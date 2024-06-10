@@ -15,4 +15,4 @@ nav_order: 2
 ### Working Paper
 
 [**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques**](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine}
-), with Konstantin Boss and Tobias Heidland and Finja Krüger, BSE Working Paper No. 1387. Revise & resubmit *Journal of Economic Geography.*
+), with Konstantin Boss and Tobias Heidland and Andre Groeger and Finja Krüger, BSE Working Paper No. 1387. Revise & resubmit *Journal of Economic Geography.*
