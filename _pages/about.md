@@ -2,7 +2,10 @@
 layout: about
 title: Home
 permalink: /
-subtitle:
+subtitle: >
+  PhD Candidate (on the Econ Job Market 2024),<br>
+  Universitat Autònoma de Barcelona (UAB) and<br>
+  Barcelona School of Economics (BSE)
 
 profile:
   align: left
@@ -14,8 +17,6 @@ news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
-
-PhD Candidate (on the Econ Job Market 2024), Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE)
 
 Applied Microeconomics; Labor Economics; Migration; Family Economics; Rural-Urban Migration and Child Education
 
