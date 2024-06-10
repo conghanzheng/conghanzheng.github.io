@@ -10,7 +10,7 @@ profile:
   align: right
   image: conghan.JPG
   image_circular: false # crops the image to make it circular
-  more_info:
+  more_info: May 2023 at BSE Jamboree, Barcelona
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
