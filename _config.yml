@@ -188,12 +188,12 @@ collections:
     permalink: /projects/:path/
 
 announcements:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
@@ -215,7 +215,10 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages"]
+include: #["_pages"]
+  - _pages/about.md
+  - _pages/publications.md
+  - _pages/teaching.md
 exclude:
   - bin/
   - CONTRIBUTING.md
@@ -388,6 +391,7 @@ imagemagick:
     - assets/img/
   input_formats:
     - ".jpg"
+    - ".JPG"
     - ".jpeg"
     - ".png"
     - ".tiff"
@@ -407,7 +411,7 @@ lazy_loading_images: true # enables lazy loading of images (recommended)
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics: false # enables google analytics
+enable_google_analytics: true # enables google analytics
 enable_cronitor_analytics: false # enables cronitor RUM analytics
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
