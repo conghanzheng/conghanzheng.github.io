@@ -3,11 +3,11 @@ layout: about
 title: Home
 permalink: /
 subtitle: >
-  PhD Candidate (on the Econ Job Market 2024),<br>
+  PhD Candidate (on the Econ Job Market 2024)<br>
   Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE)
 
 profile:
-  align: left
+  align: right
   image: conghan.JPG
   image_circular: false # crops the image to make it circular
   more_info:
