@@ -1,7 +1,7 @@
 ---
 layout: about
 title: Home
-permalink: /about/
+permalink: /
 subtitle: >
   PhD Candidate (on the Econ Job Market 2024),<br>
   Universitat Autònoma de Barcelona (UAB) and<br>
