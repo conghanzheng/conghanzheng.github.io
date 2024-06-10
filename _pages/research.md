@@ -10,7 +10,7 @@ nav_order: 2
 
 ### Job Market Paper
 
-**Parental Rurual-Urban Migration and Child Education**
+**Parental Rural-Urban Migration and Child Education**
 
 ### Working Paper
 
