@@ -4,8 +4,7 @@ title: Home
 permalink: /
 subtitle: >
   PhD Candidate (on the Econ Job Market 2024),<br>
-  Universitat Autònoma de Barcelona (UAB) and<br>
-  Barcelona School of Economics (BSE)
+  Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE)
 
 profile:
   align: left
