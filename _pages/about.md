@@ -22,7 +22,7 @@ Applied Microeconomics; Labor Economics; Migration; Family Economics; Rural-Urba
 **Contact**  
 zhengconghan [at] outlook.com
 
-Office: B3/124  
+B3/124
 Departament d'Economia i d'Història Econòmica  
-Universitat Autònoma de Barcelona, Edifici B  
-08193 Bellaterra  
+Edifici B, Universitat Autònoma de Barcelona
+08193 Bellaterra
