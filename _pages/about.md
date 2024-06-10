@@ -16,15 +16,15 @@ news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
-
-Applied Microeconomics; Labor Economics; Migration; Family Economics; Rural-Urban Migration and Child Education
-
-[<code>CV</code>](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing)
-
+  
+Applied Microeconomics; Labor Economics; Migration; Family Economics; Rural-Urban Migration and Child Education  
+  
+[<code>CV</code>](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing)  
+  
 **Contact**  
-zhengconghan [at] outlook.com
-
-B3/124
+zhengconghan [at] outlook.com  
+  
+B3/124  
 Departament d'Economia i d'Història Econòmica  
-Edifici B, Universitat Autònoma de Barcelona
-08193 Bellaterra
+Edifici B, Universitat Autònoma de Barcelona  
+08193 Bellaterra  
