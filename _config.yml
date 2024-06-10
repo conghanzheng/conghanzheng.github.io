@@ -216,8 +216,8 @@ kramdown:
 
 # Includes & excludes
 include: #["_pages"]
-  - _pages/about.md
-  - _pages/publications.md
+  - _pages/home.md
+  - _pages/research.md
   - _pages/teaching.md
 exclude:
   - bin/
