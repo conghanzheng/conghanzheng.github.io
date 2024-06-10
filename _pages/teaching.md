@@ -7,7 +7,7 @@ nav: true
 nav_order: 6
 ---
 
-## TA at IDEA, UAB
+### TA at IDEA, UAB
 - Microeconometrics (Fall 2021, Fall 2022)
 - Applied Industrial Organization (Spring 2023)
 - Development Economics (Spring 2024)
