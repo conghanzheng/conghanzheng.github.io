@@ -10,7 +10,8 @@ profile:
   align: right
   image: conghan.JPG
   image_circular: false # crops the image to make it circular
-  more_info: <p>zhengconghan [at] outlook.com</p>
+  more_info: |
+  <p>zhengconghan [at] outlook.com</p>
   <p>B3/124</p>
   <p>Departament d'Economia i d'Història Econòmica</p>
   <p>Edifici B, Universitat Autònoma de Barcelona</p> 
