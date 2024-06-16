@@ -45,7 +45,7 @@ social: false # includes social icons at the bottom of the page
 ## Teaching
 
 ### International Doctorate of Economic Analysis (IDEA), UAB
-- [Microeconometrics](https://github.com/conghanzheng/Microeconometrics_TA) (Fall 2021, Fall 2022)
-- [Applied Industrial Organization](https://github.com/conghanzheng/Applied_IO_TA) (Spring 2023)
-- Development Economics (Spring 2024)
-- [Econometrics II](https://github.com/conghanzheng/EconometricsII_TA) (Spring 2024)
+- [Microeconometrics](https://github.com/conghanzheng/Microeconometrics_TA) (TA; Fall 2021, Fall 2022)
+- [Applied Industrial Organization](https://github.com/conghanzheng/Applied_IO_TA) (TA; Spring 2023)
+- Development Economics (TA; Spring 2024)
+- [Econometrics II](https://github.com/conghanzheng/EconometricsII_TA) (TA;  Spring 2024)
