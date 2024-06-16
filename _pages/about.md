@@ -11,11 +11,11 @@ profile:
   image: conghan.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
-  <p>zhengconghan [at] outlook.com</p>
-  <p>B3/124</p>
-  <p>Departament d'Economia i d'Història Econòmica</p>
-  <p>Edifici B, Universitat Autònoma de Barcelona</p> 
-  <p>08193 Bellaterra</p>
+  zhengconghan [at] outlook.com<br>
+  B3/124<br>
+  Departament d'Economia i d'Història Econòmica<br>
+  Edifici B, Universitat Autònoma de Barcelona<br>
+  08193 Bellaterra<br>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
