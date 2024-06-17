@@ -22,3 +22,15 @@ social: true # includes social icons at the bottom of the page
 <br/>
 
 [<code>CV</code>](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing)
+
+<br/>
+
+## Research
+
+### Job Market Paper
+
+**Parental Rural-Urban Migration and Child Education**
+
+### Working Paper
+
+[**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques**](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine), with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger, BSE Working Paper No. 1387. Revise & resubmit *Journal of Economic Geography.*
