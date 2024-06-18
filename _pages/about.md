@@ -17,14 +17,14 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 <br/>
-
 **Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Rural-Urban Migration and Child Education
 <br/>
 
 View my latest [<code>CV</code>](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing)
 <br/>
 
-Get in touch with me via [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)<br>
+Get in touch with me via [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)
+<br/>
 <br/>
 
 #### Job Market Paper
