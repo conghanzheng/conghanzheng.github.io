@@ -7,7 +7,7 @@ subtitle: >
   Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE)
 
 profile:
-  align: left
+  align: right
   image: conghan.JPG
   image_circular: false # crops the image to make it circular
   more_info:
