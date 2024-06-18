@@ -24,12 +24,7 @@ social: false # includes social icons at the bottom of the page
 View my latest [<code>CV</code>](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing)
 <br/>
 
-**Contact Info**:<br>
-E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)<br>
-Office B3/124<br>
-Departament d'Econumia i d'Història Econòmica<br>
-Universitat Autònoma de Barcelona, Edifici B
-08193, Bellaterra
+Get in touch with me via [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)<br>
 <br/>
 
 #### Job Market Paper
