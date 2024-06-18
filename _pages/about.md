@@ -17,11 +17,13 @@ social: false # includes social icons at the bottom of the page
 ---
 
 I am a PhD Candidate in the \textit{International Doctorate of Economic Analysis} (IDEA) program at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE).
-<br/>
+
+
 I will be on the Econ Job Market 2024.
-<br/>
+
+
 **Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Rural-Urban Migration and Child Education
-<br/>
+
 My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/)
 
 <br/>
