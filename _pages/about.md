@@ -34,7 +34,7 @@ View my [CV](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/v
 
 #### Working Paper
 
-<u>[**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques**](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine)</u> (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger)
+[<ins>**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques**</ins>](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger)
 
 BSE Working Paper No. 1387. Revise & resubmit *Journal of Economic Geography.*
 
