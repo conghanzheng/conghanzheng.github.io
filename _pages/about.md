@@ -21,6 +21,8 @@ I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona S
 
 I will be on the Econ Job Market 2024.
 
+View my [CV](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing)
+
 <br/>
 <br/>
 
@@ -34,4 +36,16 @@ I will be on the Econ Job Market 2024.
 
 <u>[**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques**](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine)</u> (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger)
 
-&nbsp;&nbsp; BSE Working Paper No. 1387. Revise & resubmit *Journal of Economic Geography.*
+BSE Working Paper No. 1387. Revise & resubmit *Journal of Economic Geography.*
+
+<br/>
+
+#### Teaching
+
+**Teaching Assistant, PhD Level Courses at IDEA Program, UAB**
+- [Microeconometrics](https://github.com/conghanzheng/Microeconometrics_TA) (Fall 2021, Fall 2022; Lecturer: Hanna Wang)
+- [Applied Industrial Organization](https://github.com/conghanzheng/Applied_IO_TA) (Spring 2023; Lecturer: Susanna Esteban)
+- Development Economics (Spring 2024; Lecturer: Laurence Go)
+- [Econometrics II](https://github.com/conghanzheng/EconometricsII_TA) (Spring 2024; Lecturer: Michael Creel)
+
+Teaching evaluations available upon request.
