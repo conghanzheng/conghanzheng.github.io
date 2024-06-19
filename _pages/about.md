@@ -15,13 +15,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-I am a PhD Candidate in the \textit{International Doctorate of Economic Analysis} (IDEA) program at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE). I will be on the Econ Job Market 2024.
-
+I am a PhD Candidate in the \textit{International Doctorate of Economic Analysis} (IDEA) program at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE). My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/).
 
 **Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Rural-Urban Migration and Child Education
 
-
-My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/)
+I will be on the Econ Job Market 2024.
 
 <br/>
 
@@ -33,7 +31,9 @@ My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](ht
 
 #### Working Paper
 
-[**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques**](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine), with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger, BSE Working Paper No. 1387. Revise & resubmit *Journal of Economic Geography.*
+**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques** (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger)
+
+[BSE Working Paper No. 1387](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine). Revise & resubmit *Journal of Economic Geography.*
 
 <br/>
 
