@@ -8,21 +8,18 @@ profile:
   align: right
   image: conghan.JPG
   image_circular: false # crops the image to make it circular
-  more_info: >
-  E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)
+  more_info: # > E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-I am a PhD Candidate in the \textit{International Doctorate of Economic Analysis} (IDEA) program at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE).
-
-
-I will be on the Econ Job Market 2024.
+I am a PhD Candidate in the \textit{International Doctorate of Economic Analysis} (IDEA) program at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE). I will be on the Econ Job Market 2024.
 
 
 **Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Rural-Urban Migration and Child Education
+
 
 My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/)
 
