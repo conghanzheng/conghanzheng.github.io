@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Research
+title: #Research
 permalink: /
 subtitle:
 
