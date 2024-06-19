@@ -32,6 +32,6 @@ I will be on the Econ Job Market 2024.
 
 #### Working Paper
 
-**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques** (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger)
+<u>[**Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques**](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine)</u> (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger)
 
-[BSE Working Paper No. 1387](https://bse.eu/research/working-papers/forecasting-bilateral-refugee-flows-high-dimensional-data-and-machine). Revise & resubmit *Journal of Economic Geography.*
+&nbsp;&nbsp; BSE Working Paper No. 1387. Revise & resubmit *Journal of Economic Geography.*
