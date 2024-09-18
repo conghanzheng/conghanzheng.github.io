@@ -29,7 +29,7 @@ nav_order: 4
       </h5>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
+      <div class="content">
 
 ![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA)
 
