@@ -28,7 +28,7 @@ My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](ht
 <br>
 
 <p style="font-family: monospace;">
-  Contact: <br>
+  <strong>Contact</strong> <br>
   <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
   B3/124, Edifici B, Campus de la UAB <br>
   08193 Bellaterra, Barcelona, Spain <br>

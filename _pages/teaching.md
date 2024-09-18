@@ -12,25 +12,32 @@ nav_order: 2
 
 #### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
 
-
 <span style="display: block; margin-top: 5px;"></span>
 
 <!-- COLLAPSIBLE-->
 <style>
     .collapsible {
-        background-color: transparent;
-        cursor: pointer;
-        border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: inherit; /* Ensures the button matches the surrounding text size */
+    display: inline-block; /* Keeps it in line with the text */
     }
 
     .collapsible:after {
         color: #6c0a31;
-        content: '\002B';
+        content: '\002B'; /* Plus sign */
+        margin-left: 5px; /* Add space between title and symbol */
+        font-size: 0.8em; /* Slightly smaller than the main text size, adjust as needed */
+        vertical-align: middle; /* Ensures the symbol aligns well with the text */
     }
 
     .active:after {
         color: #6c0a31;
-        content: "";
+        content: "\2212"; /* Minus sign */
+        margin-left: 5px; /* Space between title and symbol */
+        font-size: 0.8em; /* Slightly smaller than the main text size */
+        vertical-align: middle;
     }
 
     .content {
@@ -97,7 +104,7 @@ nav_order: 2
 
 **Applied Industrial Organization** (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible"></button>]
 <div id="aio" class="collapse">
-  <a href="https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view">Syllabus</a>
+  <b href="https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view">Syllabus</b> <br>
   <a href="https://github.com/conghanzheng/Applied_IO_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
