@@ -56,7 +56,7 @@ nav_order: 2
     });
 </script>
 
-**Econometrics II** (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible"></button>]
+**Econometrics II** (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible custom-collapsible"></button>]
 <div id="ec2" class="collapse">
   <ul>
     <li><a href="https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link">Syllabus</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
@@ -66,7 +66,7 @@ nav_order: 2
   </ul>
 </div>
 
-**Microeconometrics I** (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible"></button>]
+**Microeconometrics I** (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
    <ul>
     <li><a href="https://drive.google.com/file/d/121f153kIO8coppfRyuKmPNtTCI1Kf7sP/view?usp=share_link">Syllabus</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
@@ -94,9 +94,10 @@ nav_order: 2
 
 **Development Economics** (Spring 2024; Lecturer: [Laurence Go](https://www.laurencego.com))
 
-**Applied Industrial Organization** (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible"></button>]
+**Applied Industrial Organization** (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible custom-collapsible"></button>]
 <div id="aio" class="collapse">
-  <b href="https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view">Syllabus</b> <br>
+  <a href="https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view"><b>Syllabus</b></a> <br>
+  
   <a href="https://github.com/conghanzheng/Applied_IO_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
