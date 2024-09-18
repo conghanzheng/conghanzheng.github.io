@@ -7,7 +7,7 @@ subtitle:
 profile:
   align: right
   image: conghan.JPG
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
     <p><a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a></p>
     <p>B3/124, Edifici B, Campus de</p>
@@ -27,16 +27,9 @@ My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](ht
 
 <br>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=YourFontName:wght@400;700&display=swap');
-
-    .custom-font {
-        font-family: 'YourFontName', sans-serif;
-    }
-</style>
-
-<p class="custom-font">
-<a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
-B3/124, Edifici B, Campus de la UAB <br>
-08193 Bellaterra, Barcelona, Spain <br>
+<p style="font-family: monospace;">
+  Contact: <br>
+  <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
+  B3/124, Edifici B, Campus de la UAB <br>
+  08193 Bellaterra, Barcelona, Spain <br>
 </p>

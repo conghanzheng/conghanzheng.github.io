@@ -12,6 +12,8 @@ nav_order: 2
 
 #### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
 
+<span style="display: block; margin-top: 5px;"></span>
+
 <!-- COLLAPSIBLE-->
 <style>
     .collapsible {
@@ -27,7 +29,7 @@ nav_order: 2
 
     .active:after {
         color: #6c0a31;
-        content: "\2212";
+        content: "";
     }
 
     .content {
@@ -56,7 +58,7 @@ nav_order: 2
 
 **Econometrics II** (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible"></button>]
 <div id="ec2" class="collapse">
-  <ul style="padding-right: 20px;">
+  <ul>
     <li><a href="https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link">Syllabus</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
     <li>TA Session: Numerical Optimization <a href="https://drive.google.com/file/d/1QFRB7ZZL_lyMpmfvHX9CT163sfn2Dg5x/view?usp=share_link">[TA1.m]</a></li>
     <li>TA Session: MLE <a href="https://drive.google.com/file/d/1t7izaSqsrUKdleLYzHuhQh7LAU9qx0kF/view?usp=share_link">[TA2.m]</a> <a href="https://drive.google.com/file/d/1jMbmNokGRmbOs-8ZcRjyQRDYkZeUPD2y/view?usp=share_link">[TA2.ipynb]</a></li>
@@ -88,12 +90,13 @@ nav_order: 2
   </ul>
 </div>
 
-**Microeconometrics II**](https://drive.google.com/file/d/1D-mKQAbUQeMbdeWGhU87N7VMlOTwSIl1/view?usp=share_link) (Fall 2024; Lecturer: Joan Llull) 
+**Microeconometrics II** (Fall 2024; Lecturer: Joan Llull) 
 
 **Development Economics** (Spring 2024; Lecturer: [Laurence Go](https://www.laurencego.com))
 
-**Applied Industrial Organization**](https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view?usp=share_link) (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible"></button>]
+**Applied Industrial Organization** (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible"></button>]
 <div id="aio" class="collapse">
+  <a href="https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view">Syllabus</a>
   <a href="https://github.com/conghanzheng/Applied_IO_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
