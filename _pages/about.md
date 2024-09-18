@@ -5,7 +5,7 @@ permalink: /
 subtitle:
 
 profile:
-  align: middle
+  align: left
   image: conghan.JPG
   image_circular: true # crops the image to make it circular
   more_info: > E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)
@@ -15,7 +15,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE). 
+I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE) in the [International Doctorate of Economic Analysis (IDEA) program](https://www.uabidea.eu). 
 
 **Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Child Development
 
