@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - conghanzheng
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - conghanzheng/EconometricsII_TA
+  - conghanzheng/Microeconometrics_TA
+  - conghanzheng/Applied_IO_TA
