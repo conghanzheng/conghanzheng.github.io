@@ -7,6 +7,8 @@ nav: true
 nav_order: 4
 ---
 
+<br>
+
 #### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
 - Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: Michael Creel)
 
