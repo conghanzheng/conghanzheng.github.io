@@ -10,9 +10,6 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p><a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a></p>
-    <p>B3/124, Edifici B, Campus de</p>
-    <p>la UAB, 08193 Bellaterra</p>
-    <p>Barcelona, Spain</p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
