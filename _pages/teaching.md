@@ -7,6 +7,7 @@ nav: true
 nav_order: 4
 ---
 
+---
 <br>
 
 <!-- COLLAPSIBLE-->
@@ -54,17 +55,23 @@ nav_order: 4
 #### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
 - Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: Michael Creel) [<button data-toggle="collapse" data-target="#demo1" class="collapsible"></button>]
 <div id="demo1" class="collapse">
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA) 
+
 </div>
 
-- Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: Michael Creel) [<button data-toggle="collapse" data-target="#demo1" class="collapsible"></button>]
-<div id="demo1" class="content">
+- Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: Michael Creel) [<button data-toggle="content" data-target="#demo2" class="collapsible"></button>]
+<div id="demo2" class="content">
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA) 
+
 </div>
 
-- Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: Michael Creel) [<button data-toggle="content" data-target="#demo1" class="collapsible"></button>]
-<div id="demo1" class="content">
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA) 
+- Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: Michael Creel) [<button data-toggle="collapse" data-target="#demo3" class="collapsible"></button>]
+<div id="demo3" class="collapse">
+  <a href="https://github.com/conghanzheng/MicroeconometricsI_TA">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&theme=transparent" alt="Readme Card">
+  </a>
 </div>
 
 - Microeconometrics I ([Syllabus](https://drive.google.com/file/d/121f153kIO8coppfRyuKmPNtTCI1Kf7sP/view?usp=share_link)) (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) 
