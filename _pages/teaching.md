@@ -67,7 +67,7 @@ nav_order: 4
 
 </div>
 
-- Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: Michael Creel) [<button data-toggle="collapse" data-target="#demo3" class="collapsible"></button>]
+- Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#demo3" class="collapsible"></button>]
 <div id="demo3" class="collapse">
   <a href="https://github.com/conghanzheng/MicroeconometricsI_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&theme=transparent" alt="Readme Card">
@@ -78,7 +78,9 @@ nav_order: 4
 
 - Microeconometrics II ([Syllabus](https://drive.google.com/file/d/1D-mKQAbUQeMbdeWGhU87N7VMlOTwSIl1/view?usp=share_link)) (Fall 2024; Lecturer: Joan Llull) 
 
-- Applied Industrial Organization ([Syllabus](https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view?usp=share_link)) (Spring 2023; Lecturer: Susanna Esteban)
+- Applied Industrial Organization ([Syllabus](https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view?usp=share_link)) (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban))
+
+- Development Economics (Spring 2024; Lecturer: [Laurence Go](https://www.laurencego.com))
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA) 
 

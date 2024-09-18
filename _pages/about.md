@@ -6,8 +6,8 @@ subtitle:
 
 profile:
   align: right
-  image: conghan.JPG
-  image_circular: true # crops the image to make it circular
+  image: 404.JPG
+  image_circular: false # crops the image to make it circular
   more_info: #> E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)
 
 news: false # includes a list of news items
