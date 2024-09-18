@@ -5,7 +5,7 @@ permalink: /
 subtitle:
 
 profile:
-  align: left
+  align: middle
   image: conghan.JPG
   image_circular: false # crops the image to make it circular
   more_info: > E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)
