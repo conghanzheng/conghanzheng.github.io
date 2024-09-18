@@ -21,12 +21,3 @@ I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona S
 **Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Child Development
 
 My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/). I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](https://www.inesmachostadler.com).
-
-<br>
-
-<p style="font-family: monospace;">
-  <strong>Contact</strong> <br>
-  <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
-  B3/124, Edifici B, Campus de la UAB <br>
-  08193 Bellaterra, Barcelona, Spain <br>
-</p>
