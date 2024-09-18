@@ -7,9 +7,6 @@ nav: true
 nav_order: 2
 ---
 
----
-<br>
-
 <!-- COLLAPSIBLE-->
 <style>
     .collapsible {
@@ -51,6 +48,9 @@ nav_order: 2
         }
     });
 </script>
+
+---
+<br>
 
 #### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
 
