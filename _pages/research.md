@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: Research
-description: '<strong><em>Keyword</em></strong>: Applied Microeconomics; Labor Economics; Migration; Family Economics'
+description:
 nav: true
 nav_order: 2
 ---

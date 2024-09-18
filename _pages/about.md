@@ -1,7 +1,7 @@
 ---
 layout: about
-title: #Research
-permalink: /
+title: Home
+permalink: /home/
 subtitle:
 
 profile:
