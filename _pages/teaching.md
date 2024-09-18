@@ -22,14 +22,22 @@ nav_order: 2
         border: none;
     }
 
-    .custom-collapsible:after {
+    .collapsible:after {
         color: #6c0a31;
-        content: '\002B';
+        content: '\002B'; /* Default plus sign */
+    }
+
+    .active:after {
+        color: #6c0a31;
+        content: "\2212"; /* Minus sign for active state */
+    }
+
+    .custom-collapsible:after {
+        content: '\002B'; /* Default plus sign for custom collapsible */
     }
 
     .custom-collapsible.active:after {
-        color: #6c0a31;
-        content: "\2212";
+        content: "\2212"; /* Minus sign for active custom collapsible */
     }
 
     .content {
@@ -97,7 +105,7 @@ nav_order: 2
 **Applied Industrial Organization** (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible custom-collapsible"></button>]
 <div id="aio" class="collapse">
   <a href="https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view"><b>Syllabus</b></a> <br>
-  
+
   <a href="https://github.com/conghanzheng/Applied_IO_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
