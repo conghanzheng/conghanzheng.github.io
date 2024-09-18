@@ -61,11 +61,13 @@ nav_order: 4
     });
 </script>
 
-Abstract [<button class="collapsible"></button>]
-<div class="card">
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA)
-
+<p>
+    <span>&nbsp;</span> Materials [<button class="collapsible"></button>]
+</p>
+<div class="content">
+    <div class="card card-body">
+        [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA)
+    </div>
 </div>
 
 <p>
