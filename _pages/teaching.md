@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Teaching evaluations available upon request.
+description: #Teaching evaluations available upon request.
 nav: true
 nav_order: 6
 ---
@@ -14,14 +14,3 @@ nav_order: 6
 - Applied Industrial Organization ([Syllabus](https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view?usp=share_link)) (Spring 2023; Lecturer: Susanna Esteban)
 - Development Economics (Spring 2024; Lecturer: Laurence Go)
 
-
-<details>
-<summary>Teaching Materials</summary>
-<br>
-<!-- code for GitHub repositories -->
-{% if site.data.repositories.github_repos %}
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %} {% include repository/repo.liquid repository=repo %} {% endfor %}
-</div>
-{% endif %}
-</details>
