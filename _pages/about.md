@@ -5,7 +5,7 @@ permalink: /
 subtitle:
 
 profile:
-  align: right
+  align: left
   image: conghan.JPG
   image_circular: true # crops the image to make it circular
   more_info: >
