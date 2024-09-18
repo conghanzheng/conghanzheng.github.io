@@ -7,6 +7,11 @@ nav: true
 nav_order: 2
 ---
 
+---
+<br>
+
+#### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
+
 <!-- COLLAPSIBLE-->
 <style>
     .collapsible {
@@ -48,11 +53,6 @@ nav_order: 2
         }
     });
 </script>
-
----
-<br>
-
-#### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
 
 - **Econometrics II** (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible"></button>]
 <div id="ec2" class="collapse">

@@ -108,9 +108,10 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note:  >
-    <p>E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)</p>
-    <p>B3/124, Edifici B, Campus de la UAB</p>
-    <p>08193 Bellaterra, Barcelona, Spain</p>
+    <p><a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a></p>
+    <p>B3/124, Edifici B, Campus de</p>
+    <p>la UAB, 08193 Bellaterra</p>
+    <p>Barcelona, Spain</p>
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
