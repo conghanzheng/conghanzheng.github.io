@@ -17,27 +17,19 @@ nav_order: 2
 <!-- COLLAPSIBLE-->
 <style>
     .collapsible {
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    font-size: inherit; /* Ensures the button matches the surrounding text size */
-    display: inline-block; /* Keeps it in line with the text */
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
     }
 
-    .collapsible:after {
+    .custom-collapsible:after {
         color: #6c0a31;
-        content: '\002B'; /* Plus sign */
-        margin-left: 5px; /* Add space between title and symbol */
-        font-size: 0.8em; /* Slightly smaller than the main text size, adjust as needed */
-        vertical-align: middle; /* Ensures the symbol aligns well with the text */
+        content: '\002B';
     }
 
-    .active:after {
+    .custom-collapsible.active:after {
         color: #6c0a31;
-        content: "\2212"; /* Minus sign */
-        margin-left: 5px; /* Space between title and symbol */
-        font-size: 0.8em; /* Slightly smaller than the main text size */
-        vertical-align: middle;
+        content: "\2212";
     }
 
     .content {
