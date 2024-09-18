@@ -56,7 +56,7 @@ nav_order: 2
 
 - Econometrics II (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible"></button>]
 <div id="ec2" class="collapse">
-  <ul>
+  <ul style="padding-left: 20px;">
     <li><a href="https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link">Syllabus</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
     <li>TA Session: Numerical Optimization <a href="https://drive.google.com/file/d/1QFRB7ZZL_lyMpmfvHX9CT163sfn2Dg5x/view?usp=share_link">[TA1.m]</a></li>
     <li>TA Session: MLE <a href="https://drive.google.com/file/d/1t7izaSqsrUKdleLYzHuhQh7LAU9qx0kF/view?usp=share_link">[TA2.m]</a> <a href="https://drive.google.com/file/d/1jMbmNokGRmbOs-8ZcRjyQRDYkZeUPD2y/view?usp=share_link">[TA2.ipynb]</a></li>
