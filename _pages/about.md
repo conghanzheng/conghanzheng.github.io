@@ -8,7 +8,7 @@ profile:
   align: right
   image: conghan.JPG
   image_circular: false # crops the image to make it circular
-  more_info: > E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)
+  more_info: # > E-mail: [zhengconghan@outlook.com](mailto:zhengconghan@outlook.com)
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
