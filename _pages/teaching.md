@@ -56,12 +56,12 @@ nav_order: 2
 
 - Econometrics II (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible"></button>]
 <div id="ec2" class="collapse">
-  <a>
-    - [Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link) and [Course Page](https://github.com/mcreel/Econometrics)
-    - TA Session: Numerical Optimization [[TA1.m](https://drive.google.com/file/d/1QFRB7ZZL_lyMpmfvHX9CT163sfn2Dg5x/view?usp=share_link)]
-    - TA Session: MLE [[TA2.m](https://drive.google.com/file/d/1t7izaSqsrUKdleLYzHuhQh7LAU9qx0kF/view?usp=share_link)] [[TA2.ipynb](https://drive.google.com/file/d/1jMbmNokGRmbOs-8ZcRjyQRDYkZeUPD2y/view?usp=share_link)]
-    - TA Session: GMM [[TA3.m](https://drive.google.com/file/d/1Bjhtpc_YfR9yMyIQVeM6VMPPiXTOhDn_/view?usp=share_link)]
-  </a>
+  <ul>
+    <li><a href="https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link">Syllabus</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
+    <li>TA Session: Numerical Optimization <a href="https://drive.google.com/file/d/1QFRB7ZZL_lyMpmfvHX9CT163sfn2Dg5x/view?usp=share_link">[TA1.m]</a></li>
+    <li>TA Session: MLE <a href="https://drive.google.com/file/d/1t7izaSqsrUKdleLYzHuhQh7LAU9qx0kF/view?usp=share_link">[TA2.m]</a> <a href="https://drive.google.com/file/d/1jMbmNokGRmbOs-8ZcRjyQRDYkZeUPD2y/view?usp=share_link">[TA2.ipynb]</a></li>
+    <li>TA Session: GMM <a href="https://drive.google.com/file/d/1Bjhtpc_YfR9yMyIQVeM6VMPPiXTOhDn_/view?usp=share_link">[TA3.m]</a></li>
+  </ul>
 </div>
 
 - [Microeconometrics I](https://drive.google.com/file/d/121f153kIO8coppfRyuKmPNtTCI1Kf7sP/view?usp=share_link) (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible"></button>]
