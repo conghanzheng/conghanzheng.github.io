@@ -54,16 +54,19 @@ nav_order: 2
 
 #### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
 
-- [Econometrics II](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link) (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#demo3" class="collapsible"></button>]
-<div id="demo3" class="collapse">
-  <a href="https://github.com/conghanzheng/EconometricsII_TA">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=EconometricsII_TA&theme=transparent" alt="Readme Card">
+- Econometrics II (Spring 2024; Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible"></button>]
+<div id="ec2" class="collapse">
+  <a>
+    - [Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link) and [Course Page](https://github.com/mcreel/Econometrics)
+    - TA Session: Numerical Optimization [[TA1.m](https://drive.google.com/file/d/1QFRB7ZZL_lyMpmfvHX9CT163sfn2Dg5x/view?usp=share_link)]
+    - TA Session: MLE [[TA2.m](https://drive.google.com/file/d/1t7izaSqsrUKdleLYzHuhQh7LAU9qx0kF/view?usp=share_link)] [[TA2.ipynb](https://drive.google.com/file/d/1jMbmNokGRmbOs-8ZcRjyQRDYkZeUPD2y/view?usp=share_link)]
+    - TA Session: GMM [[TA3.m](https://drive.google.com/file/d/1Bjhtpc_YfR9yMyIQVeM6VMPPiXTOhDn_/view?usp=share_link)]
   </a>
 </div>
 <br>
 
-- [Microeconometrics I](https://drive.google.com/file/d/121f153kIO8coppfRyuKmPNtTCI1Kf7sP/view?usp=share_link) (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#demo3" class="collapsible"></button>]
-<div id="demo3" class="collapse">
+- [Microeconometrics I](https://drive.google.com/file/d/121f153kIO8coppfRyuKmPNtTCI1Kf7sP/view?usp=share_link) (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible"></button>]
+<div id="mc1" class="collapse">
   <a href="https://github.com/conghanzheng/MicroeconometricsI_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&theme=transparent" alt="Readme Card">
   </a>
@@ -72,8 +75,8 @@ nav_order: 2
 
 - [Microeconometrics II](https://drive.google.com/file/d/1D-mKQAbUQeMbdeWGhU87N7VMlOTwSIl1/view?usp=share_link) (Fall 2024; Lecturer: Joan Llull) 
 
-- [Applied Industrial Organization](https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view?usp=share_link) (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#demo3" class="collapsible"></button>]
-<div id="demo3" class="collapse">
+- [Applied Industrial Organization](https://drive.google.com/file/d/1_Mo3X_meH9c37PkeOMv6Y6OaQCaE9kO7/view?usp=share_link) (Spring 2023; Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible"></button>]
+<div id="aio" class="collapse">
   <a href="https://github.com/conghanzheng/Applied_IO_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
