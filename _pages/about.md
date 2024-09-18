@@ -21,3 +21,7 @@ I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona S
 **Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Child Development
 
 My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/). I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](https://www.inesmachostadler.com).
+
+---
+<p><a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a></p>
+<p><a href="https://orcid.org/0000-0003-0158-5111">ORCiD</a></p>
