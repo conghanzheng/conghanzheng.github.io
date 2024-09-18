@@ -48,7 +48,6 @@ nav_order: 4
       <div class="card-body">
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=EconometricsII_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/EconometricsII_TA)
-
       </div>
     </div>
   </div>
