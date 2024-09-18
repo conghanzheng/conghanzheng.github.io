@@ -9,10 +9,6 @@ nav_order: 4
 
 <br>
 
----
-
-<br>
-
 <!-- COLLAPSIBLE-->
 <style>
     .collapsible {
