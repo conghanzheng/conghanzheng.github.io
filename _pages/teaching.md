@@ -9,6 +9,10 @@ nav_order: 4
 
 <br>
 
+---
+
+<br>
+
 #### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
 - Econometrics II ([Syllabus](https://drive.google.com/file/d/1GSNJRoYPvwdxkAYcsPvlopU8SRnx1VmM/view?usp=share_link)) (Spring 2024; Lecturer: Michael Creel)
 
@@ -53,8 +57,4 @@ nav_order: 4
   </div>
 </div>
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA)
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=EconometricsII_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/EconometricsII_TA)
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/Applied_IO_TA)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA) [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=EconometricsII_TA&theme=transparent)](https://github.com/conghanzheng/EconometricsII_TA) [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent)](https://github.com/conghanzheng/Applied_IO_TA)
