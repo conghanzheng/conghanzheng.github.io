@@ -13,7 +13,7 @@ nav_order: 2
 
 **Parental Rural-Urban Migration and Child Education**
 
----
+<br>
 
 ### Publication
 
