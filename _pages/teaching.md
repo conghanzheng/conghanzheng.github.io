@@ -68,10 +68,22 @@ nav_order: 2
 <div id="mc1" class="collapse">
    <ul style="padding-right: 20px;">
     <li><a href="https://drive.google.com/file/d/121f153kIO8coppfRyuKmPNtTCI1Kf7sP/view?usp=share_link">Syllabus</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
-    <li>Problem Set 1: Panel Data</li>
+    <li>Panel Data</li>
     <ul>
-        <li><a href="https://drive.google.com/file/d/1QFRB7ZZL_lyMpmfvHX9CT163sfn2Dg5x/view?usp=share_link">[PS1.pdf]</a> <a href="https://drive.google.com/file/d/1EgO0K8IwVCug6YcgFh65t29sEp5aD2zA/view?usp=sharing">[PS1_1.dta]</a> <a href="https://drive.google.com/file/d/1g8Bf1W_i4zyQL-Wz-UMUTtecUXwHWBeA/view?usp=share_link">[PS1_2.dta]</a></li>
-        <li><a href="https://drive.google.com/file/d/1ii7k_9bxZAhiCr051Wuk53XDNrWtujG4/view?usp=share_link">[TA1.pdf]</a> <a href="https://drive.google.com/file/d/1-BBkUmdJPDt4MwMocVfI4YCWb9duxsAI/view?usp=share_link">[TA1.do]</a> <a href="https://drive.google.com/file/d/1BDvwNAIlcITpkf-3WIvtgA10N-z1I9w8/view?usp=share_link">[TA1.dta]</a></li>
+        <li>Problem Set 1 (Due Sep 27) <a href="https://drive.google.com/file/d/1QFRB7ZZL_lyMpmfvHX9CT163sfn2Dg5x/view?usp=share_link">[PS1.pdf]</a> <a href="https://drive.google.com/file/d/1EgO0K8IwVCug6YcgFh65t29sEp5aD2zA/view?usp=sharing">[PS1_1.dta]</a> <a href="https://drive.google.com/file/d/1g8Bf1W_i4zyQL-Wz-UMUTtecUXwHWBeA/view?usp=share_link">[PS1_2.dta]</a></li>
+        <li>TA Session 1 <a href="https://drive.google.com/file/d/1ii7k_9bxZAhiCr051Wuk53XDNrWtujG4/view?usp=share_link">[TA1.pdf]</a> <a href="https://drive.google.com/file/d/1-BBkUmdJPDt4MwMocVfI4YCWb9duxsAI/view?usp=share_link">[TA1.do]</a> <a href="https://drive.google.com/file/d/1BDvwNAIlcITpkf-3WIvtgA10N-z1I9w8/view?usp=share_link">[TA1.dta]</a></li>
+    </ul>
+    <li>Discrete Choice</li>
+    <ul style="padding-right: 40px;">
+        <li>Problem Set 2 (Due Oct 04)</li>
+    </ul>
+    <li>Censoring, Truncation, and Selection</li>
+    <ul style="padding-right: 40px;">
+        <li>Problem Set 3 (Due Oct 18)</li>
+    </ul>
+    <li>Duration Analysis</li>
+    <ul style="padding-right: 40px;">
+        <li>Problem Set 4 (Due Nov 01)</li>
     </ul>
   </ul>
 </div>
