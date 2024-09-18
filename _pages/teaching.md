@@ -20,7 +20,7 @@ nav_order: 4
 <!-- COLLAPSIBLE-->
 <style>
     .collapsible {
-        background-color: white;
+        background-color: transparent;
         cursor: pointer;
         border: none;
     }
@@ -59,12 +59,27 @@ nav_order: 4
     });
 </script>
 
-<span>&nbsp;</span> Abstract [<button class="collapsible"></button>]
-<div class="content">
-    <p>
-        [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA)
-    </p>
+Abstract [<button class="collapsible"></button>]
+<div class="card">
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA)
+
 </div>
+
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=MicroeconometricsI_TA&show_owner=true&theme=transparent)](https://github.com/conghanzheng/MicroeconometricsI_TA)
 
