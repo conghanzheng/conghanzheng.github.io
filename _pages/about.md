@@ -16,9 +16,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-<br>
+<span style="display: block; margin-top: 10px;"></span>
 
 ---
+
+<span style="display: block; margin-top: 10px;"></span>
 
 I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE) in the [International Doctorate of Economic Analysis (IDEA) program](https://www.uabidea.eu). 
 
