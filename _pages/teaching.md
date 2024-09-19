@@ -80,11 +80,11 @@ nav_order: 2
     </ul>
     <li><b>Censoring, Truncation, and Selection</b></li>
     <ul>
-        <li>Problem Set 3 (Due Oct 18)</li>
+        <li>Problem Set 3)</li>
     </ul>
     <li><b>Duration Analysis</b></li>
     <ul>
-        <li>Problem Set 4 (Due Nov 01)</li>
+        <li>Problem Set 4</li>
     </ul>
   </ul>
 </div>
