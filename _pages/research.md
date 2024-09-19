@@ -17,12 +17,20 @@ nav_order: 2
 
     .collapsible:after {
         color: #6c0a31;
-        content: '\002B';
+        content: '\002B'; /* Default plus sign */
     }
 
     .active:after {
         color: #6c0a31;
-        content: "\2212";
+        content: ""; /* Minus sign for active state */
+    }
+
+    .custom-collapsible:after {
+        content: '\002B'; /* Default plus sign for custom collapsible */
+    }
+
+    .custom-collapsible.active:after {
+        content: "\2212"; /* Minus sign for active custom collapsible */
     }
 
     .content {
