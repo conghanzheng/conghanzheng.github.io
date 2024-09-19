@@ -29,7 +29,7 @@ nav_order: 2
 
     .active:after {
         color: #6c0a31;
-        content: "\2212"; /* Minus sign for active state */
+        content: ""; /* Minus sign for active state */
     }
 
     .custom-collapsible:after {
