@@ -65,7 +65,7 @@ nav_order: 2
     });
 </script>
 
-**Microeconometrics, Part I** (Fall 2024, Lecturer: Joan Llull; Fall 2021, Fall 2022, Lecturer: Hanna Wang) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
+**Microeconometrics, Part I** (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
    <ul>
     <li><a href="https://drive.google.com/file/d/121f153kIO8coppfRyuKmPNtTCI1Kf7sP/view?usp=share_link">Syllabus</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
