@@ -103,8 +103,8 @@ nav_order: 2
 
 **Development Economics** (Spring 2024; Lecturer: [Laurence Go](https://www.laurencego.com)) [<button data-toggle="collapse" data-target="#dev" class="collapsible custom-collapsible"></button>]
 <div id="dev" class="collapse">
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Dev_Econ_2024/Syllabus.pdf"><b> [Syllabus] </b></a>
-  <span style="display: block; margin-top: 10px;"></span>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Dev_Econ_2024/Syllabus.pdf"><b> [Syllabus] </b></a> <br>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </div>
 
 **Applied Industrial Organization** (Spring 2023, Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible custom-collapsible"></button>]
