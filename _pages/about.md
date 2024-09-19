@@ -16,6 +16,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
+<br>
+
+---
+
 I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE) in the [International Doctorate of Economic Analysis (IDEA) program](https://www.uabidea.eu). 
 
 **Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Child Development
