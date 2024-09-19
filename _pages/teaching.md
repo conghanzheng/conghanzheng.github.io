@@ -69,20 +69,20 @@ nav_order: 2
 <div id="mc1" class="collapse">
    <ul>
     <li><a href="https://drive.google.com/file/d/121f153kIO8coppfRyuKmPNtTCI1Kf7sP/view?usp=share_link">Syllabus</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
-    <li>Panel Data</li>
+    <li><b>Panel Data</b></li>
     <ul>
         <li>Problem Set 1 (Due Sep 27) <a href="https://drive.google.com/file/d/1_Veoa8NHoQrYLskF9c7uPVn5x6d_uXur/view?usp=share_link">[PS1.pdf]</a> <a href="https://drive.google.com/file/d/1EgO0K8IwVCug6YcgFh65t29sEp5aD2zA/view?usp=sharing">[PS1_1.dta]</a> <a href="https://drive.google.com/file/d/1g8Bf1W_i4zyQL-Wz-UMUTtecUXwHWBeA/view?usp=share_link">[PS1_2.dta]</a> </li>
         <li>TA Session 1 <a href="https://drive.google.com/file/d/1ii7k_9bxZAhiCr051Wuk53XDNrWtujG4/view?usp=share_link">[TA1.pdf]</a> <a href="https://drive.google.com/file/d/1-BBkUmdJPDt4MwMocVfI4YCWb9duxsAI/view?usp=share_link">[TA1.do]</a> <a href="https://drive.google.com/file/d/1BDvwNAIlcITpkf-3WIvtgA10N-z1I9w8/view?usp=share_link">[TA1.dta]</a> </li>
     </ul>
-    <li>Discrete Choice</li>
+    <li><b>Discrete Choice</b></li>
     <ul>
         <li>Problem Set 2 (Due Oct 04)</li>
     </ul>
-    <li>Censoring, Truncation, and Selection</li>
+    <li><b>Censoring, Truncation, and Selection</b></li>
     <ul>
         <li>Problem Set 3 (Due Oct 18)</li>
     </ul>
-    <li>Duration Analysis</li>
+    <li><b>Duration Analysis</b></li>
     <ul>
         <li>Problem Set 4 (Due Nov 01)</li>
     </ul>
