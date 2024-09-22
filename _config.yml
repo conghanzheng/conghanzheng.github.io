@@ -10,7 +10,7 @@ email: zhengconghan@outlook.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Conghan Zheng is a PhD candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE). She is on the economic job market 2024-2025. Her research uses applied microeconomics approaches and focuses on labor economics, migration, and family.
 footer_text:
-keywords: Conghan Zheng,Conghan,Zheng,UAB,BSE,Universitat Autònoma de Barcelona,barcelona school of economics,BGSE,Barcelona gse,labor,migration,China,rural urban,children,parental migration,XJTU,SDU,ITFlows,refugee,Google Trends # add your own keywords or leave empty
+keywords: Conghan Zheng,Conghan,Zheng,UAB,BSE,Universitat Autònoma de Barcelona,barcelona school of economics,BGSE,Barcelona gse,labor,migration,China,rural urban,child,parental migration,XJTU,SDU,ITFlows,refugee,Google Trends # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: idea_logo_256x256.jpeg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -119,7 +119,7 @@ google_analytics: G-SPGNFS6SSC # your Google Analytics measurement ID (format: G
 cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: # your google-site-verification ID (Google Search Console)
+google_site_verification: LRhTZza0CiTPjy23C8XU35v9AAMil16RHXCJDJX-990 # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
