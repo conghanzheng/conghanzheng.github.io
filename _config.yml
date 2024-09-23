@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Conghan
 middle_name: 
 last_name: Zheng
-email: zhengconghan@outlook.com
+email: # zhengconghan@outlook.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Conghan Zheng is a PhD candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE). She is on the economic job market 2024-2025. Her research uses applied microeconomics approaches and focuses on labor economics, migration, and family.
 footer_text:
@@ -416,7 +416,7 @@ enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
-enable_navbar_social: false # enables displaying social links in the navbar on the about page
+enable_navbar_social: true # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
