@@ -7,7 +7,7 @@ nav: true
 nav_order: 2
 ---
 
-<a href="https://orcid.org/0000-0003-0158-5111" style="text-decoration:none;"><i class="ai ai-orcid" style="color:#A6CE39;"></i> ORCiD</a>
+<i class="ai ai-orcid" style="color:#A6CE39;"></i> [ORCiD](https://orcid.org/0000-0003-0158-5111)
 
 <br>
 
