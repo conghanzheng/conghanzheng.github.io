@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Conghan
 middle_name: 
 last_name: Zheng
-email: # zhengconghan@outlook.com
+email: zhengconghan@outlook.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Conghan Zheng is a PhD candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE). She is on the economic job market 2024-2025. Her research uses applied microeconomics approaches and focuses on labor economics, migration, and family.
 footer_text:
@@ -74,7 +74,7 @@ dblp_url: # your DBLP profile url
 discord_id: # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
 flickr_id: # your flickr id
-github_username: # your GitHub user name
+github_username: zhengconghan # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
 instagram_id: # your instagram id
