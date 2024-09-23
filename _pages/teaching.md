@@ -7,14 +7,6 @@ nav: true
 nav_order: 2
 ---
 
----
-
-<span style="display: block; margin-top: 10px;"></span>
-
-#### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
-
-<span style="display: block; margin-top: 10px;"></span>
-
 <!-- COLLAPSIBLE-->
 <style>
     .collapsible {
@@ -64,6 +56,14 @@ nav_order: 2
         }
     });
 </script>
+
+---
+
+<br>
+
+#### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
+
+<span style="display: block; margin-top: 10px;"></span>
 
 **Microeconometrics, Part I** (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
