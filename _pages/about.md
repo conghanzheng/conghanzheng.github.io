@@ -3,7 +3,7 @@ layout: about
 title: Home
 permalink: /
 subtitle: >
-  <p> (pronounced: Tsong-Hahn) </p>
+  <p> (pronounced: tsong-hahn) </p>
 
 profile:
   align: right
