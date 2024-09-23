@@ -2,7 +2,8 @@
 layout: about
 title: Home
 permalink: /
-subtitle:
+subtitle: >
+  <p> You can pronounce my name like this: ‘Tsong Hahn’ for my first name and ‘Zhuh-ng’ for my surname. Thanks for taking the time to learn it! </p>
 
 profile:
   align: right
