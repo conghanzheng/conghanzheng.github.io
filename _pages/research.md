@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: Research
-description:
+description: <i class="ai ai-orcid" style="color:#A6CE39;"></i> <a href="https://orcid.org/0000-0003-0158-5111">https://orcid.org/0000-0003-0158-5111</a> <br>
 nav: true
 nav_order: 2
 ---
