@@ -7,7 +7,8 @@ nav: true
 nav_order: 2
 ---
 
-<i class="ai ai-orcid" style="color:#A6CE39;"></i> <a href="https://orcid.org/0000-0003-0158-5111" style="text-decoration:none;">ORCiD</a>
+<i class="ai ai-orcid" style="color:#A6CE39;"></i> [ORCiD](https://orcid.org/0000-0003-0158-5111)
+
 
 <!-- COLLAPSIBLE-->
 <style>
