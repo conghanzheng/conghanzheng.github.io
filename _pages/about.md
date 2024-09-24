@@ -3,7 +3,7 @@ layout: about
 title: Home
 permalink: /
 subtitle: >
-  <p> (pronounced: tsong-hahn) </p>
+  *<p> (pronounced: tsong-hahn) </p>*
 
 profile:
   align: right
@@ -15,14 +15,14 @@ profile:
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 ---
 
 <span style="display: block; margin-top: 10px;"></span>
 
 ---
 
-<span style="display: block; margin-top: 10px;"></span>
+<br>
 
 I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE) in the [International Doctorate of Economic Analysis (IDEA) program](https://www.uabidea.eu). My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/).
 
