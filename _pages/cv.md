@@ -1,13 +1,13 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
-title: cv
+title: CV
 nav: true
 nav_order: 5
-cv_pdf: CV_ConghanZheng.pdf # [CV_ConghanZheng.pdf](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing)
+# cv_pdf: # CV_ConghanZheng.pdf # [CV_ConghanZheng.pdf](https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing)
 description:
-toc:
-  sidebar: right
+#toc:
+#  sidebar: right
 ---
 
 <object data="https://drive.google.com/file/d/1NP-zh40rHxKt-dpLZS1pdEEjRDhDJpSy/view?usp=sharing" type="application/pdf" width="100%" height="1000px">
