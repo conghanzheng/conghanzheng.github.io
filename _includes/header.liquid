@@ -43,7 +43,9 @@
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
           {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
+            {% if page.permalink == '/' %} 
+              {% assign about_title = page.title %} 
+            {% endif %}
           {% endfor %}
 
           <!-- About -->
@@ -88,7 +90,7 @@
                         <div class="dropdown-divider"></div>
                       {% else %}
                         <a class="dropdown-item {% if page.title == child.title %}active{% endif %}" href="{{ child.permalink | relative_url }}">
-                          {{- child.title -}}
+                          {{- child.nav_title | default: child.title }}
                         </a>
                       {% endif %}
                     {% endfor %}
