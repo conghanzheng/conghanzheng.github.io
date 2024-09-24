@@ -3,14 +3,14 @@ layout: about
 title: Home
 permalink: /
 subtitle: >
-  <p> (pronounced: <em>tsong-hahn</em>) </p>
+# <p> (pronounced: <em>tsong-hahn</em>) </p>
   <a>PhD Candidate, UAB and BSE</a> <br>
   <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
 
 profile:
   align: right
   image: conghan2022.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: #>
     #<a>B3/124, Edifici B, Campus de la UAB</a>
     #<a>08193 Bellaterra, Barcelona, Spain</a>
