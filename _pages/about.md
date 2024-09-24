@@ -6,14 +6,14 @@ subtitle: >
   <p> (pronounced: <em>tsong-hahn</em>) </p>
 
 profile:
-  align: left
+  align: right
   image: conghan2022.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: #>
     <a>PhD Candidate, UAB and BSE</a>
     <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
-    <a>B3/124, Edifici B, Campus de la UAB</a>
-    <a>08193 Bellaterra, Barcelona, Spain</a>
+    #<a>B3/124, Edifici B, Campus de la UAB</a>
+    #<a>08193 Bellaterra, Barcelona, Spain</a>
     # <i class="ai ai-orcid" style="color:#A6CE39;"></i> [ORCiD](https://orcid.org/0000-0003-0158-5111)
 
 news: false # includes a list of news items
@@ -22,10 +22,6 @@ social: false # includes social icons at the bottom of the page
 ---
 
 <span style="display: block; margin-top: 10px;"></span>
-
----
-
-<br>
 
 I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE) in the [International Doctorate of Economic Analysis (IDEA) program](https://www.uabidea.eu). My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/).
 

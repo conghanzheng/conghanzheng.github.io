@@ -2,6 +2,7 @@
 layout: page
 permalink: /cv/
 title: Curriculum Vitae
+nav_title: CV
 nav: true
 nav_order: 3
 # cv_pdf:
@@ -12,7 +13,7 @@ description:
 
 ---
 
-Download <a href="https://conghanzheng.github.io/assets/pdf/resume.pdf" style="color: red;">[pdf]</a>
+Download <a href="https://conghanzheng.github.io/assets/pdf/resume.pdf">[pdf]</a>
 
 <div style="width: 100%; height: 100vh; max-height: 100vh;">
   <object data="https://conghanzheng.github.io/assets/pdf/resume.pdf" type="application/pdf" style="width: 100%; height: 100%; object-fit: contain;">
