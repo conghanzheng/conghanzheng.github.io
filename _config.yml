@@ -9,7 +9,8 @@ last_name: Zheng
 email: zhengconghan@outlook.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Conghan Zheng is a PhD candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE). She is on the economic job market 2024-2025. Her research uses applied microeconomics approaches and focuses on labor economics, migration, and family.
-footer_text: ''
+show_footer: false
+footer_text:
 keywords: Conghan Zheng,Conghan,Zheng,UAB,BSE,Universitat Autònoma de Barcelona,barcelona school of economics,BGSE,Barcelona gse,labor,migration,China,rural urban,child,parental migration,XJTU,SDU,ITFlows,refugee,Google Trends # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: idea_logo_256x256.jpeg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -17,7 +18,7 @@ icon: idea_logo_256x256.jpeg # the emoji used as the favicon (alternatively, pro
 url: https://conghanzheng.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
-impressum_path: '' # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
+impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------
