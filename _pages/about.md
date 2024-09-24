@@ -11,7 +11,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: #>
     # <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
-    #<a href="https://orcid.org/0000-0003-0158-5111">https://orcid.org/0000-0003-0158-5111</a>
+    # <i class="ai ai-orcid" style="color:#A6CE39;"></i> [ORCiD](https://orcid.org/0000-0003-0158-5111)
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
