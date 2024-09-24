@@ -57,7 +57,7 @@ nav_order: 2
     });
 </script>
 
-<br>
+<span style="display: block; margin-top: 10px;"></span>
 
 ### Teaching Assistant
 *(Graduate Level Courses at IDEA Program, UAB)*
