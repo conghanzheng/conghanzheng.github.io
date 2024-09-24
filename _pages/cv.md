@@ -12,7 +12,7 @@ description:
 
 ---
 
-Download [PDF](https://conghanzheng.github.io/assets/pdf/resume.pdf)
+Download <a href="https://conghanzheng.github.io/assets/pdf/resume.pdf" style="color: red;">[pdf]</a>
 
 <div style="width: 100%; height: 100vh; max-height: 100vh;">
   <object data="https://conghanzheng.github.io/assets/pdf/resume.pdf" type="application/pdf" style="width: 100%; height: 100%; object-fit: contain;">
