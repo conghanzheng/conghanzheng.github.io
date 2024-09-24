@@ -8,7 +8,7 @@ subtitle: >
   <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
 
 profile:
-  align: left
+  align: right
   image: conghan2022.jpg
   image_circular: true # crops the image to make it circular
   more_info: #>
