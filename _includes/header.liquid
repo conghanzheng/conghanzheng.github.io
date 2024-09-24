@@ -109,7 +109,8 @@
         </ul>
       </div>
 
-      <!-- Navbar Brand (Right) -->
+      <!-- Navbar Brand (Right, except on the home page) -->
+      {% unless page.permalink == '/' %}
       <a class="navbar-brand ml-auto" href="{{ site.baseurl }}/">
         {% if site.title == 'blank' %}
           {% if site.first_name %}
@@ -125,6 +126,7 @@
           {{- site.title -}}
         {% endif %}
       </a>
+      {% endunless %}
     </div>
   </nav>
 
