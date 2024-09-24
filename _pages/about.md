@@ -4,11 +4,11 @@ title: Home
 permalink: /
 subtitle: >
   <p> (pronounced: <em>tsong-hahn</em>) </p>
-  <a>PhD Candidate, UAB and BSE</a>
+  <a>PhD Candidate, UAB and BSE</a> <br>
   <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
 
 profile:
-  align: right
+  align: left
   image: conghan2022.jpg
   image_circular: true # crops the image to make it circular
   more_info: #>
