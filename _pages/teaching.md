@@ -61,7 +61,8 @@ nav_order: 2
 
 <br>
 
-#### Teaching Assistant, PhD Level Courses at IDEA Program, UAB
+### Teaching Assistant
+#### PhD Level Courses at IDEA Program, UAB
 
 <span style="display: block; margin-top: 10px;"></span>
 
