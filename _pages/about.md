@@ -4,14 +4,14 @@ title: Home
 permalink: /
 subtitle: >
   <p> (pronounced: <em>tsong-hahn</em>) </p>
+  <a>PhD Candidate, UAB and BSE</a>
+  <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
 
 profile:
   align: right
   image: conghan2022.jpg
   image_circular: true # crops the image to make it circular
   more_info: #>
-    <a>PhD Candidate, UAB and BSE</a>
-    <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
     #<a>B3/124, Edifici B, Campus de la UAB</a>
     #<a>08193 Bellaterra, Barcelona, Spain</a>
     # <i class="ai ai-orcid" style="color:#A6CE39;"></i> [ORCiD](https://orcid.org/0000-0003-0158-5111)
