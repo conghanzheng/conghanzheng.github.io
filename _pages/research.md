@@ -61,8 +61,6 @@ nav_order: 1
     });
 </script>
 
----
-
 <br>
 
 ### Working Paper

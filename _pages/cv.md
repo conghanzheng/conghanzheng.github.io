@@ -11,8 +11,6 @@ description:
 #  sidebar: right
 ---
 
----
-
 Download <a href="https://conghanzheng.github.io/assets/pdf/resume.pdf">[pdf]</a>
 
 <div style="width: 100%; height: 100vh; max-height: 100vh;">

@@ -57,8 +57,6 @@ nav_order: 2
     });
 </script>
 
----
-
 <br>
 
 ### Teaching Assistant

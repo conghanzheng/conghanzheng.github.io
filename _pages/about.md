@@ -17,10 +17,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-<span style="display: block; margin-top: 10px;"></span>
+<br>
 
 I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE) in the [International Doctorate of Economic Analysis (IDEA) program](https://www.uabidea.eu). My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/).
 
-**Research Interests**: Applied Microeconomics; Labor Economics; Migration; Family Economics; Child Development
+My work is in applied microeconomics. I study how the household as a whole is affected in the process of migration, especially children and extended families.
 
 I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](https://www.inesmachostadler.com).
