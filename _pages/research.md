@@ -69,7 +69,7 @@ nav_order: 1
 
 **Parental Rural-Urban Migration and Child Education**, Job Market Paper, September 2024
 
-<span style="display: block; margin-top: 10px;"></span>
+<br>
 
 ### Publication
 
