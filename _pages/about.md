@@ -4,7 +4,8 @@ title: Home
 permalink: /
 subtitle: > # <p> (pronounced: <em>tsong-hahn</em>) </p>
   <a>PhD Candidate, UAB and BSE</a> <br>
-  <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a>
+  <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a> <br>
+  <i class="ai ai-orcid" style="color:#A6CE39;"> <a href="https://orcid.org/0000-0003-0158-5111">[ORCiD]</a>
 
 profile:
   align: right
