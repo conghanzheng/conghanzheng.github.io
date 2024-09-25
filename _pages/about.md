@@ -4,7 +4,7 @@ title: Home
 permalink: /
 subtitle: > # <p> (pronounced: <em>tsong-hahn</em>) </p>
   <a>PhD Candidate, UAB and BSE</a> <br>
-  &#9993; <a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a>
+  <span>&#9993;</span><a href="mailto:zhengconghan@outlook.com">zhengconghan@outlook.com</a>
 
 profile:
   align: right
