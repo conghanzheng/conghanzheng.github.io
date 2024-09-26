@@ -7,6 +7,56 @@ nav: true
 nav_order: 3
 ---
 
+<!-- COLLAPSIBLE-->
+<style>
+    .collapsible {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+    }
+
+    .collapsible:after {
+        color: #6c0a31;
+        content: '\002B'; /* Default plus sign */
+    }
+
+    .active:after {
+        color: #6c0a31;
+        content: ""; /* Minus sign for active state */
+    }
+
+    .custom-collapsible:after {
+        content: '\002B'; /* Default plus sign for custom collapsible */
+    }
+
+    .custom-collapsible.active:after {
+        content: "\2212"; /* Minus sign for active custom collapsible */
+    }
+
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    });
+</script>
+
 <br>
 
 Below are some of the scripts I’ve developed for collecting online labor data and playing around with data. For course-related codes, please visit [my teaching page](https://conghanzheng.github.io/teaching/).
@@ -25,7 +75,7 @@ Below are some of the scripts I’ve developed for collecting online labor data 
         </ul>
     <li><b>Other Econometric Topics</b></li> 
         <ul>
-            <li><b>Kronecker Product Structure (KPS) Covariance</b> [Python Code <button data-toggle="collapse" data-target="#kps" class="collapsible custom-collapsible"></button>]
+            <li><b>Kronecker Product Structure (KPS) Covariance</b><button data-toggle="collapse" data-target="#kps" class="collapsible custom-collapsible"></button>
             <div id="kps" class="collapse">
             <span style="display: block; margin-top: 10px;"></span>
                 <a href="https://github.com/conghanzheng/KPS">
