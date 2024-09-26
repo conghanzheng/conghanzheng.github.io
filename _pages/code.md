@@ -25,10 +25,12 @@ Below are some of the scripts I’ve developed for collecting online labor data 
         </ul>
     <li><b>Other Econometric Topics</b></li> 
         <ul>
-            <li><b>Kronecker Product Structure (KPS) Covariance</b></li>
+            <li><b>Kronecker Product Structure (KPS) Covariance</b> [Python Code <button data-toggle="collapse" data-target="#kps" class="collapsible custom-collapsible"></button>]
+            <div id="kps" class="collapse">
             <span style="display: block; margin-top: 10px;"></span>
-            <a href="https://github.com/conghanzheng/KPS">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=KPS&theme=transparent" alt="Readme Card">
-            </a>
+                <a href="https://github.com/conghanzheng/KPS">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=KPS&theme=transparent" alt="Readme Card">
+                </a>
+            </div></li>
         </ul>
 </ul>
