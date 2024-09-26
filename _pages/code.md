@@ -19,8 +19,8 @@ Below are some of the scripts I’ve developed for collecting online labor data 
         <ul>
             <li><b>Demand Estimation</b></li>
                 <ul>
-                    <li><b>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000</b> <a href="https://conghanzheng.github.io/Applied_IO_TA/BLP.html">[R code]</a></li>
-                    <li><b>Almost Ideal Demand System (AIDS)</b> <a href="https://conghanzheng.github.io/Applied_IO_TA/AIDS.html">[Python code]</a></li>
+                    <li><b>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000</b> <a href="https://conghanzheng.github.io/Applied_IO_TA/BLP.html">[Python code]</a></li>
+                    <li><b>Almost Ideal Demand System (AIDS)</b> <a href="https://conghanzheng.github.io/Applied_IO_TA/AIDS.html">[R code]</a></li>
                 </ul>
         </ul>
     <li><b>Other Econometric Topics</b></li> 
