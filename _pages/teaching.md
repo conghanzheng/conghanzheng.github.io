@@ -76,29 +76,14 @@ nav_order: 2
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><b>Panel Data</b></li>
     <ul>
-        <li>Problem Set 1 (Due Sep 27) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta<span id="size_mc1_1"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta<span id="size_mc1_2"></span>]</a> </li>
-        <script>
-            async function fetchFileSize(url, elementId) {
-                try {
-                const response = await fetch(url, { method: 'HEAD' });
-                const fileSize = response.headers.get('content-length');
-                if (fileSize) {
-                    const fileSizeInKB = (fileSize / 1024).toFixed(2) + ' KB';
-                    document.getElementById(elementId).innerText = `(${fileSizeInKB})`;
-                }
-                } catch (error) {
-                console.log('Error fetching file size:', error);
-                }
-            }
-            fetchFileSize('https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA3.m', 'size_mc1_1');
-            fetchFileSize('https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA3.m', 'size_mc1_2');
-        </script>
-        <li>TA Session 1 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.do">; Code and Data: [TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta(&lt;1MB)]</a>) </li>
+        <li>Problem Set 1 (Due Sep 27) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta<span id="size_mc1_ps11"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta<span id="size_mc1_ps12"></span>]</a> 
+        </li>
+        <li>TA Session 1 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.do">; Code and Data: [TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta<span id="size_mc1_ta1"></span>]</a>) </li>
     </ul>
     <li><b>Discrete Choice</b></li>
     <ul>
         <li>Problem Set 2 (Due Oct 04) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta(1.1MB)]</a></li>
-        <li>TA Session 2 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.do">; Code and Data: [TA2.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta(7.6MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_2.dta(&lt;1MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_3.dta(7.3MB)]</a>) </li>
+        <li>TA Session 2 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.do">; Code and Data: [TA2.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta<span id="size_mc1_ps21"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_2.dta<span id="size_mc1_ps22"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_3.dta<span id="size_mc1_ps23"></span>]</a>) </li>
     </ul>
     <li><b>Censoring, Truncation, and Selection</b></li>
     <ul>
@@ -128,7 +113,7 @@ nav_order: 2
     <li><a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
     <li> Numerical Optimization <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA1.m">[TA1.m]</a></li>
     <li> MLE <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA2.m">[TA2.m]</a> <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA2.ipynb">[TA2.ipynb]</a></li>
-    <li> GMM <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA3.m" id="file-link">[TA3.m]</a></li>
+    <li> GMM <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA3.m">[TA3.m]</a></li>
   </ul>
 </div>
 
@@ -146,3 +131,28 @@ nav_order: 2
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
 </div>
+
+<script>
+    async function fetchFileSize(url, elementId) {
+        try {
+            const response = await fetch(url, { method: 'HEAD' });
+            const fileSize = response.headers.get('content-length');
+            if (fileSize) {
+                const fileSizeInMB = (fileSize / (1024 * 1024)).toFixed(2);
+                if (fileSizeInMB < 1) {
+                    document.getElementById(elementId).innerText = ' (<1MB)';
+                } else {
+                    document.getElementById(elementId).innerText = ` (${fileSizeInMB} MB)`;
+                }
+            }
+        } catch (error) {
+            console.log('Error fetching file size:', error);
+        }
+    }
+    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta', 'size_mc1_ps11');
+    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta', 'size_mc1_ps12');
+    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta', 'size_mc1_ta1');
+    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_1.dta', 'size_mc1_ps21');
+    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_2.dta', 'size_mc1_ps22');
+    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_3.dta', 'size_mc1_ps23');
+</script>
