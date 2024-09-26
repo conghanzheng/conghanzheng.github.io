@@ -61,7 +61,7 @@ nav_order: 1
     });
 </script>
 
-<span style="display: block; margin-top: 10px;"></span>
+<br>
 
 ### Working Paper
 
