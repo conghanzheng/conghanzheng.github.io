@@ -78,12 +78,12 @@ nav_order: 2
     <ul>
         <li>Problem Set 1 (Due Sep 27) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta<span id="size_mc1_ps11"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta<span id="size_mc1_ps12"></span>]</a> 
         </li>
-        <li>TA Session 1 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.do">; Code and Data: [TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta<span id="size_mc1_ta1"></span>]</a>) </li>
+        <li>TA Session 1 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a>; Code and Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta<span id="size_mc1_ta1"></span>]</a>) </li>
     </ul>
     <li><b>Discrete Choice</b></li>
     <ul>
         <li>Problem Set 2 (Due Oct 04) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta(1.1MB)]</a></li>
-        <li>TA Session 2 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.do">; Code and Data: [TA2.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta<span id="size_mc1_ps21"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_2.dta<span id="size_mc1_ps22"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_3.dta<span id="size_mc1_ps23"></span>]</a>) </li>
+        <li>TA Session 2 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a>; Code and Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta<span id="size_mc1_ps21"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_2.dta<span id="size_mc1_ps22"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_3.dta<span id="size_mc1_ps23"></span>]</a>) </li>
     </ul>
     <li><b>Censoring, Truncation, and Selection</b></li>
     <ul>
@@ -138,11 +138,13 @@ nav_order: 2
             const response = await fetch(url, { method: 'HEAD' });
             const fileSize = response.headers.get('content-length');
             if (fileSize) {
-                const fileSizeInMB = (fileSize / (1024 * 1024)).toFixed(2);
-                if (fileSizeInMB < 1) {
-                    document.getElementById(elementId).innerText = ' (<1MB)';
+                const fileSizeInKB = (fileSize / 1024).toFixed(2) + ' KB'; // Get size in KB for small files
+                const linkElement = document.getElementById(elementId).parentElement; // Get parent <a> element
+                if (fileSize / (1024 * 1024) < 1) {
+                    linkElement.innerHTML = `[${linkElement.innerText}<span id="${elementId}"> (${fileSizeInKB})</span>]`;
                 } else {
-                    document.getElementById(elementId).innerText = ` (${fileSizeInMB} MB)`;
+                    const fileSizeInMB = (fileSize / (1024 * 1024)).toFixed(2) + ' MB'; // Get size in MB
+                    linkElement.innerHTML = `[${linkElement.innerText}<span id="${elementId}"> (${fileSizeInMB})</span>]`;
                 }
             }
         } catch (error) {
