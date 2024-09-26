@@ -88,8 +88,8 @@ nav_order: 2
   </ul>
 </div>
 
-**Microeconometrics, Part II** (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
-<div id="mc1" class="collapse">
+**Microeconometrics, Part II** (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc2" class="collapsible custom-collapsible"></button>]
+<div id="mc2" class="collapse">
    <ul>
     <li><a>[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><b>Treatment Effects: RCT, Matching, and IV</b></li>
