@@ -27,8 +27,8 @@ Below are some of the scripts I’ve developed for collecting online labor data 
         <ul>
             <li><b>Kronecker Product Structure (KPS) Covariance</b></li>
             <span style="display: block; margin-top: 10px;"></span>
-            <a href="https://github.com/conghanzheng/Applied_IO_TA">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
+            <a href="https://github.com/conghanzheng/KPS">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=KPS&theme=transparent" alt="Readme Card">
             </a>
         </ul>
 </ul>
