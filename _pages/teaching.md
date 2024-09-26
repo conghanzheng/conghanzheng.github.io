@@ -66,6 +66,7 @@ nav_order: 2
 
 **Microeconometrics, Part I** (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
+   <i>*Note: I will post solution after . </i>
    <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><b>Panel Data</b></li>
