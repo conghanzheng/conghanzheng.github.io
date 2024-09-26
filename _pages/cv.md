@@ -4,7 +4,7 @@ permalink: /cv/
 title: Curriculum Vitae
 nav_title: CV
 nav: true
-nav_order: 3
+nav_order: 4
 # cv_pdf:
 description:
 #toc:

@@ -67,15 +67,15 @@ nav_order: 2
 **Microeconometrics, Part I** (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
    <ul>
-    <li><a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
+    <li><a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><b>Panel Data</b></li>
     <ul>
-        <li>Problem Set 1 (Due Sep 27) <a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/PS1.pdf">[PS1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/PS1_1.dta">[PS1_1.dta(55.7MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/PS1_2.dta">[PS1_2.dta(41.1MB)]</a> </li>
-        <li>TA Session 1 <a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/TA1.pdf">[TA1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/TA1.dta">[TA1.dta]</a> </li>
+        <li>Problem Set 1 (Due Sep 27) <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS1.pdf">[PS1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS1_1.dta">[PS1_1.dta(55.7MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS1_2.dta">[PS1_2.dta(41.1MB)]</a> </li>
+        <li>TA Session 1 <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA1.pdf">[TA1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA1.dta">[TA1.dta]</a> </li>
     </ul>
     <li><b>Discrete Choice</b></li>
     <ul>
-        <li>Problem Set 2 (Due Oct 04) <a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/PS2.pdf">[PS2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroecomometricsI_2024/PS2.dta">[PS2.dta(1.1MB)]</a></li>
+        <li>Problem Set 2 (Due Oct 04) <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS2.pdf">[PS2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS2.dta">[PS2.dta(1.1MB)]</a></li>
     </ul>
     <li><b>Censoring, Truncation, and Selection</b></li>
     <ul>
@@ -88,15 +88,24 @@ nav_order: 2
   </ul>
 </div>
 
-**Microeconometrics, Part II** (Fall 2024, Lecturer: Joan Llull) 
+**Microeconometrics, Part II** (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
+<div id="mc1" class="collapse">
+   <ul>
+    <li><a>[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
+    <li><b>Treatment Effects: RCT, Matching, and IV</b></li>
+    <li><b>Treatment Effects: RD and DiD</b></li>
+    <li><b>Dynamic Discrete Choice: Full Solution</b></li>
+    <li><b>Dynamic Discrete Choice: CCP</b></li>
+  </ul>
+</div>
 
 **Econometrics II** (Spring 2024, Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible custom-collapsible"></button>]
 <div id="ec2" class="collapse">
   <ul>
-    <li><a href="https://conghanzheng.github.io/assets/TA/EcomometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
-    <li> Numerical Optimization <a href="https://conghanzheng.github.io/assets/TA/EcomometricsII_2024/TA1.m">[TA1.m]</a></li>
-    <li> MLE <a href="https://conghanzheng.github.io/assets/TA/EcomometricsII_2024/TA2.m">[TA2.m]</a> <a href="https://conghanzheng.github.io/assets/TA/EcomometricsII_2024/TA2.ipynb">[TA2.ipynb]</a></li>
-    <li> GMM <a href="https://conghanzheng.github.io/assets/TA/EcomometricsII_2024/TA3.m">[TA3.m]</a></li>
+    <li><a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
+    <li> Numerical Optimization <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA1.m">[TA1.m]</a></li>
+    <li> MLE <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA2.m">[TA2.m]</a> <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA2.ipynb">[TA2.ipynb]</a></li>
+    <li> GMM <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA3.m">[TA3.m]</a></li>
   </ul>
 </div>
 
