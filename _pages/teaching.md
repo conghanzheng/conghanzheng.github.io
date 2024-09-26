@@ -73,16 +73,16 @@ nav_order: 2
    <span style="display: block; margin-top: 10px;"></span>
 
    <ul>
-    <li><a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
+    <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><b>Panel Data</b></li>
     <ul>
-        <li>Problem Set 1 (Due Sep 27) <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS1.pdf">[PS1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS1_1.dta">[PS1_1.dta(55.7MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS1_2.dta">[PS1_2.dta(41.1MB)]</a> </li>
-        <li>TA Session 1 <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA1.pdf">[TA1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA1.dta">[TA1.dta(&lt;1MB)]</a> </li>
+        <li>Problem Set 1 (Due Sep 27) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta(55.7MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta(41.1MB)]</a> </li>
+        <li>TA Session 1 <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta(&lt;1MB)]</a> </li>
     </ul>
     <li><b>Discrete Choice</b></li>
     <ul>
-        <li>Problem Set 2 (Due Oct 04) <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS2.pdf">[PS2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS2.dta">[PS2.dta(1.1MB)]</a></li>
-        <li>TA Session 2 <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2.pdf">[TA2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2_1.dta">[TA1.dta(7.6MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2_1.dta">[TA2_2.dta(&lt;1MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2_1.dta">[TA2_3.dta(7.3MB)]</a> </li>
+        <li>Problem Set 2 (Due Oct 04) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta(1.1MB)]</a></li>
+        <li>TA Session 2 <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA1.dta(7.6MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_2.dta(&lt;1MB)]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_3.dta(7.3MB)]</a> </li>
     </ul>
     <li><b>Censoring, Truncation, and Selection</b></li>
     <ul>
