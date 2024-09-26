@@ -67,7 +67,7 @@ nav_order: 1
 
 <span style="display: block; margin-top: 10px;"></span>
 
-"Parental Rural-Urban Migration and Child Education", Job Market Paper, September 2024
+**"Parental Rural-Urban Migration and Child Education"**, **Job Market Paper**, September 2024
 
 <br>
 
@@ -75,7 +75,7 @@ nav_order: 1
 
 <span style="display: block; margin-top: 10px;"></span>
 
-["Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"](https://doi.org/10.1093/jeg/lbae023) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger), *Journal of Economic Geography*, August 2024
+[**"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"**](https://doi.org/10.1093/jeg/lbae023) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger), ***Journal of Economic Geography***, August 2024
 
 <span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#jeg2024" class="collapsible custom-collapsible"></button>]
 <div id="jeg2024" class="collapse">
