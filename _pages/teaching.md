@@ -82,6 +82,7 @@ nav_order: 2
     <li><b>Discrete Choice</b></li>
     <ul>
         <li>Problem Set 2 (Due Oct 04) <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS2.pdf">[PS2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/PS2.dta">[PS2.dta(1.1MB)]</a></li>
+        <li>TA Session 2 <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2.pdf">[TA2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2_1.dta">[TA1.dta]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2_1.dta">[TA2_2.dta]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroEconometricsI_2024/TA2_1.dta">[TA2_3.dta]</a> </li>
     </ul>
     <li><b>Censoring, Truncation, and Selection</b></li>
     <ul>
