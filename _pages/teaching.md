@@ -76,22 +76,41 @@ nav_order: 2
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><b>Panel Data</b></li>
     <ul>
-        <li>Problem Set 1 (Due Sep 27) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta<span id="size_mc1_ps11"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta<span id="size_mc1_ps12"></span>]</a> 
-        </li>
-        <li>TA Session 1 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a>; Code and Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta<span id="size_mc1_ta1"></span>]</a>) </li>
+        <li>Problem Set 1 (Due Sep 27) </li>
+        <ul>
+            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a></li>
+            <li>Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta]</a> </li>
+            <li>Solution (Sep 27)</li>
+        </ul>
+        <li>TA Session 1</li>
+        <ul>
+            <li>Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a></li>
+            <li>Code and Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta]</a></li>
+        </ul>
     </ul>
     <li><b>Discrete Choice</b></li>
     <ul>
-        <li>Problem Set 2 (Due Oct 04) <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta(1.1MB)]</a></li>
-        <li>TA Session 2 (Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a>; Code and Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta<span id="size_mc1_ps21"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_2.dta<span id="size_mc1_ps22"></span>]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_3.dta<span id="size_mc1_ps23"></span>]</a>) </li>
+        <li>Problem Set 2 (Due Oct 04)</li>
+        <ul>
+            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a></li>
+            <li>Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
+            <li>Solution (Oct 04)</li>
+        </ul>
+        <li>TA Session 2</li>
+        <ul>
+            <li>Slides:  <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a></li>
+            <li>Code and Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_2.dta]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_3.dta]</a></li>
+        </ul>
     </ul>
     <li><b>Censoring, Truncation, and Selection</b></li>
     <ul>
         <li>Problem Set 3 (Due Oct 16)</li>
+        <li>TA Session 3 (Oct 11)</li>
     </ul>
     <li><b>Duration Analysis</b></li>
     <ul>
         <li>Problem Set 4 (Due Nov 01)</li>
+        <li>TA Session 4 (Oct 16)</li>
     </ul>
   </ul>
 </div>
@@ -131,30 +150,3 @@ nav_order: 2
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
 </div>
-
-<script>
-    async function fetchFileSize(url, elementId) {
-        try {
-            const response = await fetch(url, { method: 'HEAD' });
-            const fileSize = response.headers.get('content-length');
-            if (fileSize) {
-                const fileSizeInKB = (fileSize / 1024).toFixed(2) + ' KB'; // Get size in KB for small files
-                const linkElement = document.getElementById(elementId).parentElement; // Get parent <a> element
-                if (fileSize / (1024 * 1024) < 1) {
-                    linkElement.innerHTML = `[${linkElement.innerText}<span id="${elementId}"> (${fileSizeInKB})</span>]`;
-                } else {
-                    const fileSizeInMB = (fileSize / (1024 * 1024)).toFixed(2) + ' MB'; // Get size in MB
-                    linkElement.innerHTML = `[${linkElement.innerText}<span id="${elementId}"> (${fileSizeInMB})</span>]`;
-                }
-            }
-        } catch (error) {
-            console.log('Error fetching file size:', error);
-        }
-    }
-    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta', 'size_mc1_ps11');
-    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta', 'size_mc1_ps12');
-    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta', 'size_mc1_ta1');
-    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_1.dta', 'size_mc1_ps21');
-    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_2.dta', 'size_mc1_ps22');
-    fetchFileSize('https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_3.dta', 'size_mc1_ps23');
-</script>
