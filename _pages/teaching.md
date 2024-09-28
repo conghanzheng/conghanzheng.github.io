@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: 
+description: <i>*Teaching evaluations available upon request.</i>
 nav: true
 nav_order: 2
 ---
