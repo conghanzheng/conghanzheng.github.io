@@ -79,13 +79,13 @@ nav_order: 2
         <li>Problem Set 1 (Due Sep 27) </li>
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a></li>
-            <li>Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta]</a> </li>
+            <li>Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta]</a> </li>
             <li>Solution (Sep 27)</li>
         </ul>
         <li>TA Session 1</li>
         <ul>
             <li>Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a></li>
-            <li>Code and Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta]</a></li>
+            <li>Code and Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta]</a></li>
         </ul>
     </ul>
     <li><b>Discrete Choice</b></li>
@@ -93,13 +93,13 @@ nav_order: 2
         <li>Problem Set 2 (Due Oct 04)</li>
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a></li>
-            <li>Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
+            <li>Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
             <li>Solution (Oct 04)</li>
         </ul>
         <li>TA Session 2</li>
         <ul>
             <li>Slides:  <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a></li>
-            <li>Code and Data: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_2.dta]</a> <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_3.dta]</a></li>
+            <li>Code and Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_2.dta">[TA2_2.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_3.dta">[TA2_3.dta]</a></li>
         </ul>
     </ul>
     <li><b>Censoring, Truncation, and Selection</b></li>

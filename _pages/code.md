@@ -64,7 +64,7 @@ Below are some of the scripts I’ve developed for collecting online labor data 
 <span style="display: block; margin-top: 20px;"></span>
 
 <ul>
-    <li><b>Automated Data Collection</b> <a href="https://conghanzheng.github.io/assets/R/eurostatB.R">[R code]</a></li>
+    <li><b>Automated Data Collection</b> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/R/eurostatB.R">[R code]</a></li>
     <li><b>Applied Microeconometrics</b></li> 
         <ul>
             <li><b>Demand Estimation</b></li>
