@@ -94,7 +94,7 @@ nav_order: 2
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a></li>
             <li>Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
-            <li>Solution (Oct 07)</li>
+            <li>Solution (Oct 04)</li>
         </ul>
         <li>TA Session 2</li>
         <ul>
