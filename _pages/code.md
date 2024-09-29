@@ -57,7 +57,7 @@ nav_order: 3
     });
 </script>
 
-<br>
+<span style="display: block; margin-top: 20px;"></span>
 
 Below are some of the scripts I’ve developed for collecting online labor data and playing around with data. For course-related codes, please visit [my teaching page](https://conghanzheng.github.io/teaching/).
 
