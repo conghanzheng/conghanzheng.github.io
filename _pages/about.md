@@ -88,14 +88,14 @@ I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](
 
 **"Parental Rural-Urban Migration and Child Education"**, September 2024
 
-<br>
+<span style="display: block; margin-top: 20px;"></span>
 
 ### Publication
 
 <span style="display: block; margin-top: 10px;"></span>
 
-[**"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"**](https://doi.org/10.1093/jeg/lbae023) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger) <br>
-***Journal of Economic Geography, August 2024: lbae023.*** <br>
+[**<u>"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"</u>**](https://doi.org/10.1093/jeg/lbae023) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger) <br>
+*Journal of Economic Geography*, August 2024: lbae023.<br>
 <span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#jeg2024" class="collapsible custom-collapsible"></button>]
 <div id="jeg2024" class="collapse">
     <p>
@@ -103,12 +103,20 @@ I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](
     </p>
 </div>
 
+<span style="display: block; margin-top: 20px;"></span>
+
 ### Working Paper
 
-[**Migration Outcome Gap: The Cost of Leaving Children Behind**](https://conghanzheng.github.io/assets/pdf/ENTER_JBR_paper.pdf), May 2023. <br>
+[**<u>"Migration Outcome Gap: The Cost of Leaving Children Behind"</u>**](https://conghanzheng.github.io/assets/pdf/ENTER_JBR_paper.pdf) <br>
 <span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#enterjbr2023" class="collapsible custom-collapsible"></button>]
 <div id="enterjbr2023" class="collapse">
     <p>
         Parents invest money and parental care in their children. Given the constraints on migration, migrant parents may trade one for the other. In China, in addition to financial constraints, there are also institutional mobility restrictions on rural-urban migration, which limit the ability of migrants to claim urban citizenship and thus pose the problem of multiple selectivity. Using a simultaneous equations model to deal with endogeneity, the results highlight the motive of households to migrate for better educational opportunities for children and predict a gain from rural-urban migration in children's educational outcomes. And a significant part of the income gains from migration is invested in the child's human capital accumulation. The results also suggest that <i>Hukou</i> restrictions in China don't prevent migrant families from going to urban areas, but only limit their access to local social services and lead to a loss of welfare.
     </p>
 </div>
+
+<span style="display: block; margin-top: 20px;"></span>
+
+### Work-in-Progress
+
+**Household Migration and the Intergenerational Contract**
