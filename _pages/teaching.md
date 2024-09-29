@@ -80,7 +80,7 @@ nav_order: 2
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a></li>
             <li>Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta]</a> </li>
-            <li>Solution (Sep 27)</li>
+            <li>Solution (Oct 01)</li>
         </ul>
         <li>TA Session 1</li>
         <ul>
@@ -94,7 +94,7 @@ nav_order: 2
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a></li>
             <li>Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
-            <li>Solution (Oct 04)</li>
+            <li>Solution (Oct 07)</li>
         </ul>
         <li>TA Session 2</li>
         <ul>
