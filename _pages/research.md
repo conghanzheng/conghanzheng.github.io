@@ -63,11 +63,11 @@ nav_order: 1
 
 <br>
 
-### Working Paper
+### Job Market Paper
 
 <span style="display: block; margin-top: 10px;"></span>
 
-**"Parental Rural-Urban Migration and Child Education"**, **Job Market Paper**, September 2024
+**"Parental Rural-Urban Migration and Child Education"**, September 2024
 
 <br>
 
