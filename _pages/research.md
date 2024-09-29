@@ -71,21 +71,6 @@ nav_order: 1
 
 <span style="display: block; margin-top: 20px;"></span>
 
-#### Publication
-
-<span style="display: block; margin-top: 10px;"></span>
-
-[<u>"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"</u>](https://doi.org/10.1093/jeg/lbae023) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger) <br>
-*Journal of Economic Geography*, August 2024: lbae023.<br>
-<span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#jeg2024" class="collapsible custom-collapsible"></button>]
-<div id="jeg2024" class="collapse">
-    <p>
-        We develop monthly asylum seeker flow forecasting models for 157 origin countries to the EU27, using machine learning and high-dimensional data, including digital trace data from Google Trends. Comparing different models and forecasting horizons and validating out-of-sample, we find that an ensemble forecast combining Random Forest and Extreme Gradient Boosting algorithms outperforms the random walk over horizons between 3 and 12 months. For large corridors, this holds in a parsimonious model exclusively based on Google Trends variables, which has the advantage of near real-time availability. We provide practical recommendations how our approach can enable ahead-of-period asylum seeker flow forecasting applications.
-    </p>
-</div>
-
-<span style="display: block; margin-top: 20px;"></span>
-
 #### Working Paper
 
 [<u>"Migration Outcome Gap: The Cost of Leaving Children Behind"</u>](https://conghanzheng.github.io/assets/pdf/ENTER_JBR_paper.pdf) <br>
@@ -101,3 +86,18 @@ nav_order: 1
 #### Work-in-Progress
 
 "Household Migration and the Intergenerational Contract"
+
+<span style="display: block; margin-top: 20px;"></span>
+
+#### Publication
+
+<span style="display: block; margin-top: 10px;"></span>
+
+[<u>"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"</u>](https://doi.org/10.1093/jeg/lbae023) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger) <br>
+*Journal of Economic Geography*, August 2024: lbae023.<br>
+<span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#jeg2024" class="collapsible custom-collapsible"></button>]
+<div id="jeg2024" class="collapse">
+    <p>
+        We develop monthly asylum seeker flow forecasting models for 157 origin countries to the EU27, using machine learning and high-dimensional data, including digital trace data from Google Trends. Comparing different models and forecasting horizons and validating out-of-sample, we find that an ensemble forecast combining Random Forest and Extreme Gradient Boosting algorithms outperforms the random walk over horizons between 3 and 12 months. For large corridors, this holds in a parsimonious model exclusively based on Google Trends variables, which has the advantage of near real-time availability. We provide practical recommendations how our approach can enable ahead-of-period asylum seeker flow forecasting applications.
+    </p>
+</div>

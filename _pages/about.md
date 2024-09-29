@@ -72,7 +72,7 @@ social: false # includes social icons at the bottom of the page
     });
 </script>
 
-<br>
+<span style="display: block; margin-top: 20px;"></span>
 
 I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE) in the [International Doctorate of Economic Analysis (IDEA) program](https://www.uabidea.eu). My supervisors are [Joan Llull](https://joanllull.github.io) and [Hanna Wang](https://sites.google.com/view/hannawang/).
 
@@ -80,4 +80,4 @@ I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona S
 
 I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](https://www.inesmachostadler.com).
 
-<br>
+<span style="display: block; margin-top: 20px;"></span>
