@@ -118,7 +118,7 @@ nav_order: 2
 **Microeconometrics, Part II** (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc2" class="collapsible custom-collapsible"></button>]
 <div id="mc2" class="collapse">
    <ul>
-    <li><a>[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
+    <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><b>Treatment Effects: RCT, Matching, and IV</b></li>
     <li><b>Treatment Effects: RD and DiD</b></li>
     <li><b>Dynamic Discrete Choice: Full Solution</b></li>
