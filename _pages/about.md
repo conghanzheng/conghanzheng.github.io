@@ -94,7 +94,7 @@ I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](
 
 <span style="display: block; margin-top: 10px;"></span>
 
-[**<u>"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"</u>**](https://doi.org/10.1093/jeg/lbae023) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger) <br>
+[<u>"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"</u>](https://doi.org/10.1093/jeg/lbae023) (with [Konstantin Boss](https://sites.google.com/view/konstantinboss/home) and [Tobias Heidland](https://www.tobias-heidland.de) and [Andre Groeger](https://sites.google.com/site/andregroeger/) and Finja Krüger) <br>
 *Journal of Economic Geography*, August 2024: lbae023.<br>
 <span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#jeg2024" class="collapsible custom-collapsible"></button>]
 <div id="jeg2024" class="collapse">
@@ -107,7 +107,7 @@ I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](
 
 ### Working Paper
 
-[**<u>"Migration Outcome Gap: The Cost of Leaving Children Behind"</u>**](https://conghanzheng.github.io/assets/pdf/ENTER_JBR_paper.pdf) <br>
+[<u>"Migration Outcome Gap: The Cost of Leaving Children Behind"</u>](https://conghanzheng.github.io/assets/pdf/ENTER_JBR_paper.pdf) <br>
 <span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#enterjbr2023" class="collapsible custom-collapsible"></button>]
 <div id="enterjbr2023" class="collapse">
     <p>
@@ -120,3 +120,6 @@ I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](
 ### Work-in-Progress
 
 **Household Migration and the Intergenerational Contract**
+
+<br>
+<br>
