@@ -61,7 +61,7 @@ nav_order: 3
 
 Below are some of the scripts I’ve developed for collecting online labor data and playing around with data. For course-related codes, please visit [my teaching page](https://conghanzheng.github.io/teaching/).
 
-<br>
+<span style="display: block; margin-top: 15px;"></span>
 
 <ul>
     <li><b>Automated Data Collection</b> <a href="https://conghanzheng.github.io/assets/R/eurostatB.R">[R code]</a></li>
