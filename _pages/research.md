@@ -75,7 +75,7 @@ nav_order: 1
 
 <span style="display: block; margin-top: 20px;"></span>
 
-[<u>"Migration Outcome Gap: The Cost of Leaving Children Behind"</u>](https://conghanzheng.github.io/assets/pdf/ENTER_JBR_paper.pdf) <br>
+[<u>"Migration Outcome Gap: The Cost of Leaving Children Behind"</u>](https://conghanzheng.github.io/assets/pdf/ENTER_JBR_paper.pdf), 2023 <br>
 <span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#enterjbr2023" class="collapsible custom-collapsible"></button>]
 <div id="enterjbr2023" class="collapse">
     <p>
@@ -83,7 +83,7 @@ nav_order: 1
     </p>
 </div>
 
-<span style="display: block; margin-top: 30px;"></span>, 2023
+<span style="display: block; margin-top: 30px;"></span>
 
 #### Work-in-Progress
 
