@@ -119,7 +119,7 @@ I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](
 
 ### Work-in-Progress
 
-**Household Migration and the Intergenerational Contract**
+"Household Migration and the Intergenerational Contract"
 
 <br>
 <br>
