@@ -57,12 +57,12 @@ nav_order: 2
     });
 </script>
 
-<span style="display: block; margin-top: 20px;"></span>
+<span style="display: block; margin-top: 30px;"></span>
 
 ### Teaching Assistant
 (Graduate Level Courses at IDEA Program, UAB)
 
-<span style="display: block; margin-top: 10px;"></span>
+<span style="display: block; margin-top: 20px;"></span>
 
 **Microeconometrics, Part I** (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
@@ -150,3 +150,5 @@ nav_order: 2
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
 </div>
+
+<br>
