@@ -89,7 +89,7 @@ nav_order: 1
 
 <span style="display: block; margin-top: 20px;"></span>
 
-"Household Migration and the Intergenerational Contract"
+"Family Migration and the Intergenerational Contract"
 
 <span style="display: block; margin-top: 30px;"></span>
 
