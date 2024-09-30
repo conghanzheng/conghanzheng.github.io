@@ -64,7 +64,7 @@ nav_order: 2
 
 <span style="display: block; margin-top: 20px;"></span>
 
-**Microeconometrics, Part I** (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
+Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
    <i>Schedule of TA Sessions</i> : <a>We will have a total of five sessions, each session 1, 2, 4, 5 will cover one of the following four topics, session 3 (October 11th) will cover the solutions to PS1 and PS2.</a>
    <span style="display: block; margin-top: 10px;"></span>
@@ -74,7 +74,7 @@ nav_order: 2
 
    <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
-    <li><b>Panel Data</b></li>
+    <li><a>Panel Data</a></li>
     <ul>
         <li>Problem Set 1 (Due Sep 27) </li>
         <ul>
@@ -88,7 +88,7 @@ nav_order: 2
             <li>Code and Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta]</a></li>
         </ul>
     </ul>
-    <li><b>Discrete Choice</b></li>
+    <li><a>Discrete Choice</a></li>
     <ul>
         <li>Problem Set 2 (Due Oct 04)</li>
         <ul>
@@ -102,12 +102,12 @@ nav_order: 2
             <li>Code and Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_2.dta">[TA2_2.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_3.dta">[TA2_3.dta]</a></li>
         </ul>
     </ul>
-    <li><b>Censoring, Truncation, and Selection</b></li>
+    <li><a>Censoring, Truncation, and Selection</a></li>
     <ul>
         <li>Problem Set 3 (Due Oct 16)</li>
         <li>TA Session 3 (Oct 11)</li>
     </ul>
-    <li><b>Duration Analysis</b></li>
+    <li><a>Duration Analysis</a></li>
     <ul>
         <li>Problem Set 4 (Due Nov 01)</li>
         <li>TA Session 4 (Oct 16)</li>
@@ -115,18 +115,18 @@ nav_order: 2
   </ul>
 </div>
 
-**Microeconometrics, Part II** (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc2" class="collapsible custom-collapsible"></button>]
+Microeconometrics, Part II (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc2" class="collapsible custom-collapsible"></button>]
 <div id="mc2" class="collapse">
    <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
-    <li><b>Treatment Effects: RCT, Matching, and IV</b></li>
-    <li><b>Treatment Effects: RD and DiD</b></li>
-    <li><b>Dynamic Discrete Choice: Full Solution</b></li>
-    <li><b>Dynamic Discrete Choice: CCP</b></li>
+    <li><a>Treatment Effects: RCT, Matching, and IV</a></li>
+    <li><a>Treatment Effects: RD and DiD</a></li>
+    <li><a>Dynamic Discrete Choice: Full Solution</a></li>
+    <li><a>Dynamic Discrete Choice: CCP</a></li>
   </ul>
 </div>
 
-**Econometrics II** (Spring 2024, Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible custom-collapsible"></button>]
+Econometrics II (Spring 2024, Lecturer: [Michael Creel](http://pareto.uab.es/mcreel/)) [<button data-toggle="collapse" data-target="#ec2" class="collapsible custom-collapsible"></button>]
 <div id="ec2" class="collapse">
   <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
@@ -136,15 +136,15 @@ nav_order: 2
   </ul>
 </div>
 
-**Development Economics** (Spring 2024; Lecturer: [Laurence Go](https://www.laurencego.com)) [<button data-toggle="collapse" data-target="#dev" class="collapsible custom-collapsible"></button>]
+Development Economics (Spring 2024; Lecturer: [Laurence Go](https://www.laurencego.com)) [<button data-toggle="collapse" data-target="#dev" class="collapsible custom-collapsible"></button>]
 <div id="dev" class="collapse">
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Dev_Econ_2024/Syllabus.pdf"><b> [Syllabus] </b></a> <br>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Dev_Econ_2024/Syllabus.pdf"><a> [Syllabus] </a></a> <br>
   <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </div>
 
-**Applied Industrial Organization** (Spring 2023, Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible custom-collapsible"></button>]
+Applied Industrial Organization (Spring 2023, Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible custom-collapsible"></button>]
 <div id="aio" class="collapse">
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Applied_IO_2023/Syllabus.pdf"><b> [Syllabus] </b></a> <br>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Applied_IO_2023/Syllabus.pdf"><a> [Syllabus] </a></a> <br>
   <span style="display: block; margin-top: 10px;"></span>
   <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://github.com/conghanzheng/Applied_IO_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">

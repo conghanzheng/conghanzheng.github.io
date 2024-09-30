@@ -64,18 +64,18 @@ Below are some of the scripts I’ve developed for collecting online labor data 
 <span style="display: block; margin-top: 20px;"></span>
 
 <ul>
-    <li><b>Automated Data Collection</b> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/R/eurostatB.R">[R code]</a></li>
-    <li><b>Applied Microeconometrics</b></li> 
+    <li><a>Automated Data Collection</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/R/eurostatB.R">[R code]</a></li>
+    <li><a>Applied Microeconometrics</a></li> 
         <ul>
-            <li><b>Demand Estimation</b></li>
+            <li><a>Demand Estimation</a></li>
                 <ul>
-                    <li><b>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000</b> <a href="https://conghanzheng.github.io/Applied_IO_TA/BLP.html">[Python Notebook]</a></li>
-                    <li><b>Almost Ideal Demand System (AIDS)</b> <a href="https://conghanzheng.github.io/Applied_IO_TA/AIDS.html">[R Markdown]</a></li>
+                    <li><a>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000</a> <a href="https://conghanzheng.github.io/Applied_IO_TA/BLP.html">[Python Notebook]</a></li>
+                    <li><a>Almost Ideal Demand System (AIDS)</a> <a href="https://conghanzheng.github.io/Applied_IO_TA/AIDS.html">[R Markdown]</a></li>
                 </ul>
         </ul>
-    <li><b>Other Econometric Topics</b></li> 
+    <li><a>Other Econometric Topics</a></li> 
         <ul>
-            <li><b>Kronecker Product Structure (KPS) Covariance</b> [Python Code<button data-toggle="collapse" data-target="#kps" class="collapsible custom-collapsible"></button>]
+            <li><a>Kronecker Product Structure (KPS) Covariance</a> [Python Code<button data-toggle="collapse" data-target="#kps" class="collapsible custom-collapsible"></button>]
             <div id="kps" class="collapse">
             <span style="display: block; margin-top: 10px;"></span>
                 <a href="https://github.com/conghanzheng/KPS">
