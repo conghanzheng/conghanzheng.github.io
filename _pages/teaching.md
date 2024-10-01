@@ -66,7 +66,7 @@ nav_order: 2
 
 Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
-   <i>Schedule of TA Sessions</i> : <a>We will have a total of five sessions, each session 1, 2, 4, 5 will cover one of the following four topics, session 3 (October 11th) will cover the solutions to PS1 and PS2.</a>
+   <i>Schedule of TA Sessions</i> : <a>We will have a total of five sessions, each session 1, 2, 4, 5 will cover one of the following four topics, session 3 (October 4th) will cover the solutions to PS1 and PS2.</a>
    <span style="display: block; margin-top: 10px;"></span>
 
    <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post a solution code script and a pdf. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
