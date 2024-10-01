@@ -61,7 +61,7 @@ nav_order: 1
     });
 </script>
 
-<span style="display: block; margin-top: 30px;"></span>
+<br>
 
 #### Job Market Paper
 
