@@ -1,5 +1,5 @@
 %==========================================================================
-% Exercise 2. Main file
+% Exercise 2. System GMM
 % Problem Set 2, Microeconometrics Fall 2024
 %
 % DESCRIPTION: 
