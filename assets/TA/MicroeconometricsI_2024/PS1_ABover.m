@@ -1,5 +1,5 @@
 %==========================================================================
-% Exercise 2.4. Main file
+% Exercise 2. Main file
 % Problem Set 2, Microeconometrics Fall 2024
 %
 % DESCRIPTION: 
@@ -11,7 +11,6 @@
 %   - none 
 %==========================================================================
 
-% Close all and set seed
 close all; clear; clc;
 rng(13);
 
@@ -20,8 +19,8 @@ tmp = matlab.desktop.editor.getActive;
 cd(fileparts(tmp.Filename));
 scriptPath = fileparts(which(matlab.desktop.editor.getActiveFilename));
 
-% Import data. CSV file exported from Stata after computing D hat in Ex 1.2
-data = readtable('PS2_2.csv');
+% Import data. CSV file exported from Stata
+data = readtable('PS1_2.csv');
 
 % Take the dependent variable
 h = data.healthy;
