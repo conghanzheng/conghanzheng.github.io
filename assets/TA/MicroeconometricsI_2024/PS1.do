@@ -2,15 +2,14 @@
 ** Microeconometrics with Hanna Wang, IDEA, FALL 2024
 ** TA: Conghan Zheng
 **
-** - Inputs:  PS2_1.dta
-**            PS2_2.dta
-** - Output: PS2_2.csv
+** - Inputs:  PS1_1.dta
+**            PS1_2.dta
+** - Output: PS1_2.csv
 
 cls, clear all
 capture set more off
 
 cd "..."
-
 
 ** Packages to be installed:	
 ** 	1. estout: Tools for making regression tables
@@ -20,11 +19,9 @@ cd "..."
 ** 	3. coefplot: Plot regression coefficients and other results
 * cap ssc install coefplot 
 
-
 ** Exercise 1 ------------------------------------------------------------------
 		
-use "PS2_1.dta", clear
-
+use "PS1_1.dta", clear
 
 ** generate a date variable combining year and month
 gen time = ym(year, month)
@@ -33,7 +30,6 @@ order id year month time weight
 	
 ** declare dataset as panel
 xtset id time
-
 	
 ** Exercise 1.1 ----
 	
@@ -59,11 +55,13 @@ eststo OLS
 ** Compare
 esttab RE FE OLS, se star stats(N r2 r2_a) nogaps compress mtitle
 	
+** Exercise 1.3 ----
+
 ** test FE versus RE
 hausman FE RE
 	
-** Exercise 1.3 ----
-	
+** Exercise 1.4 ----
+
 ** Define job types 
 gen job_type = 1 if routine==0 & cognitive==1 
 replace job_type = 2 if routine==1 & cognitive==1 
@@ -139,11 +137,11 @@ set matsize 1000
 areg ln_wage ph i.job_type i.year i.job_type#i.statefip ///
 	 i.job_type#i.year i.statefip#i.year ///
 	 if !inlist(statefip, 2, 30, 56), absorb(statefip)
-eststo m131
+eststo m141
 
 ** 2nd way of coding
 areg ln_wage ph i.job_type i.jobxyear i.jobxstate if !inlist(statefip, 2, 30, 56), absorb(statexyear)
-estimates store m132
+estimates store m142
 
 /* 3rd way of coding (we don't include job and state fixed effects because they 
 are captured by the individual FE from id variable jobxstate) */
@@ -151,43 +149,23 @@ xtset jobxstate year
 
 xtreg ln_wage ph i.year i.job_type#i.year i.statefip#i.year ///
       if !inlist(statefip, 2, 30, 56), fe
-eststo m133
+eststo m143
 	
 ** Effect on hours worked
 areg hours_worked_m ph i.job_type i.jobxyear i.jobxstate ///
      if !inlist(statefip, 2, 30, 56), absorb(statexyear)
-eststo m134
-	
-** Compare
-esttab m131 m132 m133 m134, se star stats(N r2 r2_a) nogaps compress keep(ph) depvar
-
-
-** Exercise 1.4
-	
-** Share of high-skilled workers
-gen hs_share = h_skill/(immigr+native)
-	
-** Repeat estimation
-areg ln_wage ph hs_share i.job_type i.jobxyear i.jobxstate ///
-	 if !inlist(statefip, 2, 30, 56), absorb(statexyear)
-eststo m142
-	
-areg hours_worked_m ph hs_share i.job_type i.jobxyear i.jobxstate ///
-	 if !inlist(statefip, 2, 30, 56), absorb(statexyear)
 eststo m144
 	
-/* Compare the results. There is an upward bias in the coefficient of 'ph' when 
-   we omit the share of high-skilled workers (hs_share is positively correlated 
-   with the share of high-skilled immigrants, log wages and hours worked) 
-*/
-esttab m132 m142 m134 m144, se star stats(N r2 r2_a) nogaps compress keep(ph hs_share) depvar
+** Compare
+esttab m141 m142 m143, se star stats(N r2 r2_a) nogaps compress keep(ph) depvar
 
+esttab m141 m144, se star stats(N r2 r2_a) nogaps compress keep(ph) depvar
 
 ** Exercise 2 ------------------------------------------------------------------
 	
-use "PS2_2.dta", clear
+use "PS1_2.dta", clear
 
-xtset famper year
+xtset id year
 	
 ** Generate dummies for age categories
 xi, noomit prefix("i_") gen i.agecat
@@ -195,8 +173,7 @@ xi, noomit prefix("i_") gen i.agecat
 ** Generate dummies for interactions between married and age categories
 xi, noomit prefix("i_") gen i.agecat*married
 	
-order famper year wgt
-	
+order id year wgt
 	
 ** Exercise 2.1 ----
 	
@@ -205,7 +182,6 @@ eststo clear
 xtreg healthy i_agecat_27-i_agecat_62 i_ageXmarr_22-i_ageXmarr_62 college taxincome children* birthdum* [pw=wgt], fe
 eststo WG21 
 
-	
 ** Exercise 2.2 ----
 
 /* - 'nodiffsargan' option in 'xtabond2' command
@@ -234,6 +210,9 @@ eststo WG21
    Sargan statistics, which is not robust to heteroskedasticity but doesn't 
    have the instruments problem.
 */
+
+** On error: command xtabond2 is unrecognized
+* cap ssc install xtabond2, replace
 	
 ** Arellano-Bond
 xtabond2 healthy l.healthy i_agecat_27-i_agecat_62 i_ageXmarr_22-i_ageXmarr_62 ///
@@ -293,41 +272,4 @@ coefplot (ABover01, label(System GMM)), ///
 		
 graph combine plotwg plotabond plotabover, ycommon graphregion(color(white)) ///
 	  rows(1) name(plotcombined, replace) 
-graph export "PS2.png", as(png) replace 
-
-
-** Exercise 2.4 - Arellano-Bover in Matlab
-
-** Lines below export the dataset to csv
-	
-preserve
-	** Keep observations which participated in Arellano-Bond 
-	keep if _est_ABover01==1
-			
-	** Keep individuals with observations every year
-	xtdescribe
-	xtpatternvar, gen(pattern)
-	keep if pattern=="1111111111111"
-			
-	** Time variable
-	bysort famper: egen t = min(year)
-	replace t = year - t
-			
-	** Keep only 4 periods
-	keep if t<4
-			
-	** Keep relevant variables only
-	keep famper t healthy i_agecat_* i_ageXmarr_* college black taxincome ///
-				children* birthdum*
-	sort famper t
-			
-	** Identifier
-	egen id = group(famper)
-	drop famper
-			
-	** Sort and order 
-	sort id t
-	order id t
-	list in 1/10
-	export delimited using "PS2_2.csv", replace
-restore
+graph export "PS1.png", as(png) replace 
