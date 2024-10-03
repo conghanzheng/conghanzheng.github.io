@@ -79,7 +79,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
         <li>Problem Set 1 (Due Sep 27) </li>
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta]</a> </li>
-            <li>Solution: Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_solution.pdf">[PS1_solution.pdf]</a>, Code:  <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/fe155a9a3e160738cd6030dcb64d419c27c463a3/assets/TA/MicroeconometricsI_2024/PS1.R">[PS1.R]</a>, <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/fe155a9a3e160738cd6030dcb64d419c27c463a3/assets/TA/MicroeconometricsI_2024/PS1.do">[PS1.do]</a>, <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/fe155a9a3e160738cd6030dcb64d419c27c463a3/assets/TA/MicroeconometricsI_2024/PS1_ABover.m">[ABover.m]</a> </li>
+            <li>Solution: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_solution.pdf">[PS1_solution.pdf]</a>, Code:  <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/fe155a9a3e160738cd6030dcb64d419c27c463a3/assets/TA/MicroeconometricsI_2024/PS1.R">[PS1.R]</a>, <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/fe155a9a3e160738cd6030dcb64d419c27c463a3/assets/TA/MicroeconometricsI_2024/PS1.do">[PS1.do]</a>, <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/fe155a9a3e160738cd6030dcb64d419c27c463a3/assets/TA/MicroeconometricsI_2024/PS1_ABover.m">[ABover.m]</a> </li>
         </ul>
         <li>TA Session (Sep 20)</li>
         <ul>
@@ -92,7 +92,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
         <li>Problem Set 2 (Due Oct 04)</li>
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
-            <li>Solution (Oct 04): Slides: <a>[PS2_solution.pdf]</a>, Code: </li>
+            <li>Solution (Oct 04)</li>
         </ul>
         <li>TA Session (Sep 27)</li>
         <ul>
@@ -103,6 +103,10 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
     <li><a>Censoring, Truncation, and Selection</a></li>
     <ul>
         <li>Problem Set 3 (Due Oct 16)</li>
+        <ul>
+            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a></li>
+            <li>Solution (Oct 16)</li>
+        </ul>
         <li>TA Session (Oct 11)</li>
     </ul>
     <li><a>Duration Analysis</a></li>
