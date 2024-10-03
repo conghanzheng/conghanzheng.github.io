@@ -104,7 +104,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
     <ul>
         <li>Problem Set 3 (Due Oct 16)</li>
         <ul>
-            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a></li>
+            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/a119154c83ccd2188c553a66bf5ab0aa08018e9e/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a></li>
             <li>Solution (Oct 16)</li>
         </ul>
         <li>TA Session (Oct 11)</li>
