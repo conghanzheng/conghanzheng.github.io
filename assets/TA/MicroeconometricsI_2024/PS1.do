@@ -1,5 +1,5 @@
 ** Problem Set 1: Panel Data
-** Microeconometrics, IDEA, FALL 2024
+** Microeconometrics with Joan Llull, IDEA, FALL 2024
 ** TA: Conghan Zheng
 **
 ** - Inputs:  PS1_1.dta
@@ -9,7 +9,7 @@
 cls, clear all
 capture set more off
 
-cd "..."
+cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/PS/PS1/code and data"
 
 ** Packages to be installed:	
 ** 	1. estout: Tools for making regression tables
@@ -124,7 +124,8 @@ order job_type statefip year
    according to Stata's matching method, it will catch the most closed one in 
    existing variables. 
 */
-gen ph = h_immig/(immigr+native)
+gen phm = h_immig/(immigr+native)
+gen ph = h_skill/(immigr+native)
 	
 ** Job type, state and year interactions
 egen jobxstate = group(job_type statefip) 
@@ -138,32 +139,43 @@ egen statexyear = group(statefip year)
 set matsize 1000
 	
 ** 1st way of coding estimation
-areg ln_wage ph i.job_type i.year i.job_type#i.statefip ///
+areg ln_wage phm ph i.job_type i.year i.job_type#i.statefip ///
 	 i.job_type#i.year i.statefip#i.year ///
 	 if !inlist(statefip, 2, 30, 56), absorb(statefip)
 eststo m141
 
+areg ln_wage phm i.job_type i.year i.job_type#i.statefip ///
+	 i.job_type#i.year i.statefip#i.year ///
+	 if !inlist(statefip, 2, 30, 56), absorb(statefip)
+eststo m144
+
 ** 2nd way of coding
-areg ln_wage ph i.job_type i.jobxyear i.jobxstate if !inlist(statefip, 2, 30, 56), absorb(statexyear)
+areg ln_wage phm ph i.job_type i.jobxyear i.jobxstate if !inlist(statefip, 2, 30, 56), absorb(statexyear)
 estimates store m142
 
 /* 3rd way of coding (we don't include job and state fixed effects because they 
 are captured by the individual FE from id variable jobxstate) */
 xtset jobxstate year
 
-xtreg ln_wage ph i.year i.job_type#i.year i.statefip#i.year ///
+xtreg ln_wage phm ph i.year i.job_type#i.year i.statefip#i.year ///
       if !inlist(statefip, 2, 30, 56), fe
 eststo m143
 	
 ** Effect on hours worked
-areg hours_worked_m ph i.job_type i.jobxyear i.jobxstate ///
+areg hours_worked_m phm ph i.job_type i.jobxyear i.jobxstate ///
      if !inlist(statefip, 2, 30, 56), absorb(statexyear)
-eststo m144
-	
-** Compare
-esttab m141 m142 m143, se star stats(N r2 r2_a) nogaps compress keep(ph) depvar
+eststo m145
 
-esttab m141 m144, se star stats(N r2 r2_a) nogaps compress keep(ph) depvar
+areg hours_worked_m phm i.job_type i.jobxyear i.jobxstate ///
+     if !inlist(statefip, 2, 30, 56), absorb(statexyear)
+eststo m146
+
+label var hours_worked_m "Hours"
+label var ph "% H Workers"
+label var phm "% H Migrants"
+
+** Compare
+esttab m141 m144 m145 m146, label se star stats(N r2 r2_a) nogaps compress keep(phm ph) depvar
 
 ** Exercise 2 ------------------------------------------------------------------
 	
