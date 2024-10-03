@@ -1,5 +1,5 @@
 ** Problem Set 1: Panel Data
-** Microeconometrics with Joan Llull, IDEA, FALL 2024
+** Microeconometrics, IDEA, FALL 2024
 ** TA: Conghan Zheng
 **
 ** - Inputs:  PS1_1.dta
@@ -9,7 +9,7 @@
 cls, clear all
 capture set more off
 
-cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/PS/PS1/code and data"
+cd "..."
 
 ** Packages to be installed:	
 ** 	1. estout: Tools for making regression tables
