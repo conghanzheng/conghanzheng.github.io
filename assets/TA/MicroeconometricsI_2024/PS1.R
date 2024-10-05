@@ -1,4 +1,4 @@
-cat("\f") ## clear the console; comment this if you do not use Rstudio
+# cat("\f") ## clear the console; comment this if you do not use Rstudio
 ##' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ##'
 ##'                      Solution Code to PS1: Panel Data
@@ -17,7 +17,7 @@ cat("\f") ## clear the console; comment this if you do not use Rstudio
 ##' 1. PS1_results.RData
 ##'
 ##' AUTHOR: Conghan Zheng
-##' LAST UPDATED: 03 Oct 2024
+##' LAST UPDATED: 05 Oct 2024
 ##'
 ##' TO-DO:
 ##' - Find a more efficient package for the dynamic panel models.
@@ -25,16 +25,14 @@ cat("\f") ## clear the console; comment this if you do not use Rstudio
 
 ## PRELIMINARIES ----
 
-# cat("\f") ## clear the console; comment this if you do not use Rstudio
 rm(list = ls()) ## clear the environments
-options(show.error.locations = TRUE) ## show line number upon error
 
 ## Auto install and import all packages listed in the vector:
 if (!require('pacman')) install.packages('pacman')
 library(pacman)
 
-packages <- c(# 'rstudioapi', ## if you use Rstudio
-  'this.path', ## if you don't use Rstudio
+packages <- c('rstudioapi', ## if you use Rstudio
+  # 'this.path', ## if you don't use Rstudio
   'dplyr','haven','zoo','plm','stargazer','data.table','ggplot2',
   'patchwork')
 
@@ -49,9 +47,9 @@ invisible(lapply(packages, require, character.only = TRUE, quietly = TRUE))
 
 ## Change the work directory to (a subdirectory under) that of the current script:
 ## - if you do not use Rstudio as your IDE:
-scriptpath <- this.dir() %>% setwd()
+# scriptpath <- this.dir() %>% setwd()
 ## - if you are using Rstudio:
-# scriptpath <- file.path(dirname(rstudioapi::getActiveDocumentContext()$path)) %>% setwd()
+scriptpath <- file.path(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 scriptpath %>% setwd()
 
@@ -336,7 +334,7 @@ plot_wg <- ggplot(coef_wg, aes(x = age, y = estimate)) +
   geom_line(size = 1.5) +  # Main line for the estimate
   geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
   geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "red") +
+  geom_hline(yintercept = 0, color = "blue") +
   scale_x_continuous(breaks = coef_wg$age) + # Set x-axis breaks to Age
   scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "A. Fixed Effects") +
@@ -347,7 +345,7 @@ plot_abond <- ggplot(coef_abond, aes(x = age, y = estimate)) +
   geom_line(size = 1.5) +  # Main line for the estimate
   geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
   geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "red") +
+  geom_hline(yintercept = 0, color = "blue") +
   scale_x_continuous(breaks = coef_abond$age) + # Set x-axis breaks to Age
   scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "B. Difference GMM") +
@@ -358,7 +356,7 @@ plot_abover <- ggplot(coef_abover, aes(x = age, y = estimate)) +
   geom_line(size = 1.5) +  # Main line for the estimate
   geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
   geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "red") +
+  geom_hline(yintercept = 0, color = "blue") +
   scale_x_continuous(breaks = coef_abover$age) + # Set x-axis breaks to Age
   scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "C. System GMM") +
