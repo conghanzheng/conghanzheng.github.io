@@ -50,12 +50,12 @@ invisible(lapply(packages, require, character.only = TRUE, quietly = TRUE))
 # scriptpath <- this.dir() %>% setwd()
 ## - if you are using Rstudio:
 scriptpath <- file.path(dirname(rstudioapi::getActiveDocumentContext()$path))
-
 scriptpath %>% setwd()
+
+options(dplyr.summarise.inform = FALSE) ## mute the summarise() info
 
 ## Start timer
 time_start <- Sys.time()
-cat(Sys.time() %>% as.character())
 
 cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is running. \n ==== \n') ## Showing this in console helps when you are working on a project of many scripts, Rstudio required
 
@@ -247,8 +247,6 @@ WG21 <- plm(as.formula(paste("healthy ~", paste(c(agecat_vars, children_vars, bi
 ##' 2. Some regressors (child dummies, birth dummies) are omitted in favor of speed.
 ##' 3. The following code takes 8 mins on Mac OS with the M1 chip.
 
-time_start <- Sys.time()
-
 ABond01 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1),
                 data = data2, 
                 index = c('id','year'),
@@ -276,17 +274,28 @@ ABover <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agec
                 collapse = TRUE, # nodiffsargan, collapse instruments
 )
 
+## Table
 stargazer(ABond01, ABond02, ABover,
           type = "text",
           dep.var.caption = "Health Status",
           dep.var.labels = c(""),
-          covariate.labels = c("L.health", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49", "Age 50-54", "Age 55-59", "Age 60-64","Age 20-24 X Married", "Age 25-29 X Married", "Age 30-34 X Married", "Age 35-39 X Married", "Age 40-44 X Married", "Age 45-49 X Married", "Age 50-54 X Married", "Age 55-59 X Married", "Age 60-64 X Married", "College", "Taxable Income"),
-          #keep = c("L.healthy", "agecat*", "agecat*_married*"),
+          covariate.labels = c("L.health", 
+                               "Age 25-29", "Age 30-34", "Age 35-39",
+                               "Age 40-44", "Age 45-49", "Age 50-54", 
+                               "Age 55-59", "Age 60-64",
+                               "Age 20-24 X Married", "Age 25-29 X Married",
+                               "Age 30-34 X Married", "Age 35-39 X Married", 
+                               "Age 40-44 X Married", "Age 45-49 X Married", 
+                               "Age 50-54 X Married", "Age 55-59 X Married", 
+                               "Age 60-64 X Married", 
+                               "College", "Taxable Income"),
+          keep = c("L.healthy", "agecat*", "agecat*_married*"),
           star.cutoffs = c(0.05, 0.01, 0.001),
           keep.stat = c("n","rsq"),
           digits = 3,
           model.numbers = FALSE,
-          column.labels = c("ABond01", "ABond02", "ABover01"))
+          column.labels = c("ABond 1L", "ABond 4L", "ABover 1L")
+          )
 
 ## 2.3 Marriage Health Gap Plot
 
@@ -334,7 +343,7 @@ plot_wg <- ggplot(coef_wg, aes(x = age, y = estimate)) +
   geom_line(size = 1.5) +  # Main line for the estimate
   geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
   geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "blue") +
+  geom_hline(yintercept = 0, color = "red") +
   scale_x_continuous(breaks = coef_wg$age) + # Set x-axis breaks to Age
   scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "A. Fixed Effects") +
@@ -345,7 +354,7 @@ plot_abond <- ggplot(coef_abond, aes(x = age, y = estimate)) +
   geom_line(size = 1.5) +  # Main line for the estimate
   geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
   geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "blue") +
+  geom_hline(yintercept = 0, color = "red") +
   scale_x_continuous(breaks = coef_abond$age) + # Set x-axis breaks to Age
   scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "B. Difference GMM") +
@@ -356,7 +365,7 @@ plot_abover <- ggplot(coef_abover, aes(x = age, y = estimate)) +
   geom_line(size = 1.5) +  # Main line for the estimate
   geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
   geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "blue") +
+  geom_hline(yintercept = 0, color = "red") +
   scale_x_continuous(breaks = coef_abover$age) + # Set x-axis breaks to Age
   scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "C. System GMM") +
