@@ -59,14 +59,15 @@ scriptpath %>% setwd()
 time_start <- Sys.time()
 cat(Sys.time() %>% as.character())
 
-# cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is running. \n ==== \n') ## Showing this in console helps when you are working on a project of many scripts, Rstudio required
+cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is running. \n ==== \n') ## Showing this in console helps when you are working on a project of many scripts, Rstudio required
 
-## Exercise 1: Static Panel ----
+##' Exercise 1: Static Panel ----
+##' Reference: Borjas (2003)
 
 data1_raw <- haven::read_dta(file.path(scriptpath,"PS1_1.dta")) %>%
   data.table::setDT() ## things get quicker with data.table
 
-## 1.1
+## 1.1 - 1.2 FE vs RE vs OLS
 
 data1 <- data1_raw %>%
   mutate(year_month = zoo::as.yearmon(paste0(year, month), "%Y %m"))
@@ -87,11 +88,12 @@ FE <- plm(ln_wage  ~ h_immigr + age + age2 + female + black + asian,
           model = "within") 
 summary(FE)
 
-## 1.2
-
+## OLS
 OLS <- lm(ln_wage ~ h_immigr + age + age2 + female + black + asian,  
           data = data1_h)
 summary(OLS)
+
+## Comparison
 
 ##' Note: 
 ##' 1. You can produce latex output by specifying "for (fmt in c('text','latex'))" in the for loop.
@@ -130,11 +132,11 @@ for (fmt in c('text')) {
   )
 }
 
-## 1.3
+## 1.3 Hausman Test
 
 hausman_test <- phtest(FE, RE)
 
-## 1.4
+## 1.4 Lower Frequency Data by-group jobtype*locaiton*time with Multi-way FEs
 
 data1_annual <- data1 %>%
   filter(hours_worked > 0) %>%
@@ -214,7 +216,8 @@ stargazer(FE2_wage, FE2_wage_nc, FE2_hour, FE2_hour_nc,
           )
 )
 
-## Exercise 2: Dynamic Panel ----
+##' Exercise 2: Dynamic Panel ----
+##' Reference: Guner et al. (2018)
 
 data2_raw <- haven::read_dta(file.path(scriptpath,"PS1_2.dta")) %>%
   data.table::setDT()
@@ -231,14 +234,15 @@ agecat_vars <- grep("^agecat[0-9]+(.*[^0])$", names(data2), value = TRUE) ## reg
 children_vars <- grep("^children", names(data2), value = TRUE)
 birth_vars <- grep("^birthdum", names(data2), value = TRUE)
 
-## 2.1
+## 2.1 FE
+
 WG21 <- plm(as.formula(paste("healthy ~", paste(c(agecat_vars, children_vars, birth_vars, "college", "taxincome"), collapse = " + "))),
             data = data2,
             index = c("id", "year"),
             weights = wgt,
             model = "within")
 
-## 2.2
+## 2.2 Arellano-Bond and Arellano-Bover
 
 ##' Note:
 ##' 1. Writing the formula manually without using `paste` makes it faster.
@@ -286,7 +290,7 @@ stargazer(ABond01, ABond02, ABover,
           model.numbers = FALSE,
           column.labels = c("ABond01", "ABond02", "ABover01"))
 
-## 2.3 
+## 2.3 Marriage Health Gap Plot
 
 ## Function: to extract coefficients and standard errors from plm and pgmm models
 extract_coef <- function(model, pattern) {
@@ -373,4 +377,4 @@ save(list = c('RE','FE','OLS','FE2_wage','FE2_wage_nc','FE2_hour','FE2_hour_nc',
 
 ## Ends timer
 time_end <- Sys.time()
-# cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] takes',format(time_end - time_start),'\n ==== \n') ## Rtudio required
+cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] takes',format(time_end - time_start),'\n ==== \n') ## Rtudio required
