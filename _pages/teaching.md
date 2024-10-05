@@ -78,33 +78,33 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
     <ul>
         <li>Problem Set 1 (Due Sep 27) </li>
         <ul>
-            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS1_2.dta">[PS1_2.dta]</a> </li>
-            <li>Solution: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_solution.pdf">[PS1_solution.pdf]</a>, Code:  <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/41cf6041315459b6574769f61e6eb5b4da1de064/assets/TA/MicroeconometricsI_2024/PS1.R">[PS1.R]</a>, <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/fe155a9a3e160738cd6030dcb64d419c27c463a3/assets/TA/MicroeconometricsI_2024/PS1.do">[PS1.do]</a>, <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/fe155a9a3e160738cd6030dcb64d419c27c463a3/assets/TA/MicroeconometricsI_2024/PS1_ABover.m">[ABover.m]</a> </li>
+            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1.pdf">[PS1.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS1_1.dta">[PS1_2.dta]</a> </li>
+            <li>Solution: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS1_solution.pdf">[PS1_solution.pdf]</a>, Code:  <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS1.R">[PS1.R]</a>, <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS1.do">[PS1.do]</a>, <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS1_ABover.m">[ABover.m]</a> </li>
         </ul>
         <li>TA Session (Sep 20)</li>
         <ul>
             <li>Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a></li>
-            <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta]</a></li>
+            <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta]</a></li>
         </ul>
     </ul>
     <li><a>Discrete Choice</a></li>
     <ul>
         <li>Problem Set 2 (Due Oct 04)</li>
         <ul>
-            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
+            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
             <li>Solution: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_solution.pdf">[PS2_solution.pdf]</a>, Code: <i>will be posted on Oct 08</i></li>
         </ul>
         <li>TA Session (Sep 27)</li>
         <ul>
             <li>Slides:  <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a></li>
-            <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_2.dta">[TA2_2.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/TA2_3.dta">[TA2_3.dta]</a></li>
+            <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_2.dta">[TA2_2.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_3.dta">[TA2_3.dta]</a></li>
         </ul>
     </ul>
     <li><a>Censoring, Truncation, and Selection</a></li>
     <ul>
         <li>Problem Set 3 (Due Oct 16)</li>
         <ul>
-            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/a119154c83ccd2188c553a66bf5ab0aa08018e9e/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a></li>
+            <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a></li>
             <li>Solution: <i>will be posted on Oct 16</i></li>
         </ul>
         <li>TA Session (Oct 11): <i>materials will be posted on Oct 10</i></li>
@@ -132,16 +132,16 @@ Econometrics II (Spring 2024, Lecturer: [Michael Creel](http://pareto.uab.es/mcr
 <div id="ec2" class="collapse">
   <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://github.com/mcreel/Econometrics">Course Page</a></li>
-    <li> Numerical Optimization <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA1.m">[TA1.m]</a></li>
-    <li> MLE <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA2.m">[TA2.m]</a> <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA2.ipynb">[TA2.ipynb]</a></li>
-    <li> GMM <a href="https://conghanzheng.github.io/assets/TA/EconometricsII_2024/TA3.m">[TA3.m]</a></li>
+    <li> Numerical Optimization <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/EconometricsII_2024/TA1.m">[TA1.m]</a></li>
+    <li> MLE <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/EconometricsII_2024/TA2.m">[TA2.m]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/EconometricsII_2024/TA2.ipynb">[TA2.ipynb]</a></li>
+    <li> GMM <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/EconometricsII_2024/TA3.m">[TA3.m]</a></li>
   </ul>
 </div>
 
 Development Economics (Spring 2024; Lecturer: [Laurence Go](https://www.laurencego.com)) [<button data-toggle="collapse" data-target="#dev" class="collapsible custom-collapsible"></button>]
 <div id="dev" class="collapse">
   <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Dev_Econ_2024/Syllabus.pdf"><a> [Syllabus] </a></a> <br>
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <span>&nbsp;</span>
 </div>
 
 Applied Industrial Organization (Spring 2023, Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible custom-collapsible"></button>]
