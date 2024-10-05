@@ -69,7 +69,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
    <i>Schedule of TA Sessions</i> : <a>We will have a total of five sessions, each session 1, 2, 4, 5 will cover one of the following four topics, session 3 (October 04) will cover the solutions to PS1 and PS2.</a>
    <span style="display: block; margin-top: 10px;"></span>
 
-   <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post a solution code script and a pdf. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
+   <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post solution code scripts and a slides. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
    <span style="display: block; margin-top: 10px;"></span>
 
    <ul>
@@ -119,6 +119,11 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
 
 Microeconometrics, Part II (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc2" class="collapsible custom-collapsible"></button>]
 <div id="mc2" class="collapse">
+    <i>Schedule of TA Sessions</i> : <a>We will have a total of four sessions, each session will cover one of the following four topics..</a>
+    <span style="display: block; margin-top: 10px;"></span>
+    <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post solution code scripts. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
+    <span style="display: block; margin-top: 10px;"></span>
+
    <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><a>Treatment Effects: RCT, Matching, and IV</a></li>
@@ -142,15 +147,14 @@ Development Economics (Spring 2024; Lecturer: [Laurence Go](https://www.laurence
 <div id="dev" class="collapse">
   <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/Dev_Econ_2024/Syllabus.pdf">[Syllabus]</a></li>
-    <li> Research Proposal Tutorial</li>
-    <li> Literature Reading on Topic: Saving, Education, Political Econ</li>
   </ul>
 </div>
 
 Applied Industrial Organization (Spring 2023, Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible custom-collapsible"></button>]
 <div id="aio" class="collapse">
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Applied_IO_2023/Syllabus.pdf">[Syllabus]</a> <br>
-  <span style="display: block; margin-top: 10px;"></span>
+    <ul>
+        <li><a href="https://conghanzheng.github.io/assets/TA/Applied_IO_2023/Syllabus.pdf">[Syllabus]</a></li>
+    </ul>
   <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://github.com/conghanzheng/Applied_IO_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
   </a>
