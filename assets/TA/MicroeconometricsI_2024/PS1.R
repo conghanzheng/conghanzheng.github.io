@@ -247,7 +247,7 @@ WG21 <- plm(as.formula(paste("healthy ~", paste(c(agecat_vars, children_vars, bi
 ##' 2. Some regressors (child dummies, birth dummies) are omitted in favor of speed.
 ##' 3. The following code takes 8 mins on Mac OS with the M1 chip.
 
-ABond01 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1),
+ABondL1 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1),
                 data = data2, 
                 index = c('id','year'),
                 effect = "individual", 
@@ -256,7 +256,7 @@ ABond01 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + age
                 collapse = TRUE, # nodiffsargan, collapse instruments
 )
 
-ABond02 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1:4),
+ABondL4 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1:4),
                 data = data2, 
                 index = c('id','year'),
                 effect = "individual", 
@@ -265,7 +265,7 @@ ABond02 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + age
                 collapse = TRUE, # nodiffsargan, collapse instruments
 )
 
-ABover <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1),
+ABoverL1 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1),
                 data = data2, 
                 index = c('id','year'),
                 effect = "individual", 
@@ -275,7 +275,7 @@ ABover <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agec
 )
 
 ## Table
-stargazer(ABond01, ABond02, ABover,
+stargazer(ABondL1, ABondL4, ABoverL1,
           type = "text",
           dep.var.caption = "Health Status",
           dep.var.labels = c(""),
@@ -294,7 +294,7 @@ stargazer(ABond01, ABond02, ABover,
           keep.stat = c("n","rsq"),
           digits = 3,
           model.numbers = FALSE,
-          column.labels = c("ABond 1L", "ABond 4L", "ABover 1L")
+          column.labels = c("ABond 1L", "ABond 4L", "ABoverL1 1L")
           )
 
 ## 2.3 Marriage Health Gap Plot
@@ -320,21 +320,21 @@ extract_coef <- function(model, pattern) {
 coef_wg <- extract_coef(WG21, "agecat.*married") %>%
   mutate(age = as.numeric(gsub("agecat(\\d{2}).*", "\\1", term))) 
 
-coef_abond <- extract_coef(ABond01, "agecat.*married") %>%
+coef_abond <- extract_coef(ABondL1, "agecat.*married") %>%
   mutate(age = as.numeric(gsub("agecat(\\d{2}).*", "\\1", term)))
 
-coef_abover <- extract_coef(ABover, "agecat.*married") %>%
+coef_ABoverL1 <- extract_coef(ABoverL1, "agecat.*married") %>%
   mutate(age = as.numeric(gsub("agecat(\\d{2}).*", "\\1", term))) %>%
   filter(age > 22)
 
 ## Set common y-axis limits based on the overall range of the data
 y_min <- min(c(coef_wg$estimate - coef_wg$std.error,
                coef_abond$estimate - coef_abond$std.error,
-               coef_abover$estimate - coef_abover$std.error))
+               coef_ABoverL1$estimate - coef_ABoverL1$std.error))
 
 y_max <- max(c(coef_wg$estimate + coef_wg$std.error,
                coef_abond$estimate + coef_abond$std.error,
-               coef_abover$estimate + coef_abover$std.error))
+               coef_ABoverL1$estimate + coef_ABoverL1$std.error))
 
 y_limits <- c(y_min, y_max)  # Set dynamic y-axis limits
 
@@ -349,7 +349,7 @@ plot_wg <- ggplot(coef_wg, aes(x = age, y = estimate)) +
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "A. Fixed Effects") +
   theme_minimal()
 
-## Plot for ABond01
+## Plot for ABondL1
 plot_abond <- ggplot(coef_abond, aes(x = age, y = estimate)) +
   geom_line(size = 1.5) +  # Main line for the estimate
   geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
@@ -360,19 +360,19 @@ plot_abond <- ggplot(coef_abond, aes(x = age, y = estimate)) +
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "B. Difference GMM") +
   theme_minimal()
 
-## Plot for ABover
-plot_abover <- ggplot(coef_abover, aes(x = age, y = estimate)) +
+## Plot for ABoverL1
+plot_ABoverL1 <- ggplot(coef_ABoverL1, aes(x = age, y = estimate)) +
   geom_line(size = 1.5) +  # Main line for the estimate
   geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
   geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
   geom_hline(yintercept = 0, color = "red") +
-  scale_x_continuous(breaks = coef_abover$age) + # Set x-axis breaks to Age
+  scale_x_continuous(breaks = coef_ABoverL1$age) + # Set x-axis breaks to Age
   scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
   labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "C. System GMM") +
   theme_minimal()
 
-plot_2_3 <- plot_wg + plot_abond + plot_abover + plot_layout(nrow = 1)
-plot_2_3
+plot_mhgap <- plot_wg + plot_abond + plot_ABoverL1 + plot_layout(nrow = 1)
+plot_mhgap
 
 ##' Note: You can also save the combined plot in a plot object, and then use the 
 ##' "ggsave" command to save it to the local disk.
@@ -380,7 +380,7 @@ plot_2_3
 ## Closing ----
 
 ## Output
-save(list = c('RE','FE','OLS','FE2_wage','FE2_wage_nc','FE2_hour','FE2_hour_nc','ABond01','ABond02','ABover','plot_2_3'), file = file.path(scriptpath,'PS1_results.RData')) ## or you can save the whole image
+save(list = c('RE','FE','OLS','FE2_wage','FE2_wage_nc','FE2_hour','FE2_hour_nc','ABondL1','ABondL4','ABoverL1','plot_mhgap'), file = file.path(scriptpath,'PS1_results.RData')) ## or you can save the whole image
 
 ## Ends timer
 time_end <- Sys.time()
