@@ -66,7 +66,7 @@ nav_order: 2
 
 Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
-   <i>Schedule of TA Sessions</i> : <a>We will have a total of five sessions, each session 1, 2, 4, 5 will cover one of the following four topics, session 3 (October 4th) will cover the solutions to PS1 and PS2.</a>
+   <i>Schedule of TA Sessions</i> : <a>We will have a total of five sessions, each session 1, 2, 4, 5 will cover one of the following four topics, session 3 (October 04) will cover the solutions to PS1 and PS2.</a>
    <span style="display: block; margin-top: 10px;"></span>
 
    <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post a solution code script and a pdf. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
@@ -107,12 +107,12 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/a119154c83ccd2188c553a66bf5ab0aa08018e9e/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a></li>
             <li>Solution: <i>will be posted on Oct 16</i></li>
         </ul>
-        <li>TA Session (Oct 11)</li>
+        <li>TA Session (Oct 11): <i>materials will be posted on Oct 10</i></li>
     </ul>
     <li><a>Duration Analysis</a></li>
     <ul>
         <li>Problem Set 4 (Due Nov 01): <i>will be posted on Oct 10</i></li>
-        <li>TA Session (Oct 16)</li>
+        <li>TA Session (Oct 16): <i>materials will be posted on Oct 15</i></li>
     </ul>
   </ul>
 </div>
