@@ -92,7 +92,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
         <li>Problem Set 2 (Due Oct 04)</li>
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2.pdf">[PS2.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/TA/MicroeconometricsI_2024/PS2.dta">[PS2.dta]</a></li>
-            <li>Solution: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_solution.pdf">[PS2_solution.pdf]</a></li>
+            <li>Solution: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS2_solution.pdf">[PS2_solution.pdf]</a>, Code: <i>will be posted on Oct 08</i></li>
         </ul>
         <li>TA Session (Sep 27)</li>
         <ul>
@@ -105,13 +105,13 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
         <li>Problem Set 3 (Due Oct 16)</li>
         <ul>
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/a119154c83ccd2188c553a66bf5ab0aa08018e9e/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a></li>
-            <li>Solution (Oct 16)</li>
+            <li>Solution: <i>will be posted on Oct 16</i></li>
         </ul>
         <li>TA Session (Oct 11)</li>
     </ul>
     <li><a>Duration Analysis</a></li>
     <ul>
-        <li>Problem Set 4 (Due Nov 01)</li>
+        <li>Problem Set 4 (Due Nov 01): <i>will be posted on Oct 10</i></li>
         <li>TA Session (Oct 16)</li>
     </ul>
   </ul>
