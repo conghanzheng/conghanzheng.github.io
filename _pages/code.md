@@ -67,6 +67,7 @@ Below are some of the scripts I’ve developed for collecting online labor data 
     <li><a>Automated Data Collection</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/5d2547cf7402bba5b8c6fd3c8a1c3e16d61a7318/assets/R/eurostatB.R">[R code]</a></li>
     <li><a>Applied Microeconometrics</a></li> 
         <ul>
+            <li><a>Panel Data:</a>: <a>Static and Dynamic</a> <a href="">[R Code]</a> </li>
             <li><a>Demand Estimation</a></li>
                 <ul>
                     <li><a>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000</a> <a href="https://conghanzheng.github.io/Applied_IO_TA/BLP.html">[Python Notebook]</a></li>
