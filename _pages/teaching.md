@@ -140,13 +140,16 @@ Econometrics II (Spring 2024, Lecturer: [Michael Creel](http://pareto.uab.es/mcr
 
 Development Economics (Spring 2024; Lecturer: [Laurence Go](https://www.laurencego.com)) [<button data-toggle="collapse" data-target="#dev" class="collapsible custom-collapsible"></button>]
 <div id="dev" class="collapse">
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Dev_Econ_2024/Syllabus.pdf"><a> [Syllabus] </a></a> <br>
-  <span>&nbsp;</span>
+  <ul>
+    <li><a href="https://conghanzheng.github.io/assets/TA/Dev_Econ_2024/Syllabus.pdf">[Syllabus]</a></li>
+    <li> Research Proposal Tutorial</li>
+    <li> Literature Reading on Topic: Saving, Education, Political Econ</li>
+  </ul>
 </div>
 
 Applied Industrial Organization (Spring 2023, Lecturer: [Susanna Esteban](https://www.cemfi.es/people/faculty/profile.asp?u=esteban)) [<button data-toggle="collapse" data-target="#aio" class="collapsible custom-collapsible"></button>]
 <div id="aio" class="collapse">
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Applied_IO_2023/Syllabus.pdf"><a> [Syllabus] </a></a> <br>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://conghanzheng.github.io/assets/TA/Applied_IO_2023/Syllabus.pdf">[Syllabus]</a> <br>
   <span style="display: block; margin-top: 10px;"></span>
   <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="https://github.com/conghanzheng/Applied_IO_TA">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=conghanzheng&repo=Applied_IO_TA&theme=transparent" alt="Readme Card">
