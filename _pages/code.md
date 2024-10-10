@@ -68,6 +68,7 @@ Below are some of the scripts I’ve developed for collecting online labor data 
     <li><a>Applied Microeconometrics</a></li> 
         <ul>
             <li><a>Panel Data</a>: <a>Static and Dynamic</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS1.R">[R Code]</a> </li>
+            <li><a>Discrete Choice</a>: <a>Binary and Multinomial</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS2.R">[R Code]</a> </li>
             <li><a>Demand Estimation</a></li>
                 <ul>
                     <li><a>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000</a> <a href="https://conghanzheng.github.io/Applied_IO_TA/BLP.html">[Python Notebook]</a></li>
