@@ -115,7 +115,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
     </ul>
     <li><a>Duration Analysis</a></li>
     <ul>
-        <li>Problem Set 4 (Due Nov 01): <i>will be posted on Oct 10</i>; <i>Feedback on your solutions will be sent out around Nov 05.</i></li>
+        <li>Problem Set 4 (Due Nov 01): <i>will be posted on Oct 15</i>; <i>Feedback on your solutions will be sent out around Nov 05.</i></li>
         <li>TA Session (Oct 16): <i>materials will be posted on Oct 15</i></li>
     </ul>
   </ul>
