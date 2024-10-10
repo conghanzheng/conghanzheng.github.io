@@ -107,7 +107,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
             <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a></li>
             <li>Solution: <i>will be posted on Oct 16</i></li>
         </ul>
-        <li>TA Session (Oct 11): <i>materials will be posted on Oct 10</i></li>
+        <li>TA Session (Oct 11)</li>
         <ul>
             <li>Slides:  <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA3.pdf">[TA3.pdf]</a></li>
             <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA3.do">[TA3.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA3.dta">[TA3.dta]</a></li>
@@ -115,7 +115,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
     </ul>
     <li><a>Duration Analysis</a></li>
     <ul>
-        <li>Problem Set 4 (Due Nov 01): <i>will be posted on Oct 10</i></li>
+        <li>Problem Set 4 (Due Nov 01): <i>will be posted on Oct 10</i>; <i>Feedback on your solutions will be sent out around Nov 05.</i></li>
         <li>TA Session (Oct 16): <i>materials will be posted on Oct 15</i></li>
     </ul>
   </ul>
