@@ -11,11 +11,11 @@ description:
 #  sidebar: right
 ---
 
-Download <a href="https://conghanzheng.github.io/assets/pdf/resume.pdf">[pdf]</a>
+Download <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">[pdf]</a>
 
 <div style="width: 100%; height: 100vh; max-height: 100vh;">
-  <object data="https://conghanzheng.github.io/assets/pdf/resume.pdf" type="application/pdf" style="width: 100%; height: 100%; object-fit: contain;">
-    <p>Your browser does not support embedded PDFs. You can <a href="https://conghanzheng.github.io/assets/pdf/resume.pdf">download the PDF file</a> instead.</p>
+  <object data="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf" type="application/pdf" style="width: 100%; height: 100%; object-fit: contain;">
+    <p>Your browser does not support embedded PDFs. You can <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">download the PDF file</a> instead.</p>
   </object>
 </div>
 

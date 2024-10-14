@@ -67,7 +67,7 @@ nav_order: 1
 
 <span style="display: block; margin-top: 20px;"></span>
 
-"Parental Rural-Urban Migration and Child Education", 2024
+[<u>"Parental Rural-Urban Migration and Child Education"</u>](https://conghanzheng.github.io/assets/pdf/Conghan_JMPaper2024.pdf), 2024
 
 <span style="display: block; margin-top: 30px;"></span>
 
@@ -75,7 +75,7 @@ nav_order: 1
 
 <span style="display: block; margin-top: 20px;"></span>
 
-[<u>"Migration Outcome Gap: The Cost of Leaving Children Behind"</u>](https://conghanzheng.github.io/assets/pdf/ENTER_JBR_paper.pdf), 2023 <br>
+[<u>"Migration Outcome Gap: The Cost of Leaving Children Behind"</u>](https://conghanzheng.github.io/assets/pdf/Conghan_ENTER_JBR_Paper.pdf), 2023 <br>
 <span>&nbsp;</span> Abstract [<button data-toggle="collapse" data-target="#enterjbr2023" class="collapsible custom-collapsible"></button>]
 <div id="enterjbr2023" class="collapse">
     <p>
