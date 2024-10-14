@@ -7,7 +7,7 @@ cls, clear all
 set seed 13
 cap set more off
 
-cd "..."
+cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA3"
 
 /* Contents
    
@@ -23,7 +23,7 @@ cd "..."
    interested in studying ambulatory expenditure ('ambexp') 
 */
 
-use "TA4.dta", clear
+use "TA3.dta", clear
 
 
 ** PART I: Censoring -----------------------------------------------------------
@@ -216,7 +216,7 @@ qui probit dy age female educ blhisp totchr ins
 predict dyhat, pr
 qui reg lny age female educ blhisp totchr ins if dy==1
 predict xbpos, xb
-	
+
 ** Fitted log values from the second part of the two-part model
 gen yhatpos = exp(xbpos+0.5*e(rmse)^2)
 	
