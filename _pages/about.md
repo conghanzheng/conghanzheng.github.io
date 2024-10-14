@@ -8,7 +8,7 @@ subtitle: > # <p> (pronounced: <em>tsong-hahn</em>) </p>
 
 profile:
   align: right
-  image: conghan2022.jpg
+  image: conghan2024.jpg
   image_circular: false # crops the image to make it circular
   more_info:
 
