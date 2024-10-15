@@ -7,7 +7,7 @@ cls, clear all
 set seed 13
 cap set more off
 
-cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA3"
+cd "..."
 
 /* Contents
    
@@ -24,7 +24,6 @@ cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2
 */
 
 use "TA3.dta", clear
-
 
 ** PART I: Censoring -----------------------------------------------------------
 
@@ -77,12 +76,10 @@ mfx compute, predict(ystar(0, .))
 * estout ME, cells("b p") margin style(fixed)
 * esttab ME, cells("b") margin
 
-	
 ** Marginal impact on probabilities
 ** (275, 1913) = (the 25th percentile, the 75th percentile)
 quietly tobit ambexp $xlist , ll(0) vce(robust)
 mfx compute, predict(pr(113, 1618)) 
-
 
 ** I.2 Tobit with log-normal data
 	
@@ -160,10 +157,11 @@ tobit lny $xlist, ll(gamma01) ul(upper) vce(robust)
 
 scalar gamma = - 0.0000001 // lower censoring point
 qui tobit lny $xlist, ll(gamma) vce(robust)
+
 predict xb, xb // Linear prediction x'beta
 matrix btobit = e(b) 
-/* Estimated standard error of the regression, e(df_m): model degrees of freedom, btobit[1,e(df_m)+2]: var(e.ambexp)*/
-scalar sigma = sqrt(btobit[1,e(df_m)+2])
+/* Estimated standard error of the regression, btobit[1,last]: var(e.ambexp) */
+scalar sigma = sqrt(btobit[1,colsof(btobit)])
 gen threshold = (gamma-xb)/sigma
 	
 ** Predict y_hat (notice that our dependent variable is not in logs)
