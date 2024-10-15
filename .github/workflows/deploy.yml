@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "**.bib"
       - "**.html"
       - "**.js"
       - "**.liquid"
@@ -33,6 +34,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "**.bib"
       - "**.html"
       - "**.js"
       - "**.liquid"
@@ -60,6 +62,7 @@ permissions:
 
 jobs:
   deploy:
+    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -76,19 +79,11 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
-      - name: Install Dependencies 🛠️
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
       - name: Install and Build 🔧
         run: |
-          python3 -m venv venv
-          source venv/bin/activate
-          pip install --upgrade pip
-          pip install lxml_html_clean
+          pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
-          bundle install
-          bundle exec jekyll build --trace
+          bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
