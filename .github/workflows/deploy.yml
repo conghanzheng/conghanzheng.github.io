@@ -60,7 +60,6 @@ permissions:
 
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -77,13 +76,12 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
-      - name: Set up Python environment
-        run: |
-          python3 -m venv .venv
-          source .venv/bin/activate
       - name: Install and Build 🔧
         run: |
-          pip3 install --upgrade jupyter
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install --upgrade jupyter
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
