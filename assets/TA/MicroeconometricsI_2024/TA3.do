@@ -7,7 +7,7 @@ cls, clear all
 set seed 13
 cap set more off
 
-cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA3"
+cd "..."
 
 /* Contents
    
@@ -24,7 +24,6 @@ cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2
 */
 
 use "TA3.dta", clear
-
 
 ** PART I: Censoring -----------------------------------------------------------
 
@@ -77,12 +76,10 @@ mfx compute, predict(ystar(0, .))
 * estout ME, cells("b p") margin style(fixed)
 * esttab ME, cells("b") margin
 
-	
 ** Marginal impact on probabilities
 ** (275, 1913) = (the 25th percentile, the 75th percentile)
 quietly tobit ambexp $xlist , ll(0) vce(robust)
 mfx compute, predict(pr(113, 1618)) 
-
 
 ** I.2 Tobit with log-normal data
 	
@@ -158,24 +155,23 @@ tobit lny $xlist, ll(gamma01) ul(upper) vce(robust)
    predictions in levels, we need to do some transformations.
 */
 
-qui tobit ambexp age female educ blhisp totchr ins, ll(0)
-** Censoring point
-scalar gamma = 0
-** Estimates
-matrix btobit = e(b)
-/* Estimated standard error of the regression, e(df_m): model degrees of freedom,
-   btobit[1,e(df_m)+2]: var(e.ambexp)*/
-scalar sigma = sqrt(btobit[1,e(df_m)+2])
-** Linear prediction
-predict xb
-** Standardized censoring point
+scalar gamma = - 0.0000001 // lower censoring point
+qui tobit lny $xlist, ll(gamma) vce(robust)
+
+predict xb, xb // Linear prediction x'beta
+matrix btobit = e(b) 
+/* Estimated standard error of the regression, btobit[1,last]: var(e.ambexp) */
+scalar sigma = sqrt(btobit[1,colsof(btobit)])
 gen threshold = (gamma-xb)/sigma
 	
 ** Predict y_hat (notice that our dependent variable is not in logs)
-gen yhat = exp(xb + 0.5*sigma^2)*(1-normal((gamma-xb-sigma^2)/sigma))
-gen ytrunchat = yhat/(1 - normal(threshold)) if dy == 1
+gen yhat = exp(xb + 0.5*sigma^2)*(1-normal((gamma-xb-sigma^2)/sigma)) // censored mean, E(y)
+gen ytrunchat = yhat/(1 - normal(threshold)) if dy == 1 // truncated mean, E(y|y>0)
+
+summarize y yhat ytrunchat
 summarize y yhat ytrunchat if dy == 1
 
+// Mean expenditure is overpredicted in both cases and more so in the censored case.
 
 ** I.3 Two-part model
 
@@ -218,13 +214,13 @@ qui reg lny age female educ blhisp totchr ins if dy==1
 predict xbpos, xb
 
 ** Fitted log values from the second part of the two-part model
-gen yhatpos = exp(xbpos+0.5*e(rmse)^2)
-	
+gen yhatpos = exp(xbpos+0.5*e(rmse)^2) // E(y2|y2>0), truncated mean
+
 /* Estimate the unconditional values by multiplying by the fitted probability of
    the positive expenditure from the probit regression.
 */
-gen yhat2step = dyhat*yhatpos
-summarize y yhat2step
+gen yhat2step = dyhat*yhatpos // E(y2), censored mean
+summarize y yhat2step yhatpos
 summarize yhatpos if dy==1
 
 ** PART II: TRUNCATION ---------------------------------------------------------
@@ -237,7 +233,6 @@ tobit lny $xlist , ll(gamma01) nolog vce(robust)
 eststo censor_log
 
 esttab truncate_log censor_log, se compress mtitle wide
-
 
 ** PART III: SELECTION ---------------------------------------------------------
 	 
