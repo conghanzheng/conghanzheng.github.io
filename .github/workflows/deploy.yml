@@ -77,6 +77,10 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Set up Python environment
+        run: |
+          python3 -m venv .venv
+          source .venv/bin/activate
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
