@@ -38,7 +38,7 @@ II Discrete Duration
 
 cls, clear all
 	
-cd "..."
+cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA4"
 	
 ** Packages to be installed	
 
@@ -354,8 +354,8 @@ global x female part_time lag stm married
 ** Cox PH with Gamma-distributed RE
 
 stcox $x, nohr shared(id)
-predict lnnu, effects // log(nu)
-sum lnnu // very small in magnitude and not varying much
+predict nu, effects // nu = log(alpha), the RE
+sum nu // very small in magnitude and not varying much
 
 ** Weibull model with frailty of inverse-Gaussian form
 streg, dist(weibull) frailty(invgau) vce(robust) nolog nohr
