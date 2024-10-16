@@ -24,3 +24,16 @@ I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona S
 **Research Interests**: Applied Microeconomics; Labor; Migration; Family Economics; Economic Geography
 
 I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](https://www.inesmachostadler.com).
+
+<!-- Add logos below -->
+<p align="center">
+  <a href="https://www.uab.cat">
+    <img src="/assets/img/UAB_Logo.png" width="10%" alt="UAB Logo">
+  </a>
+  <a href="https://www.uabidea.eu/home">
+    <img src="/assets/img/IDEA_Logo.png" width="10%" alt="IDEA Logo">
+  </a>
+  <a href="https://bse.eu">
+    <img src="/assets/img/BSE_Logo.jpg" width="10%" alt="BSE Logo">
+  </a>
+</p>
