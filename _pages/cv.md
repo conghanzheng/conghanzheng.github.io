@@ -14,25 +14,24 @@ description:
 Download <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">[pdf]</a>
 
 <div style="width: 100%; height: 100vh; max-height: 100vh;">
-  <iframe src="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf" type="application/pdf" style="width: 100%; height: 100%; border: none;">
+  <object data="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf" type="application/pdf" style="width: 100%; height: 100%; object-fit: contain;">
     <p>Your browser does not support embedded PDFs. You can <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">download the PDF file</a> instead.</p>
-  </iframe>
+  </object>
 </div>
 
 <style>
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    overflow: auto; /* Enable scrolling inside the iframe */
+  object {
+    overflow: auto; /* Make the PDF scrollable */
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent text stretching */
   }
 
-  /* For mobile devices */
   @media only screen and (max-width: 768px) {
-    iframe {
-      height: 100vh; /* Ensure full viewport height on mobile */
+    object {
+      height: auto; /* Adjust height for mobile devices while keeping aspect ratio */
+      width: 100%; /* Full width on mobile */
     }
   }
 </style>
-
-<span style="display: block; margin-top: 100px;"></span>
