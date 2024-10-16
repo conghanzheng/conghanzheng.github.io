@@ -13,22 +13,21 @@ I Continuous Duration
 	
 	I.2 Semi-parametric Approach
 		I.2.1 Cox's Proportional Hazard Model
-		I.2.2 Stratified analysis (optional)
-		I.2.3 Unobserved heterogeneity
-		I.2.4 Model diagnostics
+		I.2.2 Model diagnostics
+		I.2.3 Stratified analysis (optional)
 		
 	I.3 Parametric Approach
-	
-	I.4 Postestimation
+
+	I.4 Unobserved heterogeneity
 	
 	
 II Discrete Duration  
 
-	- Logit
+	II.1 Logit
 
-	- Complementary Log Log 
+	II.2 Complementary Log Log 
 
-	- Unobserved Heterogeneity
+	II.3 Unobserved Heterogeneity
 	
 */
 
@@ -39,7 +38,7 @@ II Discrete Duration
 
 cls, clear all
 	
-cd "..."
+cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA4"
 	
 ** Packages to be installed	
 
@@ -79,7 +78,7 @@ describe
 	
 	enter() specifies the time when new individuals enter the study.
 */
-stset duration, failure(event) id(id)
+stset duration, failure(event=1) id(id)
 list id duration event _t0 _t _d _st if id<=20, noobs sepby(id)
 
 ** Describe duration data
@@ -113,7 +112,6 @@ sts graph, by(female) survival ci risktable legend(pos(8) col(1) ring(0))
 ** b) Hazard function estimation
 sts graph, hazard kernel(gaussian) width(4 5)
 * graph export "ta4_np3.png", as(png) replace
-		
 	
 ** I.2 Semi-parametric Approach ----
 
@@ -186,7 +184,6 @@ stcurve, hazard at1(part_time=0) at2(part_time=1)
 stcurve, hazard at1(part_time=0) at2(part_time=1) kernel(gaussian) width(4)
 * graph export "ta4_base7.png", as(png) replace
 
-
 /* Difference between commands 'sts graph' and 'stvurve': 
 
 Command sts graph, hazard by() plots the the non-parametric estimates (the product-limit), and the by() option means the estimations are done on two subsamples.
@@ -194,8 +191,42 @@ Command sts graph, hazard by() plots the the non-parametric estimates (the produ
 Command stcurve is used after command stcox, streg, etc.  Options at1(), at2() means the semi-parametrically estimated function is plotted for different values of the covariate.
 */
 
-	
-/* I.2.2 Stratified analysis (optional) ----
+/* I.2.2 Model diagnostics: 
+
+    Test the proportional hazard assumption
+	  
+	Link for Manual: 
+	https://www.stata.com/manuals13/ststcoxph-assumptiontests.pdf
+*/
+
+** College dropout data
+use "TA4.dta", clear
+stset duration, failure(event) id(id)
+gen married = (marriage != 99)
+global x female grade part_time lag stm married
+
+stcox $x , vce(robust)
+		
+** 1. Statistical test: based on scaled Schoenfeld residuals 
+estat phtest, detail
+		
+** 2. Graphical test 1: Log–log plot
+stphplot, by(part_time)
+*graph export "ta4_log_log_prt.png", as(png) replace
+stphplot, by(female)
+*graph export "ta4_log_log_fml.png", as(png) replace
+		
+/* 3. Graphical test 2：
+
+   The fitted survivor function from Cox regression and the (nonregression) 
+   Kaplan-Meier estimate of the survivor function should be similar if PH holds.
+*/
+stcoxkm, by(part_time) // separate legend(cols(1)) 
+*graph export "ta4_stcoxkm_prt.png", as(png) replace
+stcoxkm, by(female) // separate legend(cols(1)) 
+*graph export "ta4_stcoxkm_fml.png", as(png) replace
+
+/* I.2.3 Stratified analysis (optional) ----
 
    Assumption: The baseline hazard h{0i}(t) can be group-specific, while the 
    coefficients from the exp(x*beta) are the same for all individuals. 
@@ -232,85 +263,6 @@ gen H1 = H if female==1
 line H0 H1 _t, c(J J) sort legend(label(1 "Men") label(2 "Women"))
 * graph export "ta4_strata.png", as(png) replace
 
-** I.2.3 Unobserved heterogeneity ----
-
-use "TA4.dta", clear
-stset duration, failure(event) id(id)
-gen married = (marriage != 99)
-global x female part_time lag stm married
-
-** Different approach to explore the group level heterogeneity 
-** (group variable: grade)
-
-** 1. Using subsamples
-qui stcox $x grade
-stcurve, hazard at1(grade=1) at2(grade=2) at3(grade=3) at4(grade=4) at5(grade=5)
-* graph export "ta4_hetero_hazard.png", as(png) replace
-
-** 2. Clustered standard errors 
-stcox $x, nohr vce(cluster grade) nolog
-eststo cluster_cox
-
-** 3. Random effects, option 'shared()' specifies the frailty variable ()
-stcox $x, nohr shared(grade) nolog
-eststo re_cox
-
-** 4. Fixed effects
-stcox $x i.grade, nohr nolog
-eststo fe_cox
-
-esttab cluster_cox re_cox fe_cox, se compress nogap mtitle stat(ll aic bic N)
-
-/* In baseline survivor estimates, regressors are assigned to zero.
-   
-   h(t) = h0*e^0 = h0
-   
-   Variable stem never goes to zero in data, so we "recenter" it.
-*/
-gen stm6 = stm - 6
-global x female part_time lag stm6 married
-stcox $x, nohr shared(grade) nolog
-predict nu, effects
-predict S0, basesurv
-qui sum nu
-gen S_low = S0^exp(r(min)) // Lowest frailty
-gen S_high = S0^exp(r(max)) // Highest frailty
-line S_low S0 S_high _t if _t<200, c(J J J) sort ytitle("Survivor function")
-graph export "ta4_share_surv.png", as(png) replace
-
-
-/* I.2.4 Model diagnostics: test the proportional hazard assumption
-	  
-	  Link for Manual: 
-	  https://www.stata.com/manuals13/ststcoxph-assumptiontests.pdf
-*/
-
-** College dropout data
-use "TA4.dta", clear
-stset duration, failure(event) id(id)
-gen married = (marriage != 99)
-global x female grade part_time lag stm married
-
-stcox $x , vce(robust)
-
-** Post-estimation
-		
-** 1. Statistical test: based on scaled Schoenfeld residuals 
-estat phtest, detail
-		
-** 2. Graphical test 1: Log–log plot
-stphplot, by(female)	
-* graph export "ta4_log_log.png", as(png) replace
-		
-/* 3. Graphical test 2：
-
-   The fitted survivor function from Cox regression and the (nonregression) 
-   Kaplan-Meier estimate of the survivor function should be similar if PH holds.
-*/
-stcoxkm, by(female) separate legend(cols(1)) 
-* graph export "ta4_stcoxkm.png", as(png) replace
-
-
 ** I.3 Parametric Approach ----
 
 /* The 'streg' commands allows for a parametric hazard function: exponential, 
@@ -328,11 +280,11 @@ qui stcox $x, vce(robust)
 eststo Cox
 stcurve, hazard saving(hazard_cox, replace)
 
-qui streg $x, dist(exponential) vce(robust)
+qui streg $x, dist(exponential) vce(robust) time
 eststo Exponential
 stcurve, hazard saving(hazard_exponential, replace)
 
-qui streg $x, dist(weibull) vce(robust)
+qui streg $x, dist(weibull) vce(robust) time
 eststo Weibull
 stcurve, hazard saving(hazard_weibull, replace)
 
@@ -351,9 +303,9 @@ esttab Cox Exponential Weibull Loglogit Lognormal, se keep($x _cons) compress no
 sts graph, hazard saving(hazard_nonparametric, replace)
 
 gr combine hazard_nonparametric.gph hazard_cox.gph hazard_exponential.gph hazard_weibull.gph hazard_loglogit.gph hazard_lognormal.gph
-* graph export "ta4_parametric_hazard.png", as(png) replace
+*graph export "ta4_parametric_hazard.png", as(png) replace
 
-** I.4 Postestimation
+** - Postestimation -
 
 use "TA4.dta", clear
 stset duration, failure(event) id(id)
@@ -392,6 +344,23 @@ stcurve, hazard at1(part_time=1 grade=1) at2(part_time=1 grade=2) ///
 				at5(part_time=1 grade=5)
 stcurve, survival at(part_time=0 grade=5)
 
+** I.4 Unobserved heterogeneity ----
+
+use "TA4.dta", clear
+stset duration, failure(event) id(id)
+gen married = (marriage != 99)
+global x female part_time lag stm married
+
+** Weibull model, with frailty of inverse-Gaussian form
+streg, dist(weibull) frailty(invgau) vce(robust) nolog nohr
+
+** Visualize the effect of the frailty on the fitted hazard rate
+
+stcurve, hazard alpha1 title("Conditional on frailty")
+*graph export "ta4_frailty1.png", as(png) replace
+stcurve, hazard unconditional title("Unconditional on frailty")
+*graph export "ta4_frailty0.png", as(png) replace
+
 ** PART II: DISCRETE DURATION -------------------------------------------------
 	
 use "TA4.dta", clear
@@ -426,12 +395,12 @@ eststo cloglog
 **The predicted probability is the hazard 
 predict hazard, pr			
 	
-** Generalized linear model
+** Alternative: Generalized linear model (cloglog family)
 qui glm y i.quarter $x, family(binomial) link(cloglog) nocons vce(robust)
 eststo glm
 
 ** Comparison 
-esttab logit cloglog glm, se mtitle compress nogap keep($x) stat(ll aic bic N)
+esttab logit cloglog, se mtitle compress nogap keep($x) stat(ll aic bic N)
 	
 ** Unobserved individual heterogeneity (optional)
 	
