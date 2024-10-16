@@ -224,7 +224,14 @@ ul.task-list input[type="checkbox"] {
         display: block;
       }
     }
+  }
+}
 
+/* For small screens (phones) */
+@media (max-width: 576px) {
+  .profile {
+    width: 100%; /* Ensures full width on mobile */
+    
     .profile-image {
       max-width: 100px; /* Makes the image smaller only on phones */
       height: auto; /* Keeps the aspect ratio */
