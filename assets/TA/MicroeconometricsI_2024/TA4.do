@@ -256,7 +256,7 @@ estimates store strata
 estimates table original by_gender males females strata, star stats(N)
 		
 ** Cumulative hazard
-drop H0 H1
+cap drop H0 H1
 predict H, basech
 gen H0 = H if female==0
 gen H1 = H if female==1
@@ -278,29 +278,29 @@ global x female grade part_time lag stm married
 
 qui stcox $x, vce(robust)
 eststo Cox
-stcurve, hazard saving(hazard_cox, replace)
+stcurve, hazard title("Cox PH") saving(hazard_cox, replace)
 
 qui streg $x, dist(exponential) vce(robust) time
 eststo Exponential
-stcurve, hazard saving(hazard_exponential, replace)
+stcurve, hazard title("Exponential") saving(hazard_exponential, replace)
 
 qui streg $x, dist(weibull) vce(robust) time
 eststo Weibull
-stcurve, hazard saving(hazard_weibull, replace)
+stcurve, hazard title("Weibull") saving(hazard_weibull, replace)
 
 qui streg $x, dist(loglogistic) vce(robust)
 eststo Loglogit
-stcurve, hazard saving(hazard_loglogit, replace)
+stcurve, hazard title("Loglogistic") saving(hazard_loglogit, replace)
 
 qui streg $x, dist(lognormal) vce(robust)
 eststo Lognormal
-stcurve, hazard saving(hazard_lognormal, replace)
+stcurve, hazard title("Lognormal") saving(hazard_lognormal, replace)
 
 esttab Cox Exponential Weibull Loglogit Lognormal, se keep($x _cons) compress nogap mtitle stat(ll aic bic N)
 
 ** Fitted hazards (evaluated at the mean of the regressors)
 
-sts graph, hazard saving(hazard_nonparametric, replace)
+sts graph, hazard title("Smoothed Kaplan-Meier") saving(hazard_nonparametric, replace)
 
 gr combine hazard_nonparametric.gph hazard_cox.gph hazard_exponential.gph hazard_weibull.gph hazard_loglogit.gph hazard_lognormal.gph
 *graph export "ta4_parametric_hazard.png", as(png) replace
