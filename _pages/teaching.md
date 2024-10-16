@@ -122,7 +122,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
             </ul>
         <li>TA Session (Oct 16):</li>
             <ul>
-                <li>Slides:</li>
+                <li>Slides:  <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA4.pdf">[TA4.pdf]</a></li>
                 <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA4.do">[TA4.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA4.dta">[TA4.dta]</a></li>
             </ul>
     </ul>
