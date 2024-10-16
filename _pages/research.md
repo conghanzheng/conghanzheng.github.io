@@ -7,10 +7,6 @@ nav: true
 nav_order: 1
 ---
 
-#testing div {
-  margin-left: 10px; /*or whatever indentation size you want*/
-}
-
 <br>
 
 #### Job Market Paper
