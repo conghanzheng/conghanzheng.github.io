@@ -38,7 +38,7 @@ II Discrete Duration
 
 cls, clear all
 	
-cd "..."
+cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA4"
 	
 ** Packages to be installed	
 
@@ -351,7 +351,13 @@ stset duration, failure(event) id(id)
 gen married = (marriage != 99)
 global x female part_time lag stm married
 
-** Weibull model, with frailty of inverse-Gaussian form
+** Cox PH with Gamma-distributed RE
+
+stcox $x, nohr shared(id)
+predict lnnu, effects // log(nu)
+sum lnnu // very small in magnitude and not varying much
+
+** Weibull model with frailty of inverse-Gaussian form
 streg, dist(weibull) frailty(invgau) vce(robust) nolog nohr
 
 ** Visualize the effect of the frailty on the fitted hazard rate
@@ -360,6 +366,8 @@ stcurve, hazard alpha1 title("Conditional on frailty")
 *graph export "ta4_frailty1.png", as(png) replace
 stcurve, hazard unconditional title("Unconditional on frailty")
 *graph export "ta4_frailty0.png", as(png) replace
+
+** The model with regressors can't converge, so Weibull model may not be a good choice.
 
 ** PART II: DISCRETE DURATION -------------------------------------------------
 	
