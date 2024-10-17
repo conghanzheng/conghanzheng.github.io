@@ -11,33 +11,31 @@ description:
 #  sidebar: right
 ---
 
-Download <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">[pdf]</a>
+<a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">[Link to PDF]</a>
 
-<!-- Use Google's PDF Viewer to enable better mobile behavior with touch zoom -->
 <div style="width: 100%; height: 100vh; max-height: 100vh;">
-  <iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf" 
-          style="width: 100%; height: 100vh; border: none; overflow: auto;" allow="fullscreen">
+  <object data="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf" type="application/pdf"
+    style="width: 100%; height: 100%; object-fit: contain;">
     <p>Your browser does not support embedded PDFs. You can <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">download the PDF file</a> instead.</p>
-  </iframe>
+  </object>
 </div>
 
 <style>
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    overflow: auto; /* Enable scrolling inside the iframe */
+  object {
+    overflow: auto; /* Make the PDF scrollable */
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent text stretching */
   }
 
-  /* For mobile devices */
-  @media only screen and (max-width: 768px) {
-    iframe {
-      height: 100vh; /* Ensure full viewport height on mobile */
-      width: 100%; /* Auto fill the width of mobile screen */
+  @media only screen and (max-width: 576px) {
+    object {
+      height: auto; /* Adjust height for mobile devices while keeping aspect ratio */
+      width: 100%; /* Full width on mobile */
       overflow: auto; /* Allow scrollbars */
     }
   }
-</style>
+  </style>
 
-
-<span style="display: block; margin-top: 50px;"></span>
+  <span style="display: block; margin-top: 50px;"></span>
