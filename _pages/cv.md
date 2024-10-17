@@ -13,29 +13,33 @@ description:
 
 <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">[Link to PDF]</a>
 
+<!-- Use Google's PDF Viewer to enable better mobile behavior with touch zoom -->
 <div style="width: 100%; height: 100vh; max-height: 100vh;">
-  <object data="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf" type="application/pdf"
-    style="width: 100%; height: 100%; object-fit: contain;">
+  <iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf" 
+          style="width: 100%; height: 100vh; overflow: auto; object-fit: contain;" allow="fullscreen">
     <p>Your browser does not support embedded PDFs. You can <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">download the PDF file</a> instead.</p>
-  </object>
+  </iframe>
 </div>
 
 <style>
-  object {
-    overflow: auto; /* Make the PDF scrollable */
+  iframe {
     max-width: 100%;
     max-height: 100%;
     height: auto; /* Maintain aspect ratio */
+    overflow: auto; /* Enable scrolling inside the iframe */
     object-fit: contain; /* Prevent text stretching */
   }
 
-  @media only screen and (max-width: 576px) {
-    object {
-      height: auto; /* Adjust height for mobile devices while keeping aspect ratio */
-      width: 100%; /* Full width on mobile */
+  /* For mobile devices */
+  @media only screen and (max-width: 768px) {
+    iframe {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto; /* Maintain aspect ratio */
       overflow: auto; /* Allow scrollbars */
+      object-fit: contain; /* Prevent text stretching */
     }
   }
-  </style>
+</style>
 
-  <span style="display: block; margin-top: 50px;"></span>
+<span style="display: block; margin-top: 50px;"></span>

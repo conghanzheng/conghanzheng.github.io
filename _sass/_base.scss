@@ -219,6 +219,16 @@ ul.task-list input[type="checkbox"] {
   .profile {
     width: 30%;
 
+    .profile-image {
+      max-width: 80px; /* Makes the image smaller only on phones */
+      height: auto; /* Keeps the aspect ratio */
+    }
+
+    .float-left, .float-right {
+      float: none; /* Center the image */
+      margin: 0 auto; /* Adjust margins for centering */
+    }
+
     .address {
       p {
         display: block;
@@ -233,7 +243,7 @@ ul.task-list input[type="checkbox"] {
     width: 100%; /* Ensures full width on mobile */
     
     .profile-image {
-      max-width: 100px; /* Makes the image smaller only on phones */
+      max-width: 60px; /* Makes the image smaller only on phones */
       height: auto; /* Keeps the aspect ratio */
     }
     
