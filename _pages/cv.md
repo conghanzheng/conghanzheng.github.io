@@ -11,7 +11,7 @@ description:
 #  sidebar: right
 ---
 
-<a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">[Link to PDF]</a>
+Download <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">[PDF]</a>
 
 <!-- Use Google's PDF Viewer to enable better mobile behavior with touch zoom -->
 <div style="width: 100%; height: 100vh; max-height: 100vh;">
