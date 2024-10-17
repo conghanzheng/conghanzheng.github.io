@@ -87,4 +87,4 @@ Below are some of the scripts I’ve developed for collecting online labor data 
         </ul>
 </ul>
 
-<span style="display: block; margin-top: 100px;"></span>
+<span style="display: block; margin-top: 50px;"></span>

@@ -48,4 +48,4 @@ nav_order: 1
     We develop monthly asylum seeker flow forecasting models for 157 origin countries to the EU27, using machine learning and high-dimensional data, including digital trace data from Google Trends. Comparing different models and forecasting horizons and validating out-of-sample, we find that an ensemble forecast combining Random Forest and Extreme Gradient Boosting algorithms outperforms the random walk over horizons between 3 and 12 months. For large corridors, this holds in a parsimonious model exclusively based on Google Trends variables, which has the advantage of near real-time availability. We provide practical recommendations how our approach can enable ahead-of-period asylum seeker flow forecasting applications.
 </p>
 
-<span style="display: block; margin-top: 100px;"></span>
+<span style="display: block; margin-top: 50px;"></span>

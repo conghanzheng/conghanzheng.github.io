@@ -165,4 +165,4 @@ Applied Industrial Organization (Spring 2023, Lecturer: [Susanna Esteban](https:
   </a>
 </div>
 
-<span style="display: block; margin-top: 100px;"></span>
+<span style="display: block; margin-top: 50px;"></span>

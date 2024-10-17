@@ -40,4 +40,4 @@ Download <a href="https://conghanzheng.github.io/assets/pdf/Conghan_CV.pdf">[pdf
 </style>
 
 
-<span style="display: block; margin-top: 100px;"></span>
+<span style="display: block; margin-top: 50px;"></span>

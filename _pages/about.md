@@ -25,7 +25,7 @@ I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona S
 
 I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](https://www.inesmachostadler.com).
 
-<br>
+<span style="display: block; margin-top: 50px;"></span>
 
 <!-- Add logos below 
 <p align="center">
@@ -40,5 +40,3 @@ I'm on the Econ Job Market 2024. My placement director is [Inés Macho-Stadler](
   </a>
 </p>
 -->
-
-<span style="display: block; margin-top: 100px;"></span>
