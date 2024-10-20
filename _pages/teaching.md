@@ -66,6 +66,10 @@ nav_order: 2
 
 Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
+    <i>Please download the solution pdf and codes before December 13, 2024. After that, all solution files will be deleted from here.</i>
+    <span style="display: block; margin-top: 10px;"></span>
+    <i>For the Stata code, I adapt the scripts contributed by previous TAs (Manuel V. Montesinos, Chanon Techasunthornwat, and Bartosz Korchowiec), for the TA Stata codes, I also refer to the book Cameron and Trivedi (2022) "Microeconometrics using stata". All errors are mine.</i>
+    <span style="display: block; margin-top: 10px;"></span>
    <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
     <li><a>Panel Data</a></li>
@@ -99,7 +103,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
         <li>Problem Set 3 (Due Oct 16)</li>
             <ul>
                 <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3.pdf">[PS3.pdf]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS3.dta">[PS3.dta]</a>, <i>Feedback on your solutions will be sent out during the week of Oct 21.</i></li>
-                <li>Solution: <i>will be posted on Oct 19</i></li>
+                <li>Solution: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/PS3_solution.pdf">[PS3_solution.pdf]</a>, Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/PS3.do">[PS3.do]</a></li>
             </ul>
         <li>TA Session (Oct 11)</li>
         <ul>
@@ -125,9 +129,9 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
 
 Microeconometrics, Part II (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc2" class="collapsible custom-collapsible"></button>]
 <div id="mc2" class="collapse">
-    <i>Schedule of TA Sessions</i> : <a>We will have a total of four sessions, each session will cover one of the following four topics..</a>
+    <i>Schedule of TA Sessions</i> : <a>We will have a total of four sessions, each session will cover one of the following four topics.</a>
     <span style="display: block; margin-top: 10px;"></span>
-    <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post solution code scripts. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
+    <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post solution code scripts. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due. Please download the solution pdf and codes before December 13, 2024. After that, all solution files will be deleted from here. </a>
     <span style="display: block; margin-top: 10px;"></span>
     <ul>
         <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
