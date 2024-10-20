@@ -66,7 +66,7 @@ nav_order: 2
 
 Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
-    <a>*Please download the solution pdf and codes before <u>December 13, 2024</u>. After that, all solution files will be deleted from here.</a>
+    <a>*Please download the problem set pdf, solution pdf and codes before <u>December 13, 2024</u>. After that, all problem sets files will be deleted from here.</a>
     <span style="display: block; margin-top: 10px;"></span>
     <a>*For the Stata codes, I adapt the scripts contributed by previous TAs (Manuel V. Montesinos, Chanon Techasunthornwat, and Bartosz Korchowiec); for the TA Stata codes, I also refer to the book Cameron and Trivedi (2022) "Microeconometrics using stata". All errors are mine.</a>
     <span style="display: block; margin-top: 10px;"></span>
@@ -129,18 +129,34 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
 
 Microeconometrics, Part II (Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc2" class="collapsible custom-collapsible"></button>]
 <div id="mc2" class="collapse">
-    <i>Schedule of TA Sessions</i> : <a>We will have a total of four sessions, each session will cover one of the following four topics.</a>
+    <i>TA Sessions</i> : <a>We will have a total of four sessions, each session will cover one of the following four topics. For each topic, I will post tutorial TA codes and slides. </a>
     <span style="display: block; margin-top: 10px;"></span>
-    <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post solution code scripts. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
-    <span style="display: block; margin-top: 10px;"></span>
-    <a>*Please download the solution pdf and codes before <u>December 13, 2024</u>. After that, all solution files will be deleted from here.</a>
+    <i>Problem Sets</i> : <a>The solutions to the first two problem sets will be discussed in class. For all problem sets, I will post solution codes. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
+     <span style="display: block; margin-top: 10px;"></span>
+    <a>*Please download the problem set pdf and solution code scripts before <u>December 13, 2024</u>. After that, all problem sets files will be deleted from here.</a>
     <span style="display: block; margin-top: 10px;"></span>
     <ul>
         <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
         <li><a>Treatment Effects: RCT, Matching, and IV</a></li>
+            <ul>
+                <li>Problem Set 1 (Due Nov 15) </li>
+                <li>TA Session (Nov 08)</li>
+            </ul>
         <li><a>Treatment Effects: RD and DiD</a></li>
+            <ul>
+                <li>Problem Set 2 (Due Nov 22) </li>
+                <li>TA Session (Nov 15)</li>
+            </ul>
         <li><a>Dynamic Discrete Choice: Full Solution</a></li>
+            <ul>
+                <li>Problem Set 3 </li>
+                <li>TA Session (Nov 22)</li>
+            </ul>
         <li><a>Dynamic Discrete Choice: CCP</a></li>
+            <ul>
+                <li>Problem Set 4 </li>
+                <li>TA Session (Nov 29)</li>
+            </ul>
     </ul>
 </div>
 
