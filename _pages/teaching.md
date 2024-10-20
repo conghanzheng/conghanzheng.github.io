@@ -66,9 +66,9 @@ nav_order: 2
 
 Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024, Lecturer: Joan Llull) [<button data-toggle="collapse" data-target="#mc1" class="collapsible custom-collapsible"></button>]
 <div id="mc1" class="collapse">
-    <i>Please download the solution pdf and codes before December 13, 2024. After that, all solution files will be deleted from here.</i>
+    <a>*Please download the solution pdf and codes before <u>December 13, 2024</u>. After that, all solution files will be deleted from here.</a>
     <span style="display: block; margin-top: 10px;"></span>
-    <i>For the Stata code, I adapt the scripts contributed by previous TAs (Manuel V. Montesinos, Chanon Techasunthornwat, and Bartosz Korchowiec), for the TA Stata codes, I also refer to the book Cameron and Trivedi (2022) "Microeconometrics using stata". All errors are mine.</i>
+    <a>*For the Stata code, I adapt the scripts contributed by previous TAs (Manuel V. Montesinos, Chanon Techasunthornwat, and Bartosz Korchowiec), for the TA Stata codes, I also refer to the book Cameron and Trivedi (2022) "Microeconometrics using stata". All errors are mine.</a>
     <span style="display: block; margin-top: 10px;"></span>
    <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
@@ -131,7 +131,9 @@ Microeconometrics, Part II (Fall 2024, Lecturer: Joan Llull) [<button data-toggl
 <div id="mc2" class="collapse">
     <i>Schedule of TA Sessions</i> : <a>We will have a total of four sessions, each session will cover one of the following four topics.</a>
     <span style="display: block; margin-top: 10px;"></span>
-    <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post solution code scripts. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due. Please download the solution pdf and codes before December 13, 2024. After that, all solution files will be deleted from here. </a>
+    <i>Solutions to Problem Sets</i> : <a>For the solution to each problem set, I will post solution code scripts. Feedback on your solution will be provided by marking and commenting on your solution PDF, which will be sent to you within one week after it is due.</a>
+    <span style="display: block; margin-top: 10px;"></span>
+    <a>*Please download the solution pdf and codes before <u>December 13, 2024</u>. After that, all solution files will be deleted from here.</a>
     <span style="display: block; margin-top: 10px;"></span>
     <ul>
         <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsII_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
