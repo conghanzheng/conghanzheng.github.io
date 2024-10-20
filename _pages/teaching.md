@@ -68,7 +68,7 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
 <div id="mc1" class="collapse">
     <a>*Please download the solution pdf and codes before <u>December 13, 2024</u>. After that, all solution files will be deleted from here.</a>
     <span style="display: block; margin-top: 10px;"></span>
-    <a>*For the Stata code, I adapt the scripts contributed by previous TAs (Manuel V. Montesinos, Chanon Techasunthornwat, and Bartosz Korchowiec), for the TA Stata codes, I also refer to the book Cameron and Trivedi (2022) "Microeconometrics using stata". All errors are mine.</a>
+    <a>*For the Stata codes, I adapt the scripts contributed by previous TAs (Manuel V. Montesinos, Chanon Techasunthornwat, and Bartosz Korchowiec); for the TA Stata codes, I also refer to the book Cameron and Trivedi (2022) "Microeconometrics using stata". All errors are mine.</a>
     <span style="display: block; margin-top: 10px;"></span>
    <ul>
     <li><a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/Syllabus.pdf">[Syllabus]</a> and <a href="https://joanllull.github.io/teaching.htm">Course Materials</a></li>
