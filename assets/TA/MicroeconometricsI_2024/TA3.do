@@ -7,7 +7,7 @@ cls, clear all
 set seed 13
 cap set more off
 
-cd "..."
+cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA3"
 
 /* Contents
    
@@ -63,23 +63,49 @@ twoway kdensity ambexp || kdensity yhatlin, ///
 graph export "graph_tobit_fit", as(png) replace
 
 ** Marginal effects
+
+/*
+[mfx] vs. [margins, dydx(*)]: [margins] is recommended as it's more versatile
+
+	- [mfx] computes the at-means marginal effects;
+
+	- By default, [margins, dydx(*)] computes the (weighted) average marginal effects, but it can also compute the at-means ME by adding an at-means option to the command.
+
+For Tobit, the at-means ME and the avg. ME are similar but not exactly the same, because Tobit is nonlinear.
+
+You may see that there is still a small difference between mfx and margins, atmeans; in fact, to exactly match the results of mfx, we should use a local mean for the covariates instead of relying on margins' atmeans option. But we can ignore this slight difference for now.
+*/
 	
 ** At-means ME for the left-truncated mean: E(y|x, y > 0)
 ** e(a,b) is for the interval a<y<b
-mfx compute, predict(e(0, .))
+* mfx compute, predict(e(0, .))
+margins, atmeans predict(e(0,.)) dydx(*)
+
+/* If you want to use esttab with margins, don't forget the [post] option.
+If you don't use the [post] option, the active estimation is the Tobit.
+By using the [post] option, the active estimation is set as the marginal effects.
+*/
+* eststo me_trunc1: margins, atmeans predict(e(0,.)) dydx(*) post
+** or 
+* estpost margins, atmeans predict(e(0,.)) dydx(*) post
+* eststo me_trunc2
+* esttab me_trunc1 me_trunc2, se compress mtitle wide
 
 ** At-means ME for right-truncated (at the median) mean: E(y|x, 0<y<535)
-mfx compute, predict(e(0, 535))
+* mfx compute, predict(e(0, 535))
+margins, atmeans predict(e(0,535)) dydx(*)
 	
 ** At-means ME for the censored mean E(y|x)
-mfx compute, predict(ystar(0, .))
+* mfx compute, predict(ystar(0, .))
 * estout ME, cells("b p") margin style(fixed)
 * esttab ME, cells("b") margin
+margins, atmeans predict(ystar(0,.)) dydx(*)
 
 ** Marginal impact on probabilities
 ** (275, 1913) = (the 25th percentile, the 75th percentile)
 quietly tobit ambexp $xlist , ll(0) vce(robust)
-mfx compute, predict(pr(113, 1618)) 
+* mfx compute, predict(pr(113, 1618)) 
+margins, atmeans predict(pr(113,1618)) dydx(*)
 
 ** I.2 Tobit with log-normal data
 	
@@ -222,6 +248,10 @@ gen yhatpos = exp(xbpos+0.5*e(rmse)^2) // E(y2|y2>0), truncated mean
 gen yhat2step = dyhat*yhatpos // E(y2), censored mean
 summarize y yhat2step yhatpos
 summarize yhatpos if dy==1
+
+** compare Tobit and Two-Part
+summarize y yhat ytrunchat yhat2step yhatpos
+summarize y yhat ytrunchat yhat2step yhatpos if dy == 1
 
 ** PART II: TRUNCATION ---------------------------------------------------------
 
