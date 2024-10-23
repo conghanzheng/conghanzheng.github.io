@@ -75,42 +75,25 @@ Microeconometrics, Part I (Fall 2021, Fall 2022, Lecturer: Hanna Wang; Fall 2024
     <li><a>Panel Data</a></li>
     <ul>
         <li>Problem Set 1 <a href="https://drive.google.com/drive/folders/1VpXIX1mRobj0ZdLQq7Qpry6dpKKQjhDO?usp=share_link">[PS1]</a> </li>
-        <li>TA Session (Sep 20)</li>
-            <ul>
-                <li>Slides: <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a></li>
-                <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta]</a></li>
-            </ul>
+        <li>TA Session: Slides <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA1.pdf">[TA1.pdf]</a>, Code <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA1.do">[TA1.do]</a>, Data <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA1.dta">[TA1.dta]</a> </li>
     </ul>
     <li><a>Discrete Choice</a></li>
     <ul>
         <li>Problem Set 2 <a href="https://drive.google.com/drive/folders/1L0gPLz2FW5lfjw6dX7WV8y_crS1prKMX?usp=share_link">[PS2]</a></li>
-        <li>TA Session (Sep 27)</li>
-            <ul>
-                <li>Slides:  <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a></li>
-                <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_2.dta">[TA2_2.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_3.dta">[TA2_3.dta]</a></li>
-            </ul>
+        <li>TA Session: Slides <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA2.pdf">[TA2.pdf]</a>, Code <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2.do">[TA2.do]</a>, Data <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_1.dta">[TA2_1.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_2.dta">[TA2_2.dta]</a> <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA2_3.dta">[TA2_3.dta]</a></li>
     </ul>
     <li><a>Censoring, Truncation, and Selection</a></li>
     <ul>
         <li>Problem Set 3 <a href="https://drive.google.com/drive/folders/1cCq1ppTYAu5BeLcSBZSyrE5HhvX1VkCl?usp=share_link">[PS3]</a></li>
-        <li>TA Session (Oct 11)</li>
-        <ul>
-            <li>Slides:  <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA3.pdf">[TA3.pdf]</a></li>
-            <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA3.do">[TA3.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA3.dta">[TA3.dta]</a></li>
-        </ul>
+        <li>TA Session: Slides <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA3.pdf">[TA3.pdf]</a>, Code <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA3.do">[TA3.do]</a>, Data <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA3.dta">[TA3.dta]</a></li>
     </ul>
     <li><a>Duration Analysis</a></li>
     <ul>
         <li>Problem Set 4 (Due Nov 01)</li>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1osKotxLfACCJiV0ckyKZHrP4qtrTJmP9?usp=share_link">[PS4]</a>, <i>Feedback on your solutions will be sent out around Nov 05</i></li>
-                <li>Solution: <i>will be posted on Nov 02</i></li>
+                <li><a href="https://drive.google.com/drive/folders/1osKotxLfACCJiV0ckyKZHrP4qtrTJmP9?usp=share_link">[PS4]</a>, <i>Solution will be posted on Nov 02; Feedback on your solutions will be sent out around Nov 05</i></li>
             </ul>
-        <li>TA Session (Oct 16):</li>
-            <ul>
-                <li>Slides:  <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA4.pdf">[TA4.pdf]</a></li>
-                <li>Code: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA4.do">[TA4.do]</a>, Data: <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA4.dta">[TA4.dta]</a></li>
-            </ul>
+        <li>TA Session: Slides <a href="https://conghanzheng.github.io/assets/TA/MicroeconometricsI_2024/TA4.pdf">[TA4.pdf]</a>, Code <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA4.do">[TA4.do]</a>, Data <a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/TA/MicroeconometricsI_2024/TA4.dta">[TA4.dta]</a></li>
     </ul>
   </ul>
 </div>
