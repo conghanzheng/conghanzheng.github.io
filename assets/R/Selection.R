@@ -55,14 +55,14 @@ cat('\n ==== \n Script [', rstudioapi::getSourceEditorContext()$path, '] is runn
 
 ## Load data
 
-data_url <- "https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/Selection.dta"
+data_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/Selection.dta"
 
 download.file(data_url, destfile = "Selection.dta")
 
 data_raw <- haven::read_dta("Selection.dta") %>%
   data.table::setDT()
 
-file.remove("Selection.dta")
+#file.remove("Selection.dta")
 
 ## Label definitions
 data <- data %>%
