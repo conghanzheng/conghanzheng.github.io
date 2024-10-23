@@ -230,7 +230,7 @@ display "lltwopart = " lltwopart
 		
 /* If we compare with the tobit model used before, the two-part model fits the 
    data considerably better. */
-quietly tobit $xlist, ll(0) vce(robust)
+tobit lny $xlist , ll(gamma01) vce(robust)
 display e(ll)
 
 ** Prediction 
