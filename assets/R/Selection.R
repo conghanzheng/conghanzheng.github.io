@@ -10,10 +10,10 @@ cat("\f")  ## Clear the console; comment this if you do not use RStudio
 ##' 3. Text is commented with ##, alternative codes with #.
 ##'
 ##' INPUT:
-##' 1. PS3.dta
+##' 1. Selection.dta
 ##'
 ##' OUTPUT:
-##' 1. PS3_results.RData
+##' 1. Selection_results.RData
 ##'
 ##' AUTHOR: Conghan Zheng (https://conghanzheng.github.io)
 ##' LAST UPDATED: 16 Oct 2024
@@ -54,7 +54,15 @@ time_start <- Sys.time()
 cat('\n ==== \n Script [', rstudioapi::getSourceEditorContext()$path, '] is running. \n ==== \n')
 
 ## Load data
-data <- haven::read_dta(file.path(scriptpath, "PS3.dta")) %>% data.table::setDT()
+
+data_url <- "https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/Selection.dta"
+
+download.file(data_url, destfile = "Selection.dta")
+
+data_raw <- haven::read_dta("Selection.dta") %>%
+  data.table::setDT()
+
+file.remove("Selection.dta")
 
 ## Label definitions
 data <- data %>%
@@ -222,7 +230,7 @@ ytrunchat_heckman_liml <- yhat_heckman_liml / probpos
 
 ## Output
 # save(list = c('tobit_lny', 'twopart_probit', 'twopart_ols', 'heckman_liml', 'heckman_fiml', 'truncols'),
-#      file = file.path(scriptpath,'PS3_results.RData'))  ## or you can save the whole image
+#      file = file.path(scriptpath,'Selection_results.RData'))  ## or you can save the whole image
 
 ## Ends timer
 time_end <- Sys.time()

@@ -10,10 +10,10 @@ cat("\f")  ## Clear the console; comment this if you do not use RStudio
 ##' 3. Text is commented with ##', alternative codes with #.
 ##'
 ##' INPUT:
-##' 1. PS2.dta
+##' 1. DiscreteChoice.dta
 ##'
 ##' OUTPUT:
-##' 1. PS2_results.RData
+##' 1. DiscreteChoice_results.RData
 ##'
 ##' AUTHOR: Conghan Zheng
 ##' LAST UPDATED: 10 Oct 2024 (https://conghanzheng.github.io)
@@ -53,7 +53,13 @@ time_start <- Sys.time()
 cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is running. \n ==== \n')  ## Showing this in console helps when you are working on a project of many scripts, RStudio required
 
 ## Load data
-data <- haven::read_dta(file.path(scriptpath,"PS2.dta")) %>% data.table::setDT()
+
+data_url <- "https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/DiscreteChoice.dta"
+
+download.file(data2_url, destfile = "DiscreteChoice.dta")
+
+data <- haven::read_dta("DiscreteChoice.dta") %>%
+  data.table::setDT()
 
 ## Exercise 1: Binary Choice Models ----
 
@@ -141,7 +147,7 @@ alternatives_finer <- c("manuf_light", "manuf_heavy", "manuf_elecon",
                         "serv_sales", "serv_fin", "serv_other",
                         "public_adm", "public_hlth")
 
-data <- haven::read_dta(file.path(scriptpath, "PS2.dta")) %>% 
+data <- haven::read_dta(file.path(scriptpath, "DiscreteChoice.dta")) %>% 
   data.table::setDT() %>%
   mutate(
     age2 = age^2,
@@ -273,9 +279,11 @@ summary(nested_clogit)
 
 ## Closing ----
 
+file.remove("DiscreteChoice.dta")
+
 ## Output
 # save(list = c('blogit','bprobit','MNL','clogit','nlogit'),
-#      file = file.path(scriptpath,'PS2_results.RData'))  ## or you can save the whole image
+#      file = file.path(scriptpath,'DiscreteChoice_results.RData'))  ## or you can save the whole image
 
 ## Ends timer
 time_end <- Sys.time()

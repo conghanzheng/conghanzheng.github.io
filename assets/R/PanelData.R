@@ -10,11 +10,11 @@
 ##' 3. Text is commented with ##, alternative codes with #.
 ##'
 ##' INPUT:
-##' 1. PS1_1.dta
-##' 2. PS1_2.dta
+##' 1. PanelData_1.dta
+##' 2. PanelData_2.dta
 ##'
 ##' OUTPUT:
-##' 1. PS1_results.RData
+##' 1. PanelData_results.RData
 ##'
 ##' AUTHOR: Conghan Zheng (https://conghanzheng.github.io)
 ##' LAST UPDATED: 05 Oct 2024
@@ -62,8 +62,14 @@ cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is runnin
 ##' Exercise 1: Static Panel ----
 ##' Reference: Borjas (2003)
 
-data1_raw <- haven::read_dta(file.path(scriptpath,"PS1_1.dta")) %>%
+data1_url <- "https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/PanelData_1.dta"
+
+download.file(data1_url, destfile = "PanelData_1.dta")
+
+data1_raw <- haven::read_dta("PanelData_1.dta") %>%
   data.table::setDT() ## things get quicker with data.table
+
+file.remove("PanelData_1.dta")
 
 ## 1.1 - 1.2 FE vs RE vs OLS
 
@@ -217,8 +223,14 @@ stargazer(FE2_wage, FE2_wage_nc, FE2_hour, FE2_hour_nc,
 ##' Exercise 2: Dynamic Panel ----
 ##' Reference: Guner et al. (2018)
 
-data2_raw <- haven::read_dta(file.path(scriptpath,"PS1_2.dta")) %>%
+data2_url <- "https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/PanelData_2.dta"
+
+download.file(data2_url, destfile = "PanelData_2.dta")
+
+data2_raw <- haven::read_dta("PanelData_2.dta") %>%
   data.table::setDT()
+
+file.remove("PanelData_2.dta")
 
 data2 <- data2_raw %>%
   mutate(across(c("agecat",'married'), as.factor)) %>%
@@ -380,7 +392,7 @@ plot_mhgap
 ## Closing ----
 
 ## Output
-save(list = c('RE','FE','OLS','FE2_wage','FE2_wage_nc','FE2_hour','FE2_hour_nc','ABondL1','ABondL4','ABoverL1','plot_mhgap'), file = file.path(scriptpath,'PS1_results.RData')) ## or you can save the whole image
+save(list = c('RE','FE','OLS','FE2_wage','FE2_wage_nc','FE2_hour','FE2_hour_nc','ABondL1','ABondL4','ABoverL1','plot_mhgap'), file = file.path(scriptpath,'PanelData_results.RData')) ## or you can save the whole image
 
 ## Ends timer
 time_end <- Sys.time()
