@@ -62,14 +62,14 @@ cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is runnin
 ##' Exercise 1: Static Panel ----
 ##' Reference: Borjas (2003)
 
-data1_url <- "https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/PanelData_1.dta"
+data1_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/PanelData_1.dta"
 
 download.file(data1_url, destfile = "PanelData_1.dta")
 
 data1_raw <- haven::read_dta("PanelData_1.dta") %>%
   data.table::setDT() ## things get quicker with data.table
 
-file.remove("PanelData_1.dta")
+#file.remove("PanelData_1.dta")
 
 ## 1.1 - 1.2 FE vs RE vs OLS
 
@@ -223,14 +223,14 @@ stargazer(FE2_wage, FE2_wage_nc, FE2_hour, FE2_hour_nc,
 ##' Exercise 2: Dynamic Panel ----
 ##' Reference: Guner et al. (2018)
 
-data2_url <- "https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/PanelData_2.dta"
+data2_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/PanelData_2.dta"
 
 download.file(data2_url, destfile = "PanelData_2.dta")
 
 data2_raw <- haven::read_dta("PanelData_2.dta") %>%
   data.table::setDT()
 
-file.remove("PanelData_2.dta")
+#file.remove("PanelData_2.dta")
 
 data2 <- data2_raw %>%
   mutate(across(c("agecat",'married'), as.factor)) %>%

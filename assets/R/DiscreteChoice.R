@@ -54,9 +54,9 @@ cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is runnin
 
 ## Load data
 
-data_url <- "https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/DiscreteChoice.dta"
+data_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/DiscreteChoice.dta"
 
-download.file(data2_url, destfile = "DiscreteChoice.dta")
+download.file(data_url, destfile = "DiscreteChoice.dta")
 
 data <- haven::read_dta("DiscreteChoice.dta") %>%
   data.table::setDT()
@@ -279,7 +279,7 @@ summary(nested_clogit)
 
 ## Closing ----
 
-file.remove("DiscreteChoice.dta")
+#file.remove("DiscreteChoice.dta")
 
 ## Output
 # save(list = c('blogit','bprobit','MNL','clogit','nlogit'),
