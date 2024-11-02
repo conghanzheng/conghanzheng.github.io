@@ -1,6 +1,6 @@
 ** =============================================================================
 ** TA Session 2 - DISCRETE CHOICE
-** Microeconometrics with Joan Llull, IDEA, FALL 2024
+** Microeconometrics, IDEA, FALL 2024
 ** TA: Conghan Zheng
 
 cls, clear all
@@ -29,9 +29,9 @@ III) Remaining topics:
 	 - Binary Models in Panel Data	
 		
 Inputs:
-	- TA3_1.dta: I.1-I.6, II.1, II.5-II.6, III.1
-	- TA3_2.dta: II.2-II.4
-	- TA3_3.dta: III.2
+	- TA2_1.dta: I.1-I.6, II.1, II.5-II.6, III.1
+	- TA2_2.dta: II.2-II.4
+	- TA2_3.dta: III.2
 	
 Outputs:
     - Graphs
@@ -40,7 +40,7 @@ Outputs:
 	
 ** PART I: BINARY OUTCOME MODELS -----------------------------------------------
 	
-use "TA3_1.dta", clear
+use "TA2_1.dta", clear
 	
 describe 
 summarize
@@ -361,7 +361,7 @@ margins, dydx(*) predict(outcome(2))
 	
 ** II.2 Conditional logit
 
-use "TA3_2.dta", clear
+use "TA2_2.dta", clear
 
 /* Now we use data on individual choice of whether to fish using one of four 
    possible alternatives: 
@@ -534,7 +534,7 @@ mixlogit d c dbeach dboat ybeach yboat, group(id) rand(p)
 
 ** II.5 Multinomial Probit
 	
-use "TA3_1.dta", clear
+use "TA2_1.dta", clear
 
 gen sector = 0 if lfp==0
 replace sector = 1 if inlist(classwkr,13,14)
@@ -597,7 +597,7 @@ ivprobit lfp age age2 (educ = educ_sp) married black nchild citiz if educ_sp!=.,
 
 ** III.2 Binary models for panel data
 
-use "TA3_3.dta", clear
+use "TA2_3.dta", clear
 
 ** Random-effects probit model
 xtset cpsidp year

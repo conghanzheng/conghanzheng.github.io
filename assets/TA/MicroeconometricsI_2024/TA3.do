@@ -7,7 +7,7 @@ cls, clear all
 set seed 13
 cap set more off
 
-cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA3"
+cd "..."
 
 /* Contents
    

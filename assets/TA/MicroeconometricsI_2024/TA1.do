@@ -1,6 +1,5 @@
-** =============================================================================
 ** TA Session 1 - Panel Data
-** Microeconometrics with Joan Llull, IDEA, FALL 2024
+** Microeconometrics, IDEA, FALL 2024
 ** TA: Conghan Zheng
 
 cls, clear all

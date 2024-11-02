@@ -38,7 +38,7 @@ II Discrete Duration
 
 cls, clear all
 	
-cd "/Users/zheng/Documents/02 IDEA_PhD/Teaching/TA_Microeconometrics_Fall_IDEA/2024/Part I/TA/TA4"
+cd "..."
 	
 ** Packages to be installed	
 
