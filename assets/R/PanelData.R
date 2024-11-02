@@ -59,7 +59,7 @@ time_start <- Sys.time()
 
 cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is running. \n ==== \n') ## Showing this in console helps when you are working on a project of many scripts, Rstudio required
 
-##' Exercise 1: Static Panel ----
+##' Static Panel ----
 ##' Reference: Borjas (2003)
 
 data1_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/PanelData_1.dta"
@@ -71,7 +71,7 @@ data1_raw <- haven::read_dta("PanelData_1.dta") %>%
 
 #file.remove("PanelData_1.dta")
 
-## 1.1 - 1.2 FE vs RE vs OLS
+## FE vs RE vs OLS 
 
 data1 <- data1_raw %>%
   mutate(year_month = zoo::as.yearmon(paste0(year, month), "%Y %m"))
@@ -136,11 +136,11 @@ for (fmt in c('text')) {
   )
 }
 
-## 1.3 Hausman Test
+## Hausman Test
 
 hausman_test <- phtest(FE, RE)
 
-## 1.4 Lower Frequency Data by-group jobtype*locaiton*time with Multi-way FEs
+## Lower Frequency Data by-group jobtype*locaiton*time with Multi-way FEs
 
 data1_annual <- data1 %>%
   filter(hours_worked > 0) %>%
@@ -220,7 +220,7 @@ stargazer(FE2_wage, FE2_wage_nc, FE2_hour, FE2_hour_nc,
           )
 )
 
-##' Exercise 2: Dynamic Panel ----
+##' Dynamic Panel ----
 ##' Reference: Guner et al. (2018)
 
 data2_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/PanelData_2.dta"
@@ -244,7 +244,7 @@ agecat_vars <- grep("^agecat[0-9]+(.*[^0])$", names(data2), value = TRUE) ## reg
 children_vars <- grep("^children", names(data2), value = TRUE)
 birth_vars <- grep("^birthdum", names(data2), value = TRUE)
 
-## 2.1 FE
+## FE
 
 WG21 <- plm(as.formula(paste("healthy ~", paste(c(agecat_vars, children_vars, birth_vars, "college", "taxincome"), collapse = " + "))),
             data = data2,
@@ -252,7 +252,7 @@ WG21 <- plm(as.formula(paste("healthy ~", paste(c(agecat_vars, children_vars, bi
             weights = wgt,
             model = "within")
 
-## 2.2 Arellano-Bond and Arellano-Bover
+## Arellano-Bond and Arellano-Bover
 
 ##' Note:
 ##' 1. Writing the formula manually without using `paste` makes it faster.
@@ -309,7 +309,7 @@ stargazer(ABondL1, ABondL4, ABoverL1,
           column.labels = c("ABond 1L", "ABond 4L", "ABoverL1 1L")
           )
 
-## 2.3 Marriage Health Gap Plot
+## Marriage Health Gap Plot
 
 ## Function: to extract coefficients and standard errors from plm and pgmm models
 extract_coef <- function(model, pattern) {
@@ -392,7 +392,7 @@ plot_mhgap
 ## Closing ----
 
 ## Output
-save(list = c('RE','FE','OLS','FE2_wage','FE2_wage_nc','FE2_hour','FE2_hour_nc','ABondL1','ABondL4','ABoverL1','plot_mhgap'), file = file.path(scriptpath,'PanelData_results.RData')) ## or you can save the whole image
+# save(list = c('RE','FE','OLS','FE2_wage','FE2_wage_nc','FE2_hour','FE2_hour_nc','ABondL1','ABondL4','ABoverL1','plot_mhgap'), file = file.path(scriptpath,'PanelData_results.RData')) ## or you can save the whole image
 
 ## Ends timer
 time_end <- Sys.time()

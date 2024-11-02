@@ -88,7 +88,7 @@ data <- data %>%
                                 "SP: Higher education"))
   )
 
-## Exercise 1: Tobit Model ----
+## Tobit Model ----
 
 ## Log wages and dummy for positive wages
 data <- data %>%
@@ -144,7 +144,7 @@ screenreg(
   digits = 3  # Increase the number of decimal places
 )
 
-### Exercise 1.2: Marginal effects on the left-censored mean of log wages ----
+### Marginal effects on the left-censored mean of log wages ----
 
 data_prl <- data
 
@@ -168,7 +168,7 @@ marginal_effect_time <- coef(tobit_lny_AER)["time"] * (1 - pnorm(-xb / sigma))
 
 summary(marginal_effect_time)
 
-### Exercise 1.3: Two-part model of log real hourly wages ----
+### Two-part model of log real hourly wages ----
 
 ## Part 1: Probit model
 twopart_probit <- glm(dy ~ married + educ * cohort + region * time + educ:cohort + educ:time + cohort:time + region:time + educ * time * cohort,
@@ -199,9 +199,9 @@ screenreg(list(logtobit = tobit_lny, twopart_ols = twopart_ols),
           custom.model.names = c("Log Tobit", "Two-Part OLS"), 
           digits = 3)
 
-## Exercise 2: Heckman Correction Method for Selection ----
+## Heckman Correction Method for Selection ----
 
-### Exercise 2.1: Heckman two-step estimation without weights ----
+### Heckman two-step estimation without weights ----
 
 heckman_liml <- selection(selection = dy ~ educ_sp + benefits + married + educ * cohort + region * time + educ:cohort + educ:time + cohort:time + region:time + educ * time * cohort,
                           outcome = lny ~ married + educ * cohort + region * time + educ:cohort + educ:time + cohort:time + region:time + educ * time * cohort,

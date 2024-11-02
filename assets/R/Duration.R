@@ -54,7 +54,7 @@ download.file(data1_url, destfile = "Duration_1.dta")
 data2_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/Duration_2.dta"
 download.file(data2_url, destfile = "Duration_2.dta")
 
-## Exercise 1: Empirical Survival Function ----
+## Empirical Survival Function ----
 
 data2 <- haven::read_dta("Duration_2.dta") %>% data.table::setDT()
 
@@ -90,7 +90,7 @@ ggsurvplot(km_fit, data = data2,
            xlab = "Time (Rounded Hours)", ylab = "Survival Probability",
            title = "Kaplan-Meier Survival Estimate")
 
-## Exercise 2: Impact of High-Wage Shift on Working Hours ----
+## Impact of High-Wage Shift on Working Hours ----
 
 ## Get the median wage
 medwage <- median(data2$wage, na.rm = TRUE)
@@ -130,7 +130,7 @@ ggplot(hazard_plot_df, aes(x = time, y = hazard, color = high_wage)) +
   scale_y_continuous(breaks = seq(0, 1.5, by = 0.5)) +
   theme_minimal()
 
-## Exercise 3: Cox Regressions and Test of PH Assumption ----
+## Cox Regressions and Test of PH Assumption ----
 
 ## Model 1
 cox_model1 <- coxph(surv_obj ~ high_wage + rainfall + snowfall, data = data2)
@@ -184,7 +184,7 @@ ggsurvplot_combine <- ggsurvplot(ggsurvplot_list,
                                  ggtheme = theme_minimal(),
                                  title = "Comparison of Empirical and Predicted Survival Functions by High Wage")
 
-## Exercise 4: Unobserved Heterogeneity of Drivers ----
+## Unobserved Heterogeneity of Drivers ----
 
 ## Cox model with frailty (shared frailty by id) using coxph
 cox_model_re <- coxph(Surv(rounded_hours, exit) ~ high_wage + rainfall + snowfall + frailty(id), data = data2)
@@ -243,7 +243,7 @@ ggplot(surv_melt_filtered, aes(x = time, y = Probability, color = Survival)) +
        x = "Time", y = "Survival Probability") +
   theme_minimal()
 
-## Exercise 5: Empirical Hazard of Stopping by Hour and Income ----
+## Empirical Hazard of Stopping by Hour and Income ----
 
 data_ps4_1 <- haven::read_dta("Duration_1.dta") %>% data.table::setDT()
 
@@ -314,7 +314,7 @@ mean_prhazard_inc <- data_ps4_1 %>%
 
 print(mean_prhazard_inc)
 
-## Exercise 6: Logit Discrete Duration Model ----
+## Logit Discrete Duration Model ----
 
 ## Load data
 data_ps4_1 <- haven::read_dta("Duration_1.dta") %>% data.table::setDT()

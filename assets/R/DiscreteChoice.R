@@ -61,9 +61,9 @@ download.file(data_url, destfile = "DiscreteChoice.dta")
 data <- haven::read_dta("DiscreteChoice.dta") %>%
   data.table::setDT()
 
-## Exercise 1: Binary Choice Models ----
+## Binary Choice Models ----
 
-### Exercise 1.1: Logit, Probit, and Odds Ratio for Logit -----
+### Logit, Probit, and Odds Ratio for Logit -----
 
 ## Generate variables
 data <- data %>%
@@ -97,7 +97,7 @@ logit_or_confint <- exp(confint(blogit))
 odds_ratios <- cbind(Odds_Ratio = logit_or, logit_or_confint)
 print(odds_ratios)
 
-### Exercise 1.2: Marginal Effects ----
+### Marginal Effects ----
 
 mean_values <- data.frame(t(colMeans(data[, c("exper", "unempl_dur", "age", "age2", "female", "ln_wage", "veneto_resid")], na.rm = TRUE)))
 
@@ -113,9 +113,9 @@ probit_margins_atmeans <- margins(bprobit, at = mean_values)
 
 summary(probit_margins_atmeans)
 
-## Exercise 2: Multinomial and Conditional Logit Models ----
+## Multinomial and Conditional Logit Models ----
 
-### Exercise 2.1: Multinomial Logit ----
+### Multinomial Logit ----
 
 ## Generate choice_ind
 data <- data %>%
@@ -136,12 +136,12 @@ MNL_coefs <- coef(MNL)
 MNL_rrr <- exp(MNL_coefs)
 print(MNL_rrr)
 
-## Exercise 2.2: At-Means Marginal Effects for MNL ----
+## At-Means Marginal Effects for MNL ----
 
 MNL_me <- marginaleffects::slopes(MNL, newdata = datagrid()) %>%
   filter(term %in% c("exper", "unempl_dur", "female"))
 
-## Exercise 2.3: Conditional Logit ----
+## Conditional Logit ----
 
 alternatives_finer <- c("manuf_light", "manuf_heavy", "manuf_elecon",
                         "serv_sales", "serv_fin", "serv_other",
@@ -260,7 +260,7 @@ avg_me <- me_data_full %>%
     values_from = Average_Marginal_Effect
   )
 
-## Exercise 2.4: Nested Logit ----
+## Nested Logit ----
 
 nests <- list(
   Manufacturing = c("manuf_light", "manuf_heavy", "manuf_elecon"),
