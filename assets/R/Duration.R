@@ -10,7 +10,7 @@ cat("\f")  ## Clear the console; comment this if you do not use RStudio
 ## 3. Text is commented with ##, alternative codes with #.
 ##
 ## INPUT:
-## 1. online data
+## 1. Online Data
 ##
 ##' AUTHOR: Conghan Zheng (https://conghanzheng.github.io)
 ## LAST UPDATED: 02 Nov 2024
