@@ -10,10 +10,10 @@ cat("\f")  ## Clear the console; comment this if you do not use RStudio
 ##' 3. Text is commented with ##', alternative codes with #.
 ##'
 ##' INPUT:
-##' 1. DiscreteChoice.dta
+##' 1. online data
 ##'
 ##' OUTPUT:
-##' 1. DiscreteChoice_results.RData
+##' 1. 
 ##'
 ##' AUTHOR: Conghan Zheng
 ##' LAST UPDATED: 10 Oct 2024 (https://conghanzheng.github.io)
