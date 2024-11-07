@@ -15,21 +15,11 @@ II) Difference in Differences
 	- Panel data 
 */	
 
-/* Datasets
+/* Data
 
-TA6_1.dta: Ham and LaLonde (1996), link: https://www.jstor.org/stable/2171928.
-		   Source: National Supported Work (NSW) labor market experiment.
-		   Treatment: on-the-job training lasting between 9 months and one year (1976-1977).
-		   
-		   y = real earnings in 1978; d = on-the-job training.
-		   
-		   Used in Part I: RA and Part II: Matching.
+TA2_1.dta: An artificial cross section of 20 observations.
 
-TA6_2.dta: Cross-sectional data on 4,361 women of childbearing age in Botswana.
-
-TA6_3.dta: An artificial cross section of 20 observations.
-
-TA6_4.dta: An artificial panel of 12 individuals and two periods.
+TA2_1.dta: An artificial panel of 12 individuals and two periods.
 */	
 
 ** Packages to be installed ----
