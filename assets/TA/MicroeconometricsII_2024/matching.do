@@ -12,10 +12,10 @@
 /* Datasets
 
 matching.dta: Ham and LaLonde (1996), link: https://www.jstor.org/stable/2171928.
-		   Source: National Supported Work (NSW) labor market experiment.
-		   Treatment: on-the-job training lasting between 9 months and one year (1976-1977).
+              Source: National Supported Work (NSW) labor market experiment.
+		      Treatment: on-the-job training lasting between 9 months and one year (1976-1977).
 		   
-		   y = real earnings in 1978; d = on-the-job training.
+		      y = real earnings in 1978; d = on-the-job training.
 */	
 
 ** Package Dependencies ----
