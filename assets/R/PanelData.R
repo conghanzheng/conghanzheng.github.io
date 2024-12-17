@@ -1,4 +1,4 @@
-# cat("\f") ## clear the console; comment this if you do not use Rstudio
+cat("\f") ## clear the console; comment this if you do not use Rstudio
 ##' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ##'
 ##'                  Panel Data: Static and Dynamics Models
@@ -32,8 +32,8 @@ library(pacman)
 
 packages <- c('rstudioapi', ## if you use Rstudio
   # 'this.path', ## if you don't use Rstudio
-  'dplyr','haven','zoo','plm','stargazer','data.table','ggplot2',
-  'patchwork')
+  'dplyr','plm','stargazer','haven','data.table','ggplot2',
+  'tidyr','lmtest','fixest')
 
 pacman::p_load(packages, character.only = TRUE)
 invisible(lapply(packages, require, character.only = TRUE, quietly = TRUE))
@@ -58,341 +58,288 @@ time_start <- Sys.time()
 
 cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is running. \n ==== \n') ## Showing this in console helps when you are working on a project of many scripts, Rstudio required
 
-##' Static Panel ----
-##' Reference: Borjas (2003)
+##' TA ----
 
-data1_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/PanelData_1.dta"
+data_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/PanelData.dta"
 
-download.file(data1_url, destfile = "PanelData_1.dta")
+download.file(data_url, destfile = "PanelData.dta")
 
-data1_raw <- haven::read_dta("PanelData_1.dta") %>%
+data_raw <- haven::read_dta("PanelData.dta") %>%
   data.table::setDT() ## things get quicker with data.table
 
-#file.remove("PanelData_1.dta")
+## PART I: MANIPULATING PANEL DATA ---------------------------------------------
 
-## FE vs RE vs OLS 
+## The data has variables n, w, k, y with repeated firm-year observations.
 
-data1 <- data1_raw %>%
-  mutate(year_month = zoo::as.yearmon(paste0(year, month), "%Y %m"))
-
-data1_h <- data1 %>% filter(h_skill == 1)
-
-## Random effects (h_immigr == immigr for the high-skilled subsample)
-RE <- plm(ln_wage  ~ h_immigr + age + age2 + female + black + asian, 
-          data = data1_h,
-          index = c("id","year_month"), 
-          model = "random") 
-summary(RE)
-
-## Fixed effects
-FE <- plm(ln_wage  ~ h_immigr + age + age2 + female + black + asian, 
-          data = data1_h,
-          index = c("id","year_month"), 
-          model = "within") 
-summary(FE)
-
-## OLS
-OLS <- lm(ln_wage ~ h_immigr + age + age2 + female + black + asian,  
-          data = data1_h)
-summary(OLS)
-
-## Comparison
-
-##' Note: 
-##' 1. You can produce latex output by specifying "for (fmt in c('text','latex'))" in the for loop.
-##' 2. "text" means display the table in the console
-
-for (fmt in c('text')) {
-  
-  if (fmt == "latex") {
-    tmppath <- file.path(scriptpath,"Ex1.tex")
-  } else {
-    tmppath <- NULL
-  }
-  
-  stargazer(RE, FE, OLS,
-            type = fmt,
-            out = tmppath,
-            title = paste0("Regression Results on Wage, Sample: Skilled Workers"),
-            dep.var.caption = "\\textit{Dependent Variable}: Log(Wage)",
-            dep.var.labels = c(""),
-            order = paste0("^", c("h_immigr",'age','age2','female','black','asian'
-            ) , "$"),
-            covariate.labels = c("Migrant",'Age','Age-sq','Female','Black','Asian'
-            ),
-            star.cutoffs = c(0.05, 0.01, 0.001),
-            #notes = c(""),
-            #notes.append = FALSE,
-            #notes.align = 'l',
-            #notes.label = '',
-            model.numbers = FALSE,
-            keep.stat = c("n","rsq"),
-            #column.sep.width = "0.5pt",
-            align = FALSE,
-            column.separate = c(1,1,1),
-            column.labels = c("RE",'FE','OLS'),
-            omit.table.layout = "m" ## Omit model-type labels
-  )
-}
-
-## Hausman Test
-
-hausman_test <- phtest(FE, RE)
-
-## Lower Frequency Data by-group jobtype*locaiton*time with Multi-way FEs
-
-data1_annual <- data1 %>%
-  filter(hours_worked > 0) %>%
-  mutate(jobtype = 1,
-         jobtype = ifelse(routine == 1 & cognitive == 0, 2, jobtype),
-         jobtype = ifelse(routine == 0 & cognitive == 1, 3, jobtype),
-         jobtype = ifelse(routine == 1 & cognitive == 1, 4, jobtype),
-         hours_worked = hours_worked * 4.348125, ## hours per week to hours per month
-         wage = exp(ln_wage),
-         ) %>%
-  group_by(jobtype, statefip, year) %>%
-  summarise(
-    wage = weighted.mean(wage, weight),
-    hours_worked = weighted.mean(hours_worked, weight),
-    ph = sum(h_immigr, na.rm = TRUE) / n(),
-    share_hskill = weighted.mean(h_skill, weight),
-    share_female = weighted.mean(female, weight),
-    share_black = weighted.mean(black, weight),
-    share_asian = weighted.mean(asian, weight)
+data_long <- data_raw %>%
+  tidyr::pivot_longer(
+    cols = -firm, 
+    names_to = c(".value", "year"),
+    names_pattern = "([nwky])([0-9]{4})"
   ) %>%
-  mutate(ln_wage = log(wage),
-         job_state = interaction(jobtype, statefip),
-         job_year = interaction(jobtype, year),
-         state_year = interaction(statefip, year))
+  mutate(year = as.integer(year)) %>%
+  data.table::setDT() %>%
+  arrange(firm, year) %>% ## order by firm and year
+  filter(if_all(c(n, w, k, y), ~ !is.na(.))) %>% ## Drop missing (in all variables n, w, k, y)
+  group_by(firm) %>%
+  mutate(count_byfirm = n()) %>%
+  ungroup() %>%
+  filter(count_byfirm > 1) %>% ## Exclude single observations (firms that only appear once)
+  select(-count_byfirm) %>%
+  distinct(firm, year, .keep_all = TRUE) ## Exclude duplicates: keep first appearances per firm-year
 
-FE2_wage <- plm(ln_wage ~ ph + share_hskill + share_female + share_black + share_asian 
-                + job_state + job_year + state_year,
-                data = data1_annual,
-                index = c("jobtype",'statefip',"year"),
-                model = 'within')
+## Overview
+summary(data_long)
 
-FE2_hour <- plm(hours_worked ~ ph + share_hskill + share_female + share_black + share_asian 
-                + job_state + job_year + state_year,
-                data = data1_annual,
-                index = c("jobtype",'statefip',"year"),
-                model = 'within')
+## Panel setting is done via plm by specifying index=c("firm","year").
 
-FE2_wage_nc <- plm(ln_wage ~ ph + job_state + job_year + state_year,,
-                   data = data1_annual,
-                   index = c("jobtype",'statefip',"year"),
-                   model = 'within')
+##' Patterns in panel data
+##' check T for each firm
+plm::pdim(data_long, index = c("firm","year"))
 
-FE2_hour_nc <- plm(hours_worked ~ ph + job_state + job_year + state_year,,
-                   data = data1_annual,
-                   index = c("jobtype",'statefip',"year"),
-                   model = 'within')
+## Within/Between Summary
 
-stargazer(FE2_wage, FE2_wage_nc, FE2_hour, FE2_hour_nc,
-          type = 'text',
-          out = tmppath,
-          title = paste0("Regression Results on Yearly Wage"),
-          dep.var.caption = "\\textit{Dependent Variable}:",
-          dep.var.labels = c("Log(Wage)",'Hours Worked'),
-          order = paste0("^", c('ph',"ph","share_hskill","share_female","share_black","share_asian"
-          ) , "$"),
-          covariate.labels = c("Share: H-skill migrant",'Share: H-skill','Share: Female','Share: Black','Share: Asian'
-          ),
-          star.cutoffs = c(0.05, 0.01, 0.001),
-          #notes = c(""),
-          #notes.append = FALSE,
-          #notes.align = 'l',
-          #notes.label = '',
-          model.numbers = FALSE,
-          keep.stat = c("n","rsq"),
-          #column.sep.width = "0.5pt",
-          align = FALSE,
-          column.separate = c(1,1,1,1),
-          column.labels = c("(1)","(2)","(3)","(4)"),
-          omit = c("job_state", "job_year", "state_year"),
-          add.lines = list(  # Manually add lines for the FEs
-            c("FE(Job)", "Yes", "Yes", "Yes", "Yes"),
-            c("FE(State)", "Yes", "Yes", "Yes", "Yes"),
-            c("FE(Year)", "Yes", "Yes", "Yes", "Yes"),
-            c("FE(Job X State)", "Yes", "Yes", "Yes", "Yes"),
-            c("FE(Job X Year)", "Yes", "Yes", "Yes", "Yes"),
-            c("FE(State X Year)", "Yes", "Yes", "Yes", "Yes")
-          )
-)
-
-##' Dynamic Panel ----
-##' Reference: Guner et al. (2018)
-
-data2_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/PanelData_2.dta"
-
-download.file(data2_url, destfile = "PanelData_2.dta")
-
-data2_raw <- haven::read_dta("PanelData_2.dta") %>%
-  data.table::setDT()
-
-#file.remove("PanelData_2.dta")
-
-data2 <- data2_raw %>%
-  mutate(across(c("agecat",'married'), as.factor)) %>%
-  bind_cols(model.matrix(~ agecat - 1, data = .)) %>%
-  bind_cols(model.matrix(~ agecat:married - 1, data = .)) %>%
-  select(id, year, wgt, everything())
-
-colnames(data2) <- gsub(":", "_", colnames(data2))
-
-agecat_vars <- grep("^agecat[0-9]+(.*[^0])$", names(data2), value = TRUE) ## regex used here
-children_vars <- grep("^children", names(data2), value = TRUE)
-birth_vars <- grep("^birthdum", names(data2), value = TRUE)
-
-## FE
-
-WG21 <- plm(as.formula(paste("healthy ~", paste(c(agecat_vars, children_vars, birth_vars, "college", "taxincome"), collapse = " + "))),
-            data = data2,
-            index = c("id", "year"),
-            weights = wgt,
-            model = "within")
-
-## Arellano-Bond and Arellano-Bover
-
-##' Note:
-##' 1. Writing the formula manually without using `paste` makes it faster.
-##' 2. Some regressors (child dummies, birth dummies) are omitted in favor of speed.
-##' 3. The following code takes 8 mins on Mac OS with the M1 chip.
-
-ABondL1 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1),
-                data = data2, 
-                index = c('id','year'),
-                effect = "individual", 
-                model = "onestep", 
-                transformation = "d", ## A-Bond
-                collapse = TRUE, # nodiffsargan, collapse instruments
-)
-
-ABondL4 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1:4),
-                data = data2, 
-                index = c('id','year'),
-                effect = "individual", 
-                model = "onestep", 
-                transformation = "d", ## A-Bond
-                collapse = TRUE, # nodiffsargan, collapse instruments
-)
-
-ABoverL1 <- pgmm(healthy ~ lag(healthy, 1) + agecat27 + agecat32 + agecat37 + agecat42 + agecat47 + agecat52 + agecat57 + agecat62 + agecat22_married1 + agecat27_married1 + agecat32_married1 + agecat37_married1 + agecat42_married1 + agecat47_married1 + agecat52_married1 + agecat57_married1 + agecat62_married1 + college + taxincome| lag(healthy, 1),
-                data = data2, 
-                index = c('id','year'),
-                effect = "individual", 
-                model = "onestep",
-                transformation = "ld", ## A-Bover
-                collapse = TRUE, # nodiffsargan, collapse instruments
-)
-
-## Table
-stargazer(ABondL1, ABondL4, ABoverL1,
-          type = "text",
-          dep.var.caption = "Health Status",
-          dep.var.labels = c(""),
-          covariate.labels = c("L.health", 
-                               "Age 25-29", "Age 30-34", "Age 35-39",
-                               "Age 40-44", "Age 45-49", "Age 50-54", 
-                               "Age 55-59", "Age 60-64",
-                               "Age 20-24 X Married", "Age 25-29 X Married",
-                               "Age 30-34 X Married", "Age 35-39 X Married", 
-                               "Age 40-44 X Married", "Age 45-49 X Married", 
-                               "Age 50-54 X Married", "Age 55-59 X Married", 
-                               "Age 60-64 X Married", 
-                               "College", "Taxable Income"),
-          keep = c("L.healthy", "agecat*", "agecat*_married*"),
-          star.cutoffs = c(0.05, 0.01, 0.001),
-          keep.stat = c("n","rsq"),
-          digits = 3,
-          model.numbers = FALSE,
-          column.labels = c("ABond 1L", "ABond 4L", "ABoverL1 1L")
-          )
-
-## Marriage Health Gap Plot
-
-## Function: to extract coefficients and standard errors from plm and pgmm models
-extract_coef <- function(model, pattern) {
-  # Get summary of the model
-  model_summary <- summary(model)
+## Function: within and between variation decomposition
+xtsum <- function(data, id, time, vars) {
+  results <- lapply(vars, function(var) {
+    ## Filter out NA values for that variable
+    df <- data %>% filter(!is.na(.data[[var]]))
+    
+    ## Overall mean and standard deviation
+    overall_mean <- mean(df[[var]], na.rm = TRUE)
+    overall_sd   <- sd(df[[var]], na.rm = TRUE)
+    
+    ## Between variation: mean by group (id)
+    firm_means <- df %>%
+      group_by(.data[[id]]) %>%
+      summarize(mean_i = mean(.data[[var]], na.rm = TRUE), .groups = "drop")
+    
+    between_sd <- sd(firm_means$mean_i, na.rm = TRUE)
+    
+    ##' Within variation:
+    ##' Compute deviations from by-id means
+    df_within <- df %>%
+      left_join(firm_means, by = id) %>%
+      mutate(diff_within = .data[[var]] - mean_i)
+    
+    within_var <- mean(df_within$diff_within^2, na.rm = TRUE)
+    within_sd  <- sqrt(within_var)
+    
+    data.frame(
+      variable = var,
+      overall_mean = overall_mean,
+      overall_sd   = overall_sd,
+      between_sd   = between_sd,
+      within_sd    = within_sd
+    )
+  })
   
-  # Extract coefficients
-  coef_table <- model_summary$coefficients
-  
-  # Convert to data frame and filter by pattern (agecat and married)
-  coef_df <- as.data.frame(coef_table, stringsAsFactors = FALSE) %>%
-    tibble::rownames_to_column("term") %>%
-    filter(grepl(pattern, term)) %>%
-    select(term, estimate = Estimate, std.error = `Std. Error`)
-  
-  return(coef_df)
+  do.call(rbind, results)
 }
 
-## Extract coef and se
-coef_wg <- extract_coef(WG21, "agecat.*married") %>%
-  mutate(age = as.numeric(gsub("agecat(\\d{2}).*", "\\1", term))) 
+## Within/Between Variation decomposition
+variation_desomposition <- xtsum(data_long, id = "firm", time = "year", vars = c("n", "w", "k", "y"))
+print(variation_desomposition)
 
-coef_abond <- extract_coef(ABondL1, "agecat.*married") %>%
-  mutate(age = as.numeric(gsub("agecat(\\d{2}).*", "\\1", term)))
+## PART II: STATIC MODELS ----
 
-coef_ABoverL1 <- extract_coef(ABoverL1, "agecat.*married") %>%
-  mutate(age = as.numeric(gsub("agecat(\\d{2}).*", "\\1", term))) %>%
-  filter(age > 22)
+## II.1 Fixed Effects (FE)
+fe_model <- plm(n ~ k + w + y,
+                data = data_long,
+                index = c("firm","year"),
+                model = "within") # FE model
+summary(fe_model)
 
-## Set common y-axis limits based on the overall range of the data
-y_min <- min(c(coef_wg$estimate - coef_wg$std.error,
-               coef_abond$estimate - coef_abond$std.error,
-               coef_ABoverL1$estimate - coef_ABoverL1$std.error))
+## Clustered standard errors by firm can be done using vcovHC:
+fe_model_clse <- coeftest(fe_model, vcov = vcovHC(fe_model, method = "arellano", type = "HC1", cluster = "group"))
 
-y_max <- max(c(coef_wg$estimate + coef_wg$std.error,
-               coef_abond$estimate + coef_abond$std.error,
-               coef_ABoverL1$estimate + coef_ABoverL1$std.error))
+## Including year dummies (two-way FE):
+fe_twoway_model <- plm(n ~ k + w + y + factor(year),
+                       data = data_long,
+                       index = c("firm","year"),
+                       model = "within")
+fe_twoway_clse <- coeftest(fe_twoway_model, vcov = vcovHC(fe_twoway_model, cluster = "group"))
 
-y_limits <- c(y_min, y_max)  # Set dynamic y-axis limits
+## II.2 LSDV Estimator (include firm dummies manually)
 
-## Plot for WG21
-plot_wg <- ggplot(coef_wg, aes(x = age, y = estimate)) +
-  geom_line(size = 1.5) +  # Main line for the estimate
-  geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
-  geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "red") +
-  scale_x_continuous(breaks = coef_wg$age) + # Set x-axis breaks to Age
-  scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
-  labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "A. Fixed Effects") +
-  theme_minimal()
+## lm with factor(firm) gives the LSDV
+ols_model <- lm(n ~ k + w + y + factor(firm), data = data_long)
+summary(ols_model)
 
-## Plot for ABondL1
-plot_abond <- ggplot(coef_abond, aes(x = age, y = estimate)) +
-  geom_line(size = 1.5) +  # Main line for the estimate
-  geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
-  geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "red") +
-  scale_x_continuous(breaks = coef_abond$age) + # Set x-axis breaks to Age
-  scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
-  labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "B. Difference GMM") +
-  theme_minimal()
+## Compare FE and OLS using stargazer:
+stargazer(fe_model, ols_model, type = "text",
+          column.labels = c("FE","LSDV"),
+          model.names = F,
+          keep = c('k','w','y'),
+          keep.stat = c("n","rsq"),
+          title = "Comparison of FE and OLS with firm dummies")
 
-## Plot for ABoverL1
-plot_ABoverL1 <- ggplot(coef_ABoverL1, aes(x = age, y = estimate)) +
-  geom_line(size = 1.5) +  # Main line for the estimate
-  geom_line(aes(y = estimate - std.error), linetype = "dashed") +  # Lower CI
-  geom_line(aes(y = estimate + std.error), linetype = "dashed") +  # Upper CI
-  geom_hline(yintercept = 0, color = "red") +
-  scale_x_continuous(breaks = coef_ABoverL1$age) + # Set x-axis breaks to Age
-  scale_y_continuous(limits = y_limits) +  # Set shared y-axis limits
-  labs(x = "Age", y = "Probability gap married vs. single, β(a)", title = "C. System GMM") +
-  theme_minimal()
+## II.3 Large number of fixed effects
 
-plot_mhgap <- plot_wg + plot_abond + plot_ABoverL1 + plot_layout(nrow = 1)
-plot_mhgap
+## lm with factor(firm) or fixest
+fe_fixest <- fixest::feols(n ~ k + w + y | firm, data = data_long)
+summary(fe_fixest)
 
-##' Note: You can also save the combined plot in a plot object, and then use the 
-##' "ggsave" command to save it to the local disk.
+## Two-way FEs: firm and year
+fe_fixest_2way <- fixest::feols(n ~ k + w + y | firm + year, data = data_long)
+summary(fe_fixest_2way)
+
+## II.4 First Differences (FD)
+
+## Create first differences
+data_long <- data_long %>%
+  group_by(firm) %>%
+  arrange(year) %>%
+  mutate(Dn = n - lag(n),
+         Dk = k - lag(k),
+         Dw = w - lag(w),
+         Dy = y - lag(y)) %>%
+  ungroup()
+
+fd_model <- lm(Dn ~ Dk + Dw + Dy, data = data_long)
+summary(fd_model)
+
+## Compare FE and FD
+stargazer(fe_model, fd_model, keep.stat = c("n","rsq"), type = "text",
+          model.names = F,
+          column.labels = c("FE","FD"))
+
+## II.5 Random Effects Model
+re_model <- plm(n ~ k + w + y,
+                data = data_long,
+                index = c("firm","year"),
+                model = "random")
+summary(re_model)
+
+## Compare FE and RE
+stargazer(fe_model, re_model, type = "text",
+          keep.stat = c("n","rsq"),
+          column.labels = c("FE","RE"),
+          model.names = F)
+
+## II.6 FE or RE: Hausman test
+hausman_test <- phtest(fe_model, re_model)
+hausman_test
+
+##' II.7 Panel IV
+##' plm with Instrument variable approach: 'pvcm' or 'panelvar' or use iv within plm
+
+##' If w is instrument for n, specify properly
+##' Actually for IV: if n is endogenous and w is instrument:
+##' formula: y ~ k + w + n | k + w + some_instrument_that_excludes n
+
+##' No exact instruments:
+##' y ~ k + n | k + w means w is excluded instrument for n
+iv_fe <- plm(y ~ k + n | k + w,
+             data = data_long,
+             index = c("firm","year"),
+             model = "within")
+summary(iv_fe)
+
+## FD IV
+iv_fd <- plm(y ~ k + n | k + w,
+             data = data_long,
+             index = c("firm","year"),
+             model = "fd")
+summary(iv_fd)
+
+## RE IV
+iv_re <- plm(y ~ k + n | k + w,
+             data = data_long,
+             index = c("firm","year"),
+             model = "random")
+summary(iv_re)
+
+stargazer(iv_fe, iv_fd, iv_re, type = "text", 
+          keep.stat = c("n","rsq"),
+          model.names = F,
+          column.labels = c("FE-IV",'FD-IV','RE-IV'))
+
+## PART III: DYNAMIC MODELS ----
+
+## Lags
+data_long <- data_long %>%
+  group_by(firm) %>%
+  arrange(year) %>%
+  mutate(Ln = lag(n,1),
+         Lk = lag(k,1),
+         Lw = lag(w,1),
+         Ly = lag(y,1),
+         L2n = lag(n,2)) %>%
+  ungroup()
+
+##' Anderson and Hsiao (1981,1982):
+##' 2SLS in differences: 
+##' Δn_t  =  Δn_{t-1} instrumented by n_{t-2}
+##' pgmm with transformation = "d"
+AH_model <- pgmm(n ~ lag(n,1) + k + w + y | lag(n,2),
+                 data = data_long,
+                 index = c("firm","year"),
+                 effect = "individual", model = "onestep", transformation = "d")
+summary(AH_model)
+
+##' Arellano and Bond (1991) - Difference GMM
+##' pgmm with transformation = "d"
+##' Suppose we want to use lagged values of n starting from 2 periods back as GMM-type instruments.
+
+AB_1step <- pgmm(
+  n ~ lag(n, 1) + k + w + y | lag(n, 2:99),
+  data = data_long,
+  index = c("firm","year"),
+  effect = "individual",
+  model = "onestep", ## the default
+  transformation = "d",
+  collapse = TRUE
+)
+summary(AB_1step)
+
+AB_2step <- pgmm(
+  n ~ lag(n, 1) + k + w + y | lag(n, 2:99),
+  data = data_long,
+  index = c("firm","year"),
+  effect = "individual",
+  model = "twosteps", 
+  transformation = "d",
+  collapse = TRUE
+)
+summary(AB_2step)
+
+##' Blundell and Bond (1998) - System GMM
+##' transformation = "ld" for system GMM in pgmm
+BB_1step <- pgmm(
+  n ~ lag(n, 1) + k + w + y | lag(n, 2:99),
+  data = data_long,
+  index = c("firm","year"),
+  effect = "individual",
+  model = "onestep", ## the default
+  transformation = "ld",  # System GMM
+  collapse = TRUE
+)
+summary(BB_1step)
+
+BB_2step <- pgmm(
+  n ~ lag(n, 1) + k + w + y | lag(n, 2:99),
+  data = data_long,
+  index = c("firm","year"),
+  effect = "individual",
+  model = "twosteps",
+  transformation = "ld",  # System GMM
+  collapse = TRUE
+)
+summary(BB_2step)
+
+## Compare dynamic estimators:
+stargazer(AH_model, AB_1step, AB_2step, BB_1step, BB_2step, type = "text",
+          column.labels = c("A-H","A-Bond 1S","A-Bond 2S","A-Bover 1S","A-Bover 2S"),
+          model.names = F)
 
 ## Closing ----
 
 ## Output
-# save(list = c('RE','FE','OLS','FE2_wage','FE2_wage_nc','FE2_hour','FE2_hour_nc','ABondL1','ABondL4','ABoverL1','plot_mhgap'), file = file.path(scriptpath,'PanelData_results.RData')) ## or you can save the whole image
+# save(list = c('ols_model','fe_model','re_model','fd_model','AH_model','AB_model','BB_model'), file = file.path(scriptpath,'PanelData_results.RData')) ## or you can save the whole image
 
 ## Ends timer
 time_end <- Sys.time()
+
+## End of script
 cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] takes',format(time_end - time_start),'\n ==== \n') ## Rtudio required

@@ -148,8 +148,8 @@ def objective(theta):
 ## Optimization
 options = {
     'disp': True,
-    'maxiter': 10**7,   # large maxiter
-    'gtol': 1e-20       # similar to TolFun/TolX in MATLAB
+    'maxiter': 10**7,   # iterations
+    'gtol': 1e-20       # tolerance
 }
 
 res = minimize(objective, thetastart, method='BFGS', options=options)
