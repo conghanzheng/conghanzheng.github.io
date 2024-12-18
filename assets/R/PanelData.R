@@ -13,13 +13,12 @@ cat("\f") ## clear the console; comment this if you do not use Rstudio
 ##' 1. Online Data
 ##'
 ##' OUTPUT:
-##' 1.
 ##'
 ##' AUTHOR: Conghan Zheng (https://conghanzheng.github.io)
 ##' LAST UPDATED: 05 Oct 2024
 ##'
 ##' TO-DO:
-##' - Find a more efficient package for the dynamic panel models.
+##' -
 ## %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ## PRELIMINARIES ----
