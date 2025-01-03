@@ -19,7 +19,7 @@ cat("\f")  ## Clear the console; comment this if you do not use RStudio
 ##' LAST UPDATED: 10 Oct 2024 (https://conghanzheng.github.io)
 ##'
 ##' TO-DO:
-##' - At-means marginal effects for 2.3
+##' - Nested Logit: add regressors that affect the upper nest choice
 ## %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ## PRELIMINARIES ----
@@ -32,11 +32,17 @@ library(pacman)
 
 packages <- c('rstudioapi',  # if you use RStudio
               # 'this.path',  # if you don't use RStudio
-              'dplyr','tidyr','haven','data.table','ggplot2',
-              'stargazer','margins','nnet','marginaleffects','mlogit')
+              'dplyr','tidyr','stringr','haven','data.table','ggplot2','car',
+              'stargazer','margins','nnet','marginaleffects','mlogit','effects')
 
 pacman::p_load(packages, character.only = TRUE)
 invisible(lapply(packages, require, character.only = TRUE, quietly = TRUE))
+
+##' List packages called in this script (package 'NCmisc' required)
+##' - This is used to check if some package dependencies have been forgotten.
+# if (!require('NCmisc')) install.packages('NCmisc')
+# library('NCmisc')
+# list.functions.in.file(rstudioapi::getSourceEditorContext()$path, alphabetic = TRUE)
 
 ## Change the work directory to (a subdirectory under) that of the current script:
 ## - if you do not use RStudio as your IDE:
@@ -52,237 +58,397 @@ time_start <- Sys.time()
 
 cat('\n ==== \n Script [',rstudioapi::getSourceEditorContext()$path,'] is running. \n ==== \n')  ## Showing this in console helps when you are working on a project of many scripts, RStudio required
 
-## Load data
+## Load Data ----
 
-data_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/DiscreteChoice.dta"
+data1_url <- "https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/R/DiscreteChoice.dta"
 
-download.file(data_url, destfile = "DiscreteChoice.dta")
+download.file(data1_url, destfile = "DiscreteChoice.dta")
 
-data <- haven::read_dta("DiscreteChoice.dta") %>%
+data1 <- haven::read_dta("DiscreteChoice.dta") %>%
   data.table::setDT()
 
-## Binary Choice Models ----
+## BINARY OUTCOME MODELS ----
 
-### Logit, Probit, and Odds Ratio for Logit -----
+### LPM vs. Logit vs. Probit ----
 
-## Generate variables
-data <- data %>%
-  mutate(age2 = age^2,
-         same_ind = as.integer(ind_prior == ind_after))
+## LPM (Linear Probability Model)
+lpm <- lm(lfp ~ age + I(age^2) + married + educ + black + nchild + citiz, 
+          data = data1)
 
 ## Logit
-blogit <- glm(same_ind ~ exper + unempl_dur + age + age2 + female + ln_wage + veneto_resid,
-                   data = data, family = binomial(link = 'logit'))
+logit_mod <- glm(lfp ~ age + I(age^2) + married + educ + black + nchild + citiz, 
+                 data = data1, 
+                 family = binomial(link = "logit"))
+
+## Odds ratios for logit
+exp(coef(logit_mod))
 
 ## Probit
-bprobit <- glm(same_ind ~ exper + unempl_dur + age + age2 + female + ln_wage + veneto_resid,
-                    data = data, family = binomial(link = 'probit'))
+probit_mod <- glm(lfp ~ age + I(age^2) + married + educ + black + nchild + citiz, 
+                  data = data1, family = binomial(link = "probit"))
 
-## Compare models
-stargazer(blogit, bprobit,
-          type = 'text',
-          title = "Logit vs Probit Models",
-          dep.var.caption = "Dependent variable: same_ind",
-          dep.var.labels = c(""),
-          model.numbers = FALSE,
-          column.labels = c("Logit", "Probit"),
-          covariate.labels = c("Experience", "Unemployment Duration", "Age", "Age squared", "Female", "Log(Wage)", "Veneto Resident"),
-          omit.stat = c("aic"),
-          single.row = TRUE)
+## Compare
+stargazer(lpm, logit_mod, probit_mod, 
+          type = "text",
+          keep.stat = c("n","rsq",'ll'),
+          column.labels = c("LPM","Logit","Probit"),
+          model.names = F)
 
-## Report odds ratios for logit model
-logit_or <- exp(coef(blogit))
-logit_or_confint <- exp(confint(blogit))
-
-odds_ratios <- cbind(Odds_Ratio = logit_or, logit_or_confint)
-print(odds_ratios)
+##' For robust errors:
+##' use packages 'sandwich', 'lmtest'
+# coeftest(logit_mod, vcov = vcovHC(logit_mod, type = "HC1"))
 
 ### Marginal Effects ----
 
-mean_values <- data.frame(t(colMeans(data[, c("exper", "unempl_dur", "age", "age2", "female", "ln_wage", "veneto_resid")], na.rm = TRUE)))
+## Marginal effects at means (MEM)
 
-## Marginal effects at means for the logit model
+data1 <- data1 %>%
+  mutate(across(c(age, married, educ, black, nchild, citiz), as.numeric))
 
-logit_margins_atmeans <- margins(blogit, at = mean_values)
+mean_vals <- data1 %>% 
+  summarize(
+    age = mean(age, na.rm = TRUE),
+    age2 = mean(age^2, na.rm = TRUE),
+    married = mean(married, na.rm = TRUE),
+    educ = mean(educ, na.rm = TRUE),
+    black = mean(black, na.rm = TRUE),
+    nchild = mean(nchild, na.rm = TRUE),
+    citiz = mean(citiz, na.rm = TRUE)
+  )
 
-summary(logit_margins_atmeans)
+mem_logit <- margins(logit_mod, at = as.list(mean_vals))
+summary(mem_logit)
 
-## Marginal effects at means for the probit model
+mem_probit <- margins(probit_mod, at = as.list(mean_vals))
+summary(mem_probit)
 
-probit_margins_atmeans <- margins(bprobit, at = mean_values)
+## Marginal effects at a representative value (MER)
 
-summary(probit_margins_atmeans)
+## At age = 20, age2 = 400, etc.
+rep_vals <- data.frame(age = 20, age2 = 400, married = 1, educ = 73, black = 1, nchild = 2, citiz = 1)
+mer_logit <- margins(logit_mod, at = rep_vals)
+summary(mer_logit)
 
-## Multinomial and Conditional Logit Models ----
+## Average marginal effects (AME)
+ame_logit <- margins(logit_mod) 
+summary(ame_logit)
+
+ame_probit <- margins(probit_mod)
+summary(ame_probit)
+
+## Example: Margins by Education
+
+## Factorization by education level
+educ_lvl <- c("Less than high-school","High-school diploma",
+              "Some college","College degree",
+              "Master/Professional/PhD")
+
+data1 <- data1 %>%
+  mutate(educ_1 = case_when(
+    educ == 73 ~ 1,
+    educ == 81 ~ 2,
+    educ >= 91 & educ <= 111 ~ 3,
+    educ > 111 ~ 4,
+    TRUE ~ 0
+  ),
+  educ_1 = factor(educ_1, levels = 0:4,
+                  labels = educ_lvl))
+
+logit_edu <- glm(lfp ~ age + I(age^2) + married + educ_1 + black + nchild + citiz,
+                 data = data1, family = binomial("logit"))
+mem_logit_edu <- margins(logit_edu, at = mean_vals)
+summary(mem_logit_edu)
+
+## Evaluate margins at specific factor levels
+margins_edu_levels <- avg_slopes(logit_edu, variables = "educ_1", at = mean_vals) %>%
+  ## Extract the first factor in the contrast (the "treatment" category)
+  mutate(treatment = str_extract(contrast, "(?<=mean\\().+?(?=\\))")) %>%
+  ## Convert to factor with desired order
+  mutate(treatment = factor(treatment, levels = educ_lvl)) %>%
+  ## Arrange by the treatment factor
+  arrange(treatment)
+
+margins_edu_levels
+
+## Plotting predicted probabilities by education
+preds_edu <- data.frame(educ_1 = levels(data1$educ_1))
+
+pred_link <- predict(logit_edu, 
+                     newdata = data.frame(age = mean_vals$age,
+                                          age2 = mean_vals$age2,
+                                          married = mean_vals$married,
+                                          educ_1 = preds_edu$educ_1,
+                                          black = mean_vals$black,
+                                          nchild = mean_vals$nchild,
+                                          citiz = mean_vals$citiz),
+                     type = "link", se.fit = TRUE)
+
+preds_edu <- preds_edu %>%
+  mutate(pred = plogis(pred_link$fit),
+         lower = plogis(pred_link$fit - 1.96 * pred_link$se.fit),
+         upper = plogis(pred_link$fit + 1.96 * pred_link$se.fit))
+
+## Plot with CI
+ggplot(preds_edu, aes(x = sort(educ_1), y = pred)) +
+  geom_line(aes(group = 1)) +
+  geom_point() +
+  geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.1) +
+  ylab("Prob.(lfp)") + xlab("Education Level") +
+  ggtitle("Predicted Probability of lfp by Education") +
+  theme_minimal()
+
+### Goodness of fit ---
+
+## Classification
+cutoff <- 0.5
+phat_logit <- predict(logit_mod, type = "response")
+pred_logit <- ifelse(phat_logit > cutoff,1,0)
+tab_logit <- table(Predicted = pred_logit, Actual = data1$lfp)
+
+## Sensitivity & specificity 
+sensitivity <- tab_logit[2,2]/(tab_logit[2,2] + tab_logit[1,2])
+specificity <- tab_logit[1,1]/(tab_logit[1,1] + tab_logit[2,1])
+c(sensitivity = sensitivity, specificity = specificity)
+
+## Compare predictions (logit vs probit vs OLS)
+phat_probit <- predict(probit_mod, type = "response")
+phat_ols <- predict(lpm, type = "response")
+
+## Plot predicted probabilities by age
+age_sort <- data1 %>% group_by(age) %>%
+  summarize(m_lfp = mean(lfp,na.rm = TRUE),
+            m_logit = mean(phat_logit[age == .$age],na.rm = TRUE),
+            m_probit = mean(phat_probit[age == .$age],na.rm = TRUE),
+            m_ols = mean(phat_ols[age == .$age],na.rm = TRUE)) %>%
+  ungroup()
+
+ggplot(age_sort, aes(x = age)) +
+  theme_minimal() +
+  geom_line(aes(y = m_lfp, color = "Actual")) +
+  geom_line(aes(y = m_ols, color = "OLS"), linetype = "longdash") +
+  geom_line(aes(y = m_logit, color = "Logit"), linetype = "dashed") +
+  geom_line(aes(y = m_probit, color = "Probit"), linetype = "dotdash") +
+  labs(x = 'Age', y = "Prob.(lfp = 1)", title = "Actual vs Predicted Choice Prob. Across Models by Age", colour = NULL) +
+  theme(
+    legend.position = c(0.95, 0.95),
+    legend.justification = c("right", "top"))
+
+### Specification Tests ----
+
+data1_test <- data1 %>%
+  mutate(
+    age_married = age * married,
+    age2_married = I(age^2) * married
+  )
+
+##' Wald test 
+##' Testing if the coefficients of the interaction terms are jointly zero
+logit_wald <- glm(lfp ~ age + I(age^2) + married + educ_1 + black + nchild + citiz + 
+                    age_married + age2_married, 
+                  data = data1_test, 
+                  family = binomial(link = "logit"))
+
+wald_test <- linearHypothesis(logit_wald, c("age_married = 0", "age2_married = 0"))
+print(wald_test)
+
+## Likelihood-ratio test
+
+## Full model (with interactions)
+logit_full <- glm(lfp ~ age + I(age^2) + married + educ_1 + black + nchild + citiz + 
+                    age_married + age2_married, 
+                  data = data1_test, 
+                  family = binomial(link = "logit"))
+
+## Restricted model (without interactions)
+logit_restricted <- glm(lfp ~ age + I(age^2) + married + educ_1 + black + nchild + citiz,
+                        data = data1_test, 
+                        family = binomial(link = "logit"))
+
+lr_test <- lrtest(logit_restricted, logit_full)
+print(lr_test)
+
+## Lagrange multiplier test
+
+xbhat <- predict(logit_restricted, type = "link")
+
+## Add squared linear predictor
+data1_test <- data1_test %>%
+  mutate(xbhat2 = xbhat^2)
+
+## Fit model with squared linear predictor
+logit_lm <- glm(lfp ~ age + I(age^2) + married + educ_1 + black + nchild + citiz + xbhat2,
+                data = data1_test, 
+                family = binomial(link = "logit"))
+
+## Test significance of squared term
+lm_test <- linearHypothesis(logit_lm, "xbhat2 = 0")
+print(lm_test)
+
+## MULTINOMIAL MODELS ----
+
+data1_mnl <- data1 %>%
+  mutate(
+    sector = case_when(
+      lfp == 0 ~ 0,
+      classwkr %in% c(13, 14) ~ 1,
+      classwkr %in% c(22, 23) ~ 2,
+      TRUE ~ NA_real_
+    )
+  ) %>%
+  filter(!is.na(sector)) %>%
+  mutate(sector = factor(sector, 
+                         levels = 0:2,
+                         labels = c("Not participating", "Self-employed", "Private sector employee")
+  ))
 
 ### Multinomial Logit ----
 
-## Generate choice_ind
-data <- data %>%
-  mutate(choice_ind = NA_integer_,
-         choice_ind = case_when(ind_after %in% c(1,2,3) ~ 1,
-                                ind_after %in% c(4,5,6) ~ 2,
-                                ind_after %in% c(7,8) ~ 3),
-         choice_ind = factor(choice_ind, levels = c(1,2,3),
-                             labels = c("Manufacturing", "Services", "Public sector")))
+mnl_model <- multinom(sector ~ age + age2 + married + educ_1 + black + nchild + citiz,
+                      data = data1_mnl, 
+                      trace = FALSE)
+mnl_coef <- coef(mnl_model)
 
-## Multinomial Logit
-MNL <- nnet::multinom(choice_ind ~ exper + unempl_dur + age + age2 + female + ln_wage + veneto_resid,
-                          data = data, base = 1)
-summary(MNL)
+## Get relative risk ratios
+rrr <- exp(coef(mnl_model))
 
-## Extract coefficients and compute relative risk ratios
-MNL_coefs <- coef(MNL)
-MNL_rrr <- exp(MNL_coefs)
-print(MNL_rrr)
+## Predicted probabilities
+mnl_probs <- predict(mnl_model, type = "probs")
+colnames(mnl_probs) <- paste0("pmlogit", 1:3)
 
-## At-Means Marginal Effects for MNL ----
+## Add predictions to data
+data1_mnl <- cbind(data1_mnl, mnl_probs)
 
-MNL_me <- marginaleffects::slopes(MNL, newdata = datagrid()) %>%
-  filter(term %in% c("exper", "unempl_dur", "female"))
+n <- nrow(data1_mnl)
 
-## Conditional Logit ----
+## Calculate marginal effects
 
-alternatives_finer <- c("manuf_light", "manuf_heavy", "manuf_elecon",
-                        "serv_sales", "serv_fin", "serv_other",
-                        "public_adm", "public_hlth")
-
-data <- haven::read_dta(file.path(scriptpath, "DiscreteChoice.dta")) %>% 
-  data.table::setDT() %>%
-  mutate(
-    age2 = age^2,
-    choice_ind = as.integer(ind_after)
-  )
-
-## Map choice_ind to alternative labels
-alt_labels <- setNames(alternatives_finer, 1:8)
-data <- data %>%
-  mutate(
-    alternative_chosen = alt_labels[as.character(choice_ind)]
-  )
-
-## Create alternative-specific choice dummies (d_)
-for (alt in alternatives_finer) {
-  data[[paste0("d_", alt)]] <- as.integer(data$choice_ind == match(alt, alternatives_finer))
+calc_me_numeric <- function(var) {
+  delta <- sd(data1_mnl[[var]]) / 1000
+  temp_data <- data1_mnl
+  temp_data[[var]] <- temp_data[[var]] + delta
+  pred_delta <- predict(mnl_model, newdata = temp_data, type = "probs")
+  me <- (pred_delta - mnl_probs) / delta
+  me_means <- colMeans(me)
+  me_ses <- apply(me, 2, sd) / sqrt(n)
+  return(list(me = me_means, se = me_ses))
 }
 
-## Lists of vars
-d_vars <- grep("^d_", names(data), value = TRUE)
-e_vars <- grep("^e_", names(data), value = TRUE)
-indiv_vars <- c("unempl_dur", "age", "age2", "female", "ln_wage", "veneto_resid")
-
-## The conditional logit long form data
-data_long <- data %>%
-  pivot_longer( ## Reshape longer
-    cols = all_of(c(d_vars, e_vars)),
-    names_to = c(".value", "alternative"),
-    names_pattern = "(d|e)_(.*)"
-  ) %>% 
-  mutate(
-    choice = d,
-    alternative_num = match(alternative, alternatives_finer)
-  )
-
-data_clogit <- mlogit::mlogit.data(
-  data_long,
-  choice = "choice",
-  shape = "long",
-  alt.var = "alternative",
-  id.var = "id"
-)
-
-## Model formula: choice ~ alternative-specific variables | individual-specific variables
-clogit <- mlogit::mlogit(
-  choice ~ e | unempl_dur + age + age2 + female + ln_wage + veneto_resid,
-  data = data_clogit
-)
-
-summary(clogit)
-
-## Compute Marginal Effects
-
-beta_e <- coef(clogit)['e']
-data_clogit_df <- model.frame(clogit)
-index_data <- index(clogit$model)
-data_clogit_df$chid <- index_data$chid
-data_clogit_df$alternative <- index_data$alt
-
-if (!'e' %in% names(data_clogit_df)) {
-  stop("Variable 'e' is not found in the data frame.")
+calc_me_binary <- function(var) {
+  temp_data_1 <- temp_data_0 <- data1_mnl
+  temp_data_1[[var]] <- 1
+  temp_data_0[[var]] <- 0
+  pred_1 <- predict(mnl_model, newdata = temp_data_1, type = "probs")
+  pred_0 <- predict(mnl_model, newdata = temp_data_0, type = "probs")
+  me <- pred_1 - pred_0
+  me_means <- colMeans(me)
+  me_ses <- apply(me, 2, sd) / sqrt(n)
+  return(list(me = me_means, se = me_ses))
 }
 
-data_clogit_df$e <- as.numeric(data_clogit_df$e)
-data_clogit_df$e[is.na(data_clogit_df$e)] <- 0
+calc_me_factor <- function(var) {
+  temp_data <- data1_mnl
+  levels <- levels(data1_mnl[[var]])
+  me_list <- list()
+  
+  for (lev in levels[-1]) {  # Compare to reference level
+    temp_data_1 <- temp_data_0 <- temp_data
+    temp_data_1[[var]] <- factor(lev, levels = levels)
+    temp_data_0[[var]] <- factor(levels[1], levels = levels)
+    pred_1 <- predict(mnl_model, newdata = temp_data_1, type = "probs")
+    pred_0 <- predict(mnl_model, newdata = temp_data_0, type = "probs")
+    me <- pred_1 - pred_0
+    me_means <- colMeans(me)
+    me_ses <- apply(me, 2, sd) / sqrt(n)
+    me_list[[lev]] <- list(me = me_means, se = me_ses)
+  }
+  return(me_list)
+}
 
-data_clogit_df <- data_clogit_df %>%
-  mutate(V_ij = beta_e * e)
+numeric_vars <- c("age",'age2',"nchild")
+binary_vars <- c("age",'age2',"nchild","married", "black", "citiz")
+factor_vars <- c("educ_1")
 
-data_clogit_df <- data_clogit_df %>%
-  mutate(
-    exp_V_ij = exp(V_ij)
-  ) %>%
-  group_by(chid) %>%
-  mutate(
-    denominator = sum(exp_V_ij),
-    P_ij = exp_V_ij / denominator
-  ) %>%
-  ungroup()
+mnl_me <- list()
+for (var in numeric_vars) mnl_me[[var]] <- calc_me_numeric(var)
+for (var in binary_vars) mnl_me[[var]] <- calc_me_binary(var)
+for (var in factor_vars) mnl_me[[var]] <- calc_me_factor(var)
 
-P_ij_df <- data_clogit_df %>%
-  select(chid, alternative, P_ij)
+mnl_me <- mnl_me %>% as.data.frame()
 
-me_data <- data_clogit_df %>%
-  rename(e_alternative = alternative, P_ej = P_ij) %>%
-  select(chid, e_alternative, P_ej)
+### Conditional Logit ----
 
-me_data_full <- me_data %>%
-  inner_join(P_ij_df, by = "chid") %>%
-  rename(alternative = alternative, P_ik = P_ij)
+data("Fishing", package = "mlogit")
+data2_cl <- dfidx(Fishing, varying = 2:9, shape = "wide", choice = "mode") %>%
+  rename(p = price,
+         c = catch)
 
-me_data_full <- me_data_full %>%
-  mutate(
-    ME = ifelse(
-      e_alternative == alternative,
-      beta_e * P_ik * (1 - P_ik),
-      -beta_e * P_ik * P_ej
-    )
+## Basic model
+cl1 <- mlogit(mode ~ p + c | 0, data = data2_cl)
+
+## Model with income
+cl2 <- mlogit(mode ~ p + c | income, data = data2_cl)
+
+## Calculate ME
+calc_cl_me <- function(model, covariate) {
+  me <- effects(model, covariate = covariate)
+  
+  if(covariate == "income") {
+    var_terms <- paste0("income:", c("boat", "charter", "pier"))
+    var_me <- sum(diag(vcov(model)[var_terms, var_terms]))
+  } else {
+    var_me <- vcov(model)[covariate, covariate]
+  }
+  
+  se <- sqrt(var_me)
+  
+  data.frame(
+    Variable = covariate,
+    ME = me[1],
+    SE = se,
+    t = me[1]/se, 
+    p = 2*pnorm(-abs(me[1]/se))
   )
+}
 
-## Average marginal effects
-avg_me <- me_data_full %>%
-  group_by(e_alternative, alternative) %>%
-  summarise(
-    Average_Marginal_Effect = mean(ME, na.rm = TRUE),
-    .groups = 'drop'
-  ) %>%
-  pivot_wider(
-    names_from = alternative,
-    values_from = Average_Marginal_Effect
-  )
+cl1_me_p <- calc_cl_me(cl1, "p")
+cl1_me_c <- calc_cl_me(cl1, "c")
+cl1_me_list <- list(cl1_me_p, cl1_me_c)
+cl1_me_table <- do.call(rbind, cl1_me_list)
 
-## Nested Logit ----
+cl2_me_p <- calc_cl_me(cl2, "p")
+cl2_me_c <- calc_cl_me(cl2, "c")
+cl2_me_inc <- calc_cl_me(cl2, "income")
+cl2_me_list <- list(cl2_me_p, cl2_me_c, cl2_me_inc)
+cl2_me_table <- do.call(rbind, cl2_me_list)
 
-nests <- list(
-  Manufacturing = c("manuf_light", "manuf_heavy", "manuf_elecon"),
-  Services = c("serv_sales", "serv_fin", "serv_other"),
-  Public = c("public_adm", "public_hlth")
-)
+### Nested Logit ----
 
-nested_clogit <- mlogit::mlogit(
-  choice ~ e | unempl_dur + age + age2 + female + ln_wage + veneto_resid,
-  data = data_clogit,
-  nests = nests,
-  reflevel = "manuf_light"
-)
+data2_nl <- data2_cl
 
-summary(nested_clogit)
+nl1 <- mlogit(mode ~ p + c | 0, 
+              data2_nl,
+              nests = list(coast = c('beach','pier'), 
+                          water = c('charter','boat')))
+
+nl2 <- mlogit(mode ~ p + c | income, 
+              data2_nl,
+              nests = list(coast = c('beach','pier'), 
+                           water = c('charter','boat')))
+
+## Compare CL and NL
+
+stargazer(cl1, nl1, cl2, nl2,
+          type = "text",
+          keep.stat = c("n",'ll'),
+          column.labels = c("CL1","NL1","CL2","NL2"),
+          model.names = F)
 
 ## Closing ----
 
 #file.remove("DiscreteChoice.dta")
 
 ## Output
-# save(list = c('blogit','bprobit','MNL','clogit','nlogit'),
+# save(list = c(),
 #      file = file.path(scriptpath,'DiscreteChoice_results.RData'))  ## or you can save the whole image
 
 ## Ends timer
