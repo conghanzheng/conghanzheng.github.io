@@ -1,167 +1,199 @@
 """
 Preliminaries
 """
-##  Package Dependencies
-import os
+## Package Dependencies
+# !pip install numpy scipy
 import numpy as np
-from scipy.io import loadmat, savemat
-from scipy.optimize import minimize
-import numba
+from scipy.optimize import minimize, approx_fprime
+from scipy.stats import norm
+import logging
 
-## Set working directory to the script's directory, for saving results
-script_path = os.path.dirname(os.path.abspath(__file__))
-os.chdir(script_path)
+logging.basicConfig(level=logging.INFO)
 
 """
 Load online data
 """
 
-data = loadmat('https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/Python/cleandata.mat')
-EExt = data['EExt']  # Cumulative mileage
-EEit = data['EEit']  # Dummy indicator matrix
+url = 'https://raw.githubusercontent.com/conghanzheng/conghanzheng.github.io/master/assets/Python/cleandata.mat'
+with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+    urllib.request.urlretrieve(url, tmp_file.name)
+
+data = loadmat(tmp_file.name)
+
+os.unlink(tmp_file.name)
+
+EExt = data['EExt']  ## Cumulative mileage
+EEit = data['EEit']  ## Dummy indicator matrix
 
 """
 Transitions
 """
 
-## Empirical frequencies
-interv = np.ceil(EExt / 5000).astype(int)  # same as ceil(EExt/5000)
-dfint = np.diff(interv, axis=0)  # difference along the time dimension (row-wise)
-
-## Prob Vector
-phi = np.zeros(3)
-for i in range(3):
-    ind = (dfint == (i)).astype(float)
-    phi[i] = np.nanmean(ind)
-
-phi = phi / np.sum(phi)
-
-## Building Transition matrix
-trans_mat = np.zeros((90, 90))
-
-for i in range(0, 89):
-    trans_mat[i, i] = phi[0]    # phi(1,1) in MATLAB is phi[0] in Python
-    trans_mat[i, i+1] = phi[1]  # phi(1,2) in MATLAB is phi[1] in Python
-
-for i in range(0, 88):
-    trans_mat[i, i+2] = phi[2]  # phi(1,3) in MATLAB is phi[2] in Python
-
-trans_mat[89, 89] = 1
-trans_mat[88, 89] = 1 - phi[0]
-
-## Save intermediate results
-savemat('results_nfxp.mat', {'phi': phi, 'trans_mat': trans_mat})
-
-## Parameters and Initial Values
-beta = 0.99
-thetastart = np.array([10, 2])
-
-"""
-    Function: Compute the value function by fixed point iteration
-
-    Inputs:
-    - beta: discount factor
-    - theta: vector of parameters [theta_r, theta_m]
-    - trans_mat: 90x90 transition matrix
-
-    Output:
-    - ev: 90x1 vector of expected value function
-"""
-@numba.njit
-def valuefunction(beta, theta, trans_mat):
+def trans_prob(EExt):
+    """
+    Function: Calculate Empirical Transition Probabilities
+    """
+    EExt_clean = np.nan_to_num(EExt, nan=0)
+    interv = np.ceil(EExt_clean / 5000).astype(int)
+    dfint = np.diff(interv, axis=0)
     
-    tol = 1e-6
+    phi = np.array([np.mean(dfint == i) for i in range(3)])
+    phi_sum = np.sum(phi)
+    if phi_sum == 0:
+        logging.warning("Zero transition probabilities detected")
+        return np.array([1/3, 1/3, 1/3])
+    return phi / phi_sum
+
+def tran_mat(phi):
+    """
+    Function: Build transition matrix from probabilities
+    """
+    F = np.zeros((90, 90))
+    np.fill_diagonal(F[:89, :89], phi[0])
+    np.fill_diagonal(F[:89, 1:], phi[1])
+    np.fill_diagonal(F[:88, 2:], phi[2])
+    F[89, 89] = 1
+    F[88, 89] = 1 - phi[0]
+    return F
+
+"""
+NFXP Steps
+"""
+
+def value_function(beta, theta, trans_mat):
+    """
+    Function: Compute Value Function
+    """
     ev = np.zeros((90, 1))
-    rule = 1.0
-    while rule > tol:
-        x = np.arange(1, 91).reshape(-1, 1) # state: 1 to 90
-        c = 0.001 * theta[1] * x   # maintenance cost
-        exp1 = np.exp(-theta[0] + beta * ev[0, 0])   # scalar
-        exp0 = np.exp(-c + beta * ev)                # 90x1
-        # ev_new = trans_mat * log(exp1 + exp0), matrix multiplication and log inside
-        # Carefully: log(exp1+exp0) is elementwise. 
-        # Need to do matrix multiplication of trans_mat with the vector log(exp1+exp0)
-        
-        vals = np.log(exp1 + exp0)  # 90x1
-        ev_new = trans_mat @ vals   # 90x1
-        
-        diff = ev_new - ev
-        rule = np.sqrt(np.sum(diff**2))
+    tol, diff = 1e-6, 1.0
+    max_iter = 1000
+    iter_count = 0
+    
+    while diff > tol and iter_count < max_iter:
+        c = 0.001 * theta[1] * np.arange(1, 91).reshape(-1, 1)
+        max_v = np.maximum(-theta[0] + beta * ev[0, 0], -c + beta * ev)
+        log_sum = np.log(np.exp(-theta[0] + beta * ev[0, 0] - max_v) + 
+                        np.exp(-c + beta * ev - max_v))
+        ev_new = trans_mat @ (max_v + log_sum)
+        diff = np.linalg.norm(ev_new - ev)
         ev = ev_new
+        iter_count += 1
+    
+    if iter_count == max_iter:
+        logging.warning("Value function iteration did not converge")
+    
     return ev
 
-"""
-    Function: Negative log-likelihood for Rust model.
-
-    Inputs:
-    - EExt: T x N matrix of cumulative mileage states
-    - EEit: T x N matrix of engine replacement dummies
-    - beta: discount factor
-    - theta: vector of parameters [theta_r, theta_m]
-    - trans_mat: 90x90 transition matrix
-
-    Output:
-    - out: scalar, negative log-likelihood
-"""
-@numba.njit
-def loglike_rust(EExt, EEit, beta, theta, trans_mat):
+def log_likelihood(theta, beta, trans_mat, state, choices):
+    """
+    Function: Compute Log-Likelihood
+    """
+    if np.any(theta <= 0):
+        return -1e10
     
-    ## Get value function fixed point
-    ev0 = valuefunction(beta, theta, trans_mat)
-    x = np.arange(1,91).reshape(-1,1)
-    c = 0.001 * theta[1] * x
-    v1 = -theta[0] - c[0] + beta * ev0[0, 0]
-    v0 = -c + beta * ev0
-    payoff_diff = v1 - v0  # 90x1
+    try:
+        ev = value_function(beta, theta, trans_mat)
+        c = 0.001 * theta[1] * np.arange(1, 91).reshape(-1, 1)
+        v_diff = -theta[0] - c[0] + beta * ev[0, 0] - (-c + beta * ev)
+        
+        loglike = 0.0
+        valid_obs = 0
+        
+        for i in range(state.shape[1]):
+            for t in range(state.shape[0]):
+                if not np.isnan(state[t, i]):
+                    s_ind = int(state[t, i]) - 1
+                    if 0 <= s_ind < 90:  # Ensure valid state index
+                        p1 = 1.0 / (1.0 + np.exp(-v_diff[s_ind]))
+                        loglike += np.log(p1 if choices[t, i] == 1 else 1 - p1)
+                        valid_obs += 1
+        
+        logging.info(f"Log-likelihood computed with {valid_obs} valid observations")
+        return loglike
+    except Exception as e:
+        logging.error(f"Error in log-likelihood computation: {str(e)}")
+        return -1e10
 
-    ## Transform states
-    if np.nanmax(EExt) > 100:
-        state = np.ceil(EExt / 5000).astype(int)
-    else:
-        state = EExt.astype(int)
-
-    ## Compute log-likelihood
-    f = np.full(EExt.shape, np.nan)
-    T, N = EExt.shape
-    for i in range(N):
-        st = state[:, i]
-        it = EEit[:, i]
-        for t in range(T):
-            if not np.isnan(st[t]):
-                s_ind = int(st[t]) - 1  # zero-based indexing
-                p1t = 1.0 - 1.0/(1.0 + np.exp(payoff_diff[s_ind]))
-                if it[t] == 1:
-                    f[t, i] = np.log(p1t)
-                else:
-                    f[t, i] = np.log(1 - p1t)
-
-    out = -np.nansum(f)
-    return out
+def estimate_rust(EExt, EEit, beta):
+    """
+    Function: Main Rust NFXP Estimation
+    """
+    logging.info("Starting Rust model estimation")
+    
+    # States
+    state = np.ceil(EExt / 5000).astype(int) if np.nanmax(EExt) > 100 else EExt.astype(int)
+    
+    # Transitions
+    phi = trans_prob(EExt)
+    logging.info(f"Transition probabilities: {phi}")
+    trans_mat = tran_mat(phi)
+    
+    # Optimization
+    objective = lambda theta: -log_likelihood(theta, beta, trans_mat, state, EEit)
+    
+    try:
+        result = minimize(objective, [10.0, 2.0], method='L-BFGS-B',
+                         bounds=[(1e-10, None), (1e-10, None)])
+        
+        n_obs = np.sum(~np.isnan(state))
+        
+        # Modified Hessian calculation with more stable step size
+        step_size = np.maximum(1e-4 * np.abs(result.x), 1e-4)  # Adaptive step size
+        
+        def compute_hessian(x, func, h):
+            n = len(x)
+            hessian = np.zeros((n, n))
+            
+            for i in range(n):
+                for j in range(n):
+                    x_ij = x.copy()
+                    x_ij[i] += h[i]
+                    x_ij[j] += h[j]
+                    
+                    x_i = x.copy()
+                    x_i[i] += h[i]
+                    
+                    x_j = x.copy()
+                    x_j[j] += h[j]
+                    
+                    hessian[i,j] = (func(x_ij) - func(x_i) - func(x_j) + func(x)) / (h[i] * h[j])
+            
+            return (hessian + hessian.T) / 2  # Ensure symmetry
+        
+        hessian = compute_hessian(result.x, objective, step_size)
+        
+        # Add small diagonal perturbation if necessary
+        min_eig = np.min(np.linalg.eigvals(hessian))
+        if min_eig < 1e-6:
+            hessian += np.eye(len(result.x)) * (1e-6 - min_eig)
+        
+        vcov = np.linalg.inv(hessian) / n_obs
+        se = np.sqrt(np.diag(vcov))
+        t_stats = result.x / se
+        p_vals = 2 * (1 - norm.cdf(np.abs(t_stats)))
+        
+        # Results
+        param_names = ['RC cost (θ_r)', 'MC cost (θ_m)']
+        print("\nRust Model Estimation Results:")
+        print("=" * 65)
+        print(f"{'Parameter':<12} {'Estimate':>10} {'Std.Err':>10} {'t-stat':>10} {'p-value':>10}")
+        print("-" * 65)
+        
+        for i, name in enumerate(param_names):
+            print(f"{name:<12} {result.x[i]:10.4f} {se[i]:10.4f} {t_stats[i]:10.4f} {p_vals[i]:10.4f}")
+        
+        print(f"\nLog-likelihood: {-result.fun:.4f}")
+        print(f"Observations: {n_obs}")
+        print(f"Converged: {result.success}")
+        
+        return result.x, se, t_stats, p_vals
+        
+    except Exception as e:
+        logging.error(f"Estimation failed: {str(e)}")
+        return None, None, None, None
 
 """
-    Optimization
+Optimization
 """
-## Objective function for scipy minimize
-def objective(theta):
-    return loglike_rust(EExt, EEit, beta, theta, trans_mat)
-
-## Optimization
-options = {
-    'disp': True,
-    'maxiter': 10**7,   # iterations
-    'gtol': 1e-20       # tolerance
-}
-
-res = minimize(objective, thetastart, method='BFGS', options=options)
-
-theta_nfxp = res.x
-hessian_pooled = res.hess_inv  # approximate Hessian inverse
-stdtheta_nfxp = np.sqrt(np.diag(hessian_pooled))
-
-## Save the results to local drive
-savemat('results_nfxp.mat', {
-    'phi': phi, 
-    'trans_mat': trans_mat, 
-    'theta_nfxp': theta_nfxp,
-    'stdtheta_nfxp': stdtheta_nfxp
-}, appendmat=True)
+beta = 0.99
+estimates, std_errors, t_stats, p_values = estimate_rust(EExt, EEit, beta)
