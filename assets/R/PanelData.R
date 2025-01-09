@@ -66,7 +66,7 @@ download.file(data_url, destfile = "PanelData.dta")
 data_raw <- haven::read_dta("PanelData.dta") %>%
   data.table::setDT() ## things get quicker with data.table
 
-## PART I: MANIPULATING PANEL DATA ---------------------------------------------
+## PART I: MANIPULATING PANEL DATA ----
 
 ## The data has variables n, w, k, y with repeated firm-year observations.
 
