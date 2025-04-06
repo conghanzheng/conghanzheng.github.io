@@ -1,21 +1,22 @@
 rm(list = ls())
 # cat("\f") ## clear the console; comment this line if you are not working with Rstudio
-## %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-##
-##              Automated Data Collection from eurostat open data
-##
-##
-## DESCRIPTION: 
-## Download selected business statistics from eurostat through API.
-##
-## INPUT:  
-## 1. "manually input country names (iso code, in [country_chr]), time range ([data_start] and [data_end]), and names of variables to be requested ([dsid]) in the script"
-##
-## OUTPUT: 
-## 1. data and TOC (csv, rds, and RData files by lines at the end of the script)
-##
-## LAST UPDATED: 26 APR 2023
-## %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+##' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+##'
+##'              Automated Data Collection from eurostat open data
+##'
+##'
+##' DESCRIPTION: 
+##' Download selected business statistics from eurostat through API.
+##'
+##' INPUT:  
+##' 1. "manually input country names (iso code, in [country_chr]), time range ([data_start] and [data_end]), and names of variables to be requested ([dsid]) in the script"
+##'
+##' OUTPUT: 
+##' 1. data and TOC (csv, rds, and RData files by lines at the end of the script)
+##'
+##' AUTHOR: Conghan Zheng (https://conghanzheng.github.io)
+##' LAST UPDATED: 26 APR 2023
+##' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ## PRELIMINARIES ----
 

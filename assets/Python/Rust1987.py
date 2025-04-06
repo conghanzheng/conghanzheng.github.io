@@ -1,3 +1,6 @@
+## AUTHOR: Conghan Zheng (https://conghanzheng.github.io)
+## Last Updated: 2024-12-13
+
 """
 Preliminaries
 """
