@@ -1,0 +1,220 @@
+---
+layout: default
+---
+
+<div class="post">
+  <div class="row">
+    <!-- Left column: Name, photo, contact info -->
+    <div class="col-md-4 sticky-column">
+      <header class="post-header">
+
+        <!-- Add spacing before photo -->
+        <div style="margin-top: 15px;"></div>
+
+        <!-- Profile image -->
+          {% if page.profile %}
+            <div class="profile" style="width: 85%;">
+              {% if page.profile.image %}
+                {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+                {% if page.profile.image_circular %}
+                  {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+                {% else %}
+                  {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+                {% endif %}
+                <img src="{{ profile_image_path | relative_url }}" class="{{ profile_image_class }}" style="width: 100%; max-width: 100%; height: auto;" alt="{{ page.profile.image }}">
+              {% endif %}
+            </div>
+          {% endif %}
+         
+        <!-- Add spacing after photo -->
+        <div style="margin-top: 15px;"></div>
+        
+        <h1 class="post-title hide-on-mobile">
+          {% if site.title == 'blank' %}
+            <span>{{ site.first_name }}</span> {{ site.middle_name }}
+            {{ site.last_name }}
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+         
+        <!-- Subtitle -->
+        {% if page.subtitle %}
+          <div class="more-info hide-on-mobile">
+            {{ page.subtitle }}
+          </div>
+        {% endif %}
+         
+        <!-- Add spacing after subtitle -->
+        <div style="margin-top: 7px;"></div>     
+         
+        <!-- Contact Info -->
+        {% if page.profile.more_info %}
+          <div class="more-info">
+            {{ page.profile.more_info }}
+          </div>
+        {% endif %}
+      </header>
+    </div>
+     
+    <!-- Right column: Main content -->
+    <div class="col-md-8 content-column">
+      <article>
+        <div class="clearfix">{{ content }}</div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- Styling -->
+<style>
+  /* Spacing between h5 sections */
+  h4, h5, h6 {
+    margin-top: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  p, a, div, i, b {
+    line-height: 1.6; 
+  }
+
+  .content-column {
+    line-height: 1.6;
+  }
+
+  .more-info {
+    line-height: 1.8;
+    text-align: left; /* Set text alignment to left */
+    display: inline-block; /* Make it inline-block to allow for center alignment */
+    margin: 0 auto; /* Center the block itself */
+  }
+
+  /* Make the left column sticky on scroll for desktop */
+  @media (min-width: 768px) {
+
+    /* Container spacing to match original design */
+    .container.mt-5 {
+      margin-top: 3rem !important; /* Keep original top spacing */
+    }
+
+    .sticky-column {
+      position: sticky; /* Modern browsers sticky positioning */
+      top: 70px; /* Distance from the top of the viewport */
+      height: auto; 
+      max-height: calc(100vh - 70px);
+      align-self: flex-start; /* Prevents column from stretching */
+      z-index: 1; /* Lower than header */
+    }
+    
+    /* Ensure the navbar is above all content */
+    #navbar {
+      z-index: 1030 !important;
+    }
+
+    .post-header {
+      margin-top: 20px;
+    }
+
+  }
+
+  /* Enhanced mobile styling */
+  @media (max-width: 767px) {
+    
+    /* Hide elements on mobile */
+    .hide-on-mobile {
+      display: none !important;
+    }
+    
+    /* Improve layout flow */
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .sticky-column {
+      position: relative;
+      top: 0;
+      height: auto;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Adjust main content width on mobile */
+    .content-column {
+      width: 95%;
+      margin: 0 auto; /* Center the content */
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    /* Make sure the column doesn't inherit conflicting Bootstrap padding */
+    .col-md-8.content-column {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    /* Center profile elements on mobile */
+    .post-title, .profile {
+      text-align: center;
+    }
+    
+    /* For mobile, optimize the profile image size */
+    .profile {
+      margin: 0 auto;
+    }
+    
+    .profile img {
+      width: 82% !important;
+      max-width: 100px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* Align more-info with the left edge of the photo on mobile */
+    .more-info {
+      width: 70% !important;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: left;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  /* Table */
+  .content-column table {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Table, mobild view (two-columns/one-column layout) */
+  @media only screen and (max-width: 768px) {
+    table {
+      width: 100%; /* Ensure the table takes full width on mobile */
+    }
+
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    td, th {
+      display: inline-block;
+      width: 90%; /* width for each column*/
+      margin-bottom: 10px;
+    }
+
+    /* Give the last td more width */
+    td:last-child {
+      width: 100%; /* Allow the last column to take full width */
+    }
+  }
+</style>
