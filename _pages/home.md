@@ -2,9 +2,9 @@
 layout: home
 title: Home
 permalink: /
-subtitle: > #<p>(pronounced: <em>tsong-hahn</em>)</p> <br>
-  <p>PhD Candidate</p>
-  <p>UAB and BSE</p>
+subtitle: > #<a>(pronounced: <em>tsong-hahn</em>)</a> <br>
+  <a>PhD Candidate</a><br>
+  <a>UAB and BSE</a>
 
 profile:
   align: right
