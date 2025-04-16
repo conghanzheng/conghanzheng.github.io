@@ -4,10 +4,6 @@ title: Home
 permalink: /
 subtitle: > #<a>(pronounced: <em>tsong-hahn</em>)</a> <br>
   <a>PhD Candidate, UAB</a><br>
-  <p></p>
-  <a>Doctorat IDEA</a><br>
-  <a>Edifici B, Campus de la UAB</a><br>
-  <a>08193 Bellaterra, Barcelona, Spain</a><br>
 profile:
   align: right
   image: conghan2024.JPG
