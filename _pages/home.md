@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: > 
     <span>&#128231;</span> <a href="mailto:conghan.zheng@uab.cat">conghan.zheng@uab.cat</a><br>
-    <span class="pdf-icon"></span> <a href="https://drive.google.com/file/d/1k2VQ8q8Dq5QhTCJPEX6S_2Ggz2XmqBn8/view?usp=share_link">CV</a><br>
+    <span class="pdf-icon"></span> <a href="https://drive.google.com/file/d/1k2VQ8q8Dq5QhTCJPEX6S_2Ggz2XmqBn8/view">CV</a><br>
     <span class="orcid-icon"></span> <a href="https://orcid.org/0000-0003-0158-5111">ORCID</a> 
 # <span class="googlescholar-icon"></span> <a href="https://scholar.google.com/citations?user=6xciHZgAAAAJ&hl=en&oi=ao">Google Scholar</a><br>
 # <span class="github-icon"></span> <a href="https://github.com/conghanzheng?tab=repositories">Github</a>
@@ -44,7 +44,7 @@ profile:
 
 <h5>Job Market Paper</h5>
 
-<p><a href="https://drive.google.com/file/d/1iStb7yNR4LUlK19sJ7lNp_yg16Ccs2Kx/view?usp=share_link">"Parental Rural-Urban Migration and Child Education"</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#jmp-abstract" class="collapsible"></button>]</p>
+<p><a href="https://drive.google.com/file/d/1iStb7yNR4LUlK19sJ7lNp_yg16Ccs2Kx/view">"Parental Rural-Urban Migration and Child Education"</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#jmp-abstract" class="collapsible"></button>]</p>
 
 <div id="jmp-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -65,7 +65,7 @@ profile:
 
 <h5>Working Paper</h5>
 
-<p><a href="https://drive.google.com/file/d/19beCLAUTd3ZVhdY0rAG171cb90w07MYH/view?usp=share_link">"Migration Outcome Gap: The Cost of Leaving Children Behind"</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#enter-jbr-abstract" class="collapsible"></button>]</p>
+<p><a href="https://drive.google.com/file/d/19beCLAUTd3ZVhdY0rAG171cb90w07MYH/view">"Migration Outcome Gap: The Cost of Leaving Children Behind"</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#enter-jbr-abstract" class="collapsible"></button>]</p>
 
 <div id="enter-jbr-abstract" class="collapse">
     <p style="padding-left: 1em;">
