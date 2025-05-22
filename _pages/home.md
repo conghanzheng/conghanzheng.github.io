@@ -73,6 +73,14 @@ profile:
     </p>
 </div>
 
+<p><a href="https://drive.google.com/file/d/1i_D9DOuTkk-ZY6V2_prUH6xJ50mT4USv/view">"The Presence of Siblings and Child Health Outcomes"</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#sibhealth-abstract" class="collapsible"></button>]</p>
+
+<div id="sibhealth-abstract" class="collapse">
+    <p style="padding-left: 1em;">
+        Using China's replacement of the 1-child policy with the 2-child policy in 2016 as a natural experiment, I examine the impact of whether a child has a sibling on child health outcomes. The results show heterogeneous effects across socioeconomic settings. First-born children in urban households experience improved physical development when a sibling arrives, suggesting that parents mobilize additional resources rather than simply reallocating fixed inputs. Conversely, rural first-borns show diminished growth metrics following the birth of a sibling, suggesting binding resource constraints. These contrasting patterns demonstrate that the elasticity of intra-household investment varies substantially with initial economic capacity, cultural factors, and historical policy context.
+    </p>
+</div>
+
 <h5>Work-in-Progress</h5>
 
 <p>"Family Migration and the Intergenerational Contract between Informal Elderly Care and Child Care" &nbsp; Abstract [<button data-toggle="collapse" data-target="#wip-intergen-abstract" class="collapsible"></button>]</p>
