@@ -16,9 +16,9 @@ profile:
 # <span class="github-icon"></span> <a href="https://github.com/conghanzheng?tab=repositories">Github</a>
 ---
 
-<p>I am a PhD Candidate at Universitat Autònoma de Barcelona (UAB) and Barcelona School of Economics (BSE) in the <a href="https://www.uabidea.eu">International Doctorate of Economic Analysis (IDEA) program</a>. My research interests are in applied microeconomics, labor, migration, and family economics.</p>
+<p>I completed my PhD studies in the <a href="https://www.uabidea.eu">International Doctorate of Economic Analysis (IDEA) program</a> at the Universitat Aut&ograve;noma de Barcelona (UAB) and the Barcelona School of Economics (BSE), graduating on 23 September 2025. My research interests are in applied microeconomics, labor, migration, and family economics.</p>
 
-<p>I'm on the Econ Job Market 2024-2025.</p>
+<p>I'm on the Econ Job Market.</p>
 
 <h5>Job Market References</h5>
 
