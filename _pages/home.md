@@ -9,7 +9,7 @@ profile:
   image: conghan2024.JPG
   image_circular: false # crops the image to make it circular
   more_info: > 
-    <span>&#128231;</span> <a href="mailto:conghan.zheng@uab.cat">conghan.zheng@uab.cat</a><br>
+    <span>&#128231;</span> <a href="mailto:conghanzheng42@gmail.com">conghanzheng42@gmail.com</a><br>
     <span class="pdf-icon"></span> <a href="https://drive.google.com/file/d/1k2VQ8q8Dq5QhTCJPEX6S_2Ggz2XmqBn8/view">CV</a><br>
     <span class="orcid-icon"></span> <a href="https://orcid.org/0000-0003-0158-5111">ORCID</a> 
 # <span class="googlescholar-icon"></span> <a href="https://scholar.google.com/citations?user=6xciHZgAAAAJ&hl=en&oi=ao">Google Scholar</a><br>
