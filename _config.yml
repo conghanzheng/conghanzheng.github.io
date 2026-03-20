@@ -5,9 +5,9 @@
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Conghan
 middle_name: 
-last_name: Zheng
-email: conghan.zheng@uab.cat
-affiliation: PhD candidate, UAB and BSE
+last_name: ZHENG
+email: conghan.zheng@autonoma.cat
+affiliation: PhD, UAB and BSE
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Conghan does research in applied micro, labor, migration, and family econ.
 show_footer: false ## check
