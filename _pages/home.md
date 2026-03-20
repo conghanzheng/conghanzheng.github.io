@@ -7,7 +7,7 @@ subtitle: >
     <a>PhD, UAB & BSE</a><br>
 profile:
   align: right
-  image: # conghan2024.JPG
+  image: conghan2024.JPG
   image_circular: false # crops the image to make it circular
   more_info: > # <span>&#128231;</span> <a href="mailto:conghan.zheng@autonoma.cat">conghan.zheng@autonoma.cat</a><br>
     <a href="mailto:conghan.zheng@autonoma.cat">conghan.zheng@autonoma.cat</a><br>
