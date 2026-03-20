@@ -2,8 +2,9 @@
 layout: home
 title: Home
 permalink: /
-subtitle: > #<a>(pronounced: <em>tsong-hahn</em>)</a> <br>
-  <a>PhD, UAB & BSE</a><br>
+subtitle: > 
+    <a>(pronounced: <em>tsong-hahn</em>)</a> <br>
+    <a>PhD, UAB & BSE</a><br>
 profile:
   align: right
   image: conghan2024.JPG
@@ -16,7 +17,9 @@ profile:
 # <span class="github-icon"></span> <a href="https://github.com/conghanzheng?tab=repositories">Github</a>
 ---
 
-<p>I received my PhD in economics from the <a href="https://www.uabidea.eu">International Doctorate of Economic Analysis (IDEA) program</a> at the Universitat Aut&ograve;noma de Barcelona (UAB) and the Barcelona School of Economics (BSE) on 23 September 2025. My research interests are in applied micro, labor, migration, and family econ. </p> 
+<p>My research interests are in applied micro, labor, migration, and family econ. </p> 
+
+<p>I received my PhD in economics from the <a href="https://www.uabidea.eu">International Doctorate of Economic Analysis (IDEA) program</a> at the Universitat Aut&ograve;noma de Barcelona (UAB) and the Barcelona School of Economics (BSE) on 23 September 2025. </p>
 
 <p> I'm on the Econ Job Market. </p>
 
