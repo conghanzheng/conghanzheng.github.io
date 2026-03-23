@@ -32,22 +32,19 @@ profile:
       <a href="https://joanllull.github.io">Joan Llull</a><br>
       <a> (PhD Advisor) </a> <br>
       <a> Professor </a> <br>
-      <a> IAE-CSIC & BSE </a> <br>
-      <p>joan.llull [at] iae.csic.es</p>
+      <a> IAE-CSIC & BSE </a>
     </td>
     <td>
       <a href="https://sites.google.com/view/hannawang/">Hanna Wang</a><br>
       <a> (PhD Advisor) </a> <br>
       <a> Assistant Professor </a> <br>
-      <a> UAB & BSE </a> <br>
-      <p>hanna.wang [at] uab.cat</p>
+      <a> UAB & BSE </a>
     </td>
     <td>
       <a href="https://sites.google.com/view/adaferrer-i-carbonell">Ada Ferrer-i-Carbonell</a> <br>
       <a> (PhD Committee Member) </a> <br>
       <a> Tenured Scientist </a> <br>
-      <a> IAE-CSIC & BSE </a> <br>
-      <p>ada.ferrer"AT"iae.csic.es</p>
+      <a> IAE-CSIC & BSE </a>
     </td>
   </tr>
 </table>
