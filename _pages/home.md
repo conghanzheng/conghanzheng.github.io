@@ -9,8 +9,9 @@ profile:
   align: right
   image: conghan2024.JPG
   image_circular: false # crops the image to make it circular
-  more_info: > # <span>&#128231;</span> <a href="mailto:conghan.zheng@autonoma.cat">conghan.zheng@autonoma.cat</a><br>
-    <a href="mailto:conghan.zheng@autonoma.cat">conghan.zheng@autonoma.cat</a><br>
+  more_info: > 
+    # <span>&#128231;</span> <a href="mailto:conghan.zheng@autonoma.cat">Email</a><br>
+# <a href="mailto:conghan.zheng@autonoma.cat">conghan.zheng@autonoma.cat</a><br>
     <span class="pdf-icon"></span> <a href="https://drive.google.com/file/d/1k2VQ8q8Dq5QhTCJPEX6S_2Ggz2XmqBn8/view">CV</a><br>
     <span class="orcid-icon"></span> <a href="https://orcid.org/0000-0003-0158-5111">ORCID</a><br>
     <span class="googlescholar-icon"></span> <a href="https://scholar.google.com/citations?user=6xciHZgAAAAJ&hl=en&oi=ao">Google Scholar</a>
@@ -105,6 +106,35 @@ profile:
 
 </div><!-- End of Research section -->
 
+<div id="code" class="section-container">
+    <!-- Begin of Code section -->
+
+<h4>Code</h4>
+
+<p>Below are some code scripts I have developed for data analysis.</p>
+
+<ul>
+    <li>Automated Data Collection &nbsp;<a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/eurostatB.R">[R code]</a></li>
+    <li>Applied Microeconometrics </li> 
+        <ul>
+            <li>Dynamic Discrete Choice</li>
+                <ul>
+                    <li>Full Solution: Rust, 1987 &nbsp;<a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/Python/Rust1987.py">[Python Code]</a></li>
+                </ul>
+            <li>Demand Estimation</li>
+                <ul>
+                    <li>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000 &nbsp;<a href="https://conghanzheng.github.io/assets/Python/BLP.html">[Python Notebook]</a></li>
+                    <li>Almost Ideal Demand System (AIDS) &nbsp;<a href="https://conghanzheng.github.io/assets/R/AIDS.html">[R Markdown]</a></li>
+                </ul>
+        </ul>
+    <li>Other Econometric Topics</li> 
+        <ul>
+            <li>Kronecker Product Structure (KPS) Covariance &nbsp;<a href="https://github.com/conghanzheng/KPS">[Python Code]</a></li>
+        </ul>
+</ul>
+
+</div><!-- End of Code section -->
+
 <div id="teaching" class="section-container">
     <!-- Begin of Teaching section -->
 
@@ -146,32 +176,3 @@ profile:
 </ul>
 
 </div><!-- End of Teaching section -->
-
-<div id="code" class="section-container">
-    <!-- Begin of Code section -->
-
-<h4>Code</h4>
-
-<p>Below are some code scripts I have developed for data analysis.</p>
-
-<ul>
-    <li>Automated Data Collection &nbsp;<a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/eurostatB.R">[R code]</a></li>
-    <li>Applied Microeconometrics </li> 
-        <ul>
-            <li>Dynamic Discrete Choice</li>
-                <ul>
-                    <li>Full Solution: Rust, 1987 &nbsp;<a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/Python/Rust1987.py">[Python Code]</a></li>
-                </ul>
-            <li>Demand Estimation</li>
-                <ul>
-                    <li>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000 &nbsp;<a href="https://conghanzheng.github.io/assets/Python/BLP.html">[Python Notebook]</a></li>
-                    <li>Almost Ideal Demand System (AIDS) &nbsp;<a href="https://conghanzheng.github.io/assets/R/AIDS.html">[R Markdown]</a></li>
-                </ul>
-        </ul>
-    <li>Other Econometric Topics</li> 
-        <ul>
-            <li>Kronecker Product Structure (KPS) Covariance &nbsp;<a href="https://github.com/conghanzheng/KPS">[Python Code]</a></li>
-        </ul>
-</ul>
-
-</div><!-- End of Code section -->
