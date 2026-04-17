@@ -3,11 +3,14 @@ layout: home
 title: Home
 permalink: /
 subtitle: > 
-    <a>(pronounced: <em>tsong-hahn</em>)</a> <br>
+    <a>pronounced: <em>tsong-hahn</em></a> <br>
+    <a>se pronuncia: <em>zong-jan</em></a> <br>
+    <a>es pronuncia: <em>çong-han</em></a> <br>
+    <br>
     <a>PhD, UAB & BSE</a><br>
 profile:
   align: right
-  image: # conghan2024.JPG
+  image: conghan2024.JPG
   image_circular: false # crops the image to make it circular
   more_info: > # <a href="mailto:conghan.zheng@autonoma.cat">conghan.zheng@autonoma.cat</a><br>
     <span>&#128231;</span> <a href="mailto:conghan.zheng@autonoma.cat">Email</a><br> 
@@ -16,7 +19,7 @@ profile:
     <span class="googlescholar-icon"></span> <a href="https://scholar.google.com/citations?user=6xciHZgAAAAJ&hl=en&oi=ao">Google Scholar</a>
 # <span class="github-icon"></span> <a href="https://github.com/conghanzheng?tab=repositories">Github</a>
 ---
-
+    
 <p>My research interests are in applied micro, labor, migration, and family econ. </p> 
 
 <p>I received my PhD in economics from the <a href="https://www.uabidea.eu">International Doctorate of Economic Analysis (IDEA) program</a> at the Universitat Aut&ograve;noma de Barcelona (UAB) and the Barcelona School of Economics (BSE). </p>
