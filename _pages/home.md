@@ -4,10 +4,9 @@ title: Home
 permalink: /
 subtitle: > 
     <a>pronounced: <em>tsong-hahn</em></a> <br>
-    <a>se pronuncia: <em>zong-jan</em></a> <br>
-    <a>es pronuncia: <em>çong-han</em></a> <br>
-    <br>
     <a>PhD, UAB & BSE</a><br>
+# <a>se pronuncia: <em>zong-jan</em></a> <br>
+# <a>es pronuncia: <em>çong-han</em></a> <br>
 profile:
   align: right
   image: conghan2024.JPG
@@ -16,7 +15,7 @@ profile:
     <span>&#128231;</span> <a href="mailto:conghan.zheng@autonoma.cat">Email</a><br> 
     <span class="pdf-icon"></span> <a href="https://drive.google.com/file/d/1k2VQ8q8Dq5QhTCJPEX6S_2Ggz2XmqBn8/view">CV</a><br>
     <span class="orcid-icon"></span> <a href="https://orcid.org/0000-0003-0158-5111">ORCID</a><br>
-    <span class="googlescholar-icon"></span> <a href="https://scholar.google.com/citations?user=6xciHZgAAAAJ&hl=en&oi=ao">Google Scholar</a>
+# <span class="googlescholar-icon"></span> <a href="https://scholar.google.com/citations?user=6xciHZgAAAAJ&hl=en&oi=ao">Google Scholar</a>
 # <span class="github-icon"></span> <a href="https://github.com/conghanzheng?tab=repositories">Github</a>
 ---
     
