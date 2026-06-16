@@ -9,7 +9,7 @@ subtitle: >
 # <a>es pronuncia: <em>çong-han</em></a> <br>
 profile:
   align: right
-  image: conghan2024.JPG
+  image: Profile_2026.JPG
   image_circular: false # crops the image to make it circular
   more_info: > # <a href="mailto:conghan.zheng@autonoma.cat">conghan.zheng@autonoma.cat</a><br>
     <span>&#128231;</span> <a href="mailto:conghanzheng42@gmail.com">Email</a><br> 
