@@ -80,8 +80,6 @@ profile:
 
 <h4>Teaching</h4>
 
-<p><i>*Teaching evaluations available upon request.</i></p>
-
 <p>Teaching Assistant (IDEA PhD Program, UAB)</p>
 
 <ul>
