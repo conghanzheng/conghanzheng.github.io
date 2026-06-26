@@ -52,6 +52,16 @@ profile:
     </p>
 </div>
 
+<h5>Selected Work-in-Progress</h5>
+
+<p>"Family Migration and the Intergenerational Contract between Informal Elderly Care and Child Care" &nbsp; Abstract [<button data-toggle="collapse" data-target="#wip-intergen-abstract" class="collapsible"></button>]</p>
+
+<div id="wip-intergen-abstract" class="collapse">
+    <p style="padding-left: 1em;">
+        Internal rural-urban labor migration has large welfare effects on the families of migrant workers, especially their parents and their children, and on intrahousehold intergenerational trade-offs. Children left behind are most likely to be cared for by grandparents, and preschool children are more likely to be brought to the destination by the migrant parents if the grandparents also move. Given that informal elder care is still the most common form of elder care in developing countries, grandparents are willing to care for grandchildren at a relatively young age in exchange for a higher chance of receiving elder care at an older age when they have more care needs. I develop a structural model of the intergenerational contract between informal elder care and child care and estimate the impact of migration on household welfare. 
+    </p>
+</div>
+
 <h5>Published Paper</h5>
 
 <p><a href="https://doi.org/10.1093/jeg/lbae023">"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"</a> (with Konstantin Boss and Tobias Heidland and Andre Groeger and Finja Krüger) <br>
@@ -60,16 +70,6 @@ profile:
 <div id="jeg2025-abstract" class="collapse">
     <p style="padding-left: 1em;">
         We develop monthly asylum seeker flow forecasting models for 157 origin countries to the EU27, using machine learning and high-dimensional data, including digital trace data from Google Trends. Comparing different models and forecasting horizons and validating out-of-sample, we find that an ensemble forecast combining Random Forest and Extreme Gradient Boosting algorithms outperforms the random walk over horizons between 3 and 12 months. For large corridors, this holds in a parsimonious model exclusively based on Google Trends variables, which has the advantage of near real-time availability. We provide practical recommendations how our approach can enable ahead-of-period asylum seeker flow forecasting applications.
-    </p>
-</div>
-
-<h5>Selected Work-in-Progress</h5>
-
-<p>"Family Migration and the Intergenerational Contract between Informal Elderly Care and Child Care" &nbsp; Abstract [<button data-toggle="collapse" data-target="#wip-intergen-abstract" class="collapsible"></button>]</p>
-
-<div id="wip-intergen-abstract" class="collapse">
-    <p style="padding-left: 1em;">
-        Internal rural-urban labor migration has large welfare effects on the families of migrant workers, especially their parents and their children, and on intrahousehold intergenerational trade-offs. Children left behind are most likely to be cared for by grandparents, and preschool children are more likely to be brought to the destination by the migrant parents if the grandparents also move. Given that informal elder care is still the most common form of elder care in developing countries, grandparents are willing to care for grandchildren at a relatively young age in exchange for a higher chance of receiving elder care at an older age when they have more care needs. I develop a structural model of the intergenerational contract between informal elder care and child care and estimate the impact of migration on household welfare. 
     </p>
 </div>
 
@@ -134,7 +134,7 @@ profile:
                 </ul>
             <li>Demand Estimation</li>
                 <ul>
-                    <li>Berry, Levinsohn & Pakes, 1995 (BLP); Nevo, 2000 &nbsp;<a href="https://conghanzheng.github.io/assets/Python/BLP.html">[Python Notebook]</a></li>
+                    <li>Berry, Levinsohn & Pakes (BLP), 1995; Nevo, 2000 &nbsp;<a href="https://conghanzheng.github.io/assets/Python/BLP.html">[Python Notebook]</a></li>
                     <li>Almost Ideal Demand System (AIDS) &nbsp;<a href="https://conghanzheng.github.io/assets/R/AIDS.html">[R Markdown]</a></li>
                 </ul>
         </ul>
