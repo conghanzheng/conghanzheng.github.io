@@ -3,8 +3,7 @@ layout: home
 title: Home
 permalink: /
 subtitle: > 
-    <a>pronounced: <em>tsong-hahn</em></a> <br>
-    <a>PhD, UAB & BSE</a><br>
+    <a>pronounced: <em>tsong-hahn</em></a>
 # <a>se pronuncia: <em>zong-jan</em></a> <br>
 # <a>es pronuncia: <em>çong-han</em></a> <br>
 profile:
