@@ -27,7 +27,9 @@ profile:
 
 <h5>Working Papers</h5>
 
-<p><a href="https://drive.google.com/file/d/1iStb7yNR4LUlK19sJ7lNp_yg16Ccs2Kx/view">"Parental Rural-Urban Migration and Child Education"</a>, 2024, Job Market Paper &nbsp; Abstract [<button data-toggle="collapse" data-target="#jmp-abstract" class="collapsible"></button>]</p>
+<p><a href="https://drive.google.com/file/d/1iStb7yNR4LUlK19sJ7lNp_yg16Ccs2Kx/view">"Parental Rural-Urban Migration and Child Education"</a>, 2024, Job Market Paper </p>
+
+<p style="padding-left: 1em;"> Abstract [<button data-toggle="collapse" data-target="#jmp-abstract" class="collapsible"></button>]</p>
 
 <div id="jmp-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -35,7 +37,9 @@ profile:
     </p>
 </div>
 
-<p><a href="https://drive.google.com/file/d/1i_D9DOuTkk-ZY6V2_prUH6xJ50mT4USv/view">"The Presence of Siblings and Child Health Outcomes"</a>, 2025 &nbsp; Abstract [<button data-toggle="collapse" data-target="#sibhealth-abstract" class="collapsible"></button>]</p>
+<p><a href="https://drive.google.com/file/d/1i_D9DOuTkk-ZY6V2_prUH6xJ50mT4USv/view">"The Presence of Siblings and Child Health Outcomes"</a> </p>
+
+<p style="padding-left: 1em;"> Abstract [<button data-toggle="collapse" data-target="#sibhealth-abstract" class="collapsible"></button>]</p>
 
 <div id="sibhealth-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -43,7 +47,9 @@ profile:
     </p>
 </div>
 
-<p><a href="https://drive.google.com/file/d/19beCLAUTd3ZVhdY0rAG171cb90w07MYH/view">"Migration Outcome Gap: The Cost of Leaving Children Behind"</a>, 2023 &nbsp; Abstract [<button data-toggle="collapse" data-target="#enter-jbr-abstract" class="collapsible"></button>]</p>
+<p><a href="https://drive.google.com/file/d/19beCLAUTd3ZVhdY0rAG171cb90w07MYH/view">"Migration Outcome Gap: The Cost of Leaving Children Behind"</a> </p>
+
+<p style="padding-left: 1em;"> Abstract [<button data-toggle="collapse" data-target="#enter-jbr-abstract" class="collapsible"></button>]</p>
 
 <div id="enter-jbr-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -53,7 +59,9 @@ profile:
 
 <h5>Selected Work-in-Progress</h5>
 
-<p>"Family Migration and the Intergenerational Contract between Informal Elderly Care and Child Care" &nbsp; Abstract [<button data-toggle="collapse" data-target="#wip-intergen-abstract" class="collapsible"></button>]</p>
+<p>"Family Migration and the Intergenerational Contract between Informal Elderly Care and Child Care" </p>
+
+<p style="padding-left: 1em;">  Abstract [<button data-toggle="collapse" data-target="#wip-intergen-abstract" class="collapsible"></button>]</p>
 
 <div id="wip-intergen-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -64,7 +72,9 @@ profile:
 <h5>Published Paper</h5>
 
 <p><a href="https://doi.org/10.1093/jeg/lbae023">"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"</a> (with Konstantin Boss and Tobias Heidland and Andre Groeger and Finja Krüger) <br>
-<i>Journal of Economic Geography</i> (2025): 25(1), 3-19. &nbsp; Abstract [<button data-toggle="collapse" data-target="#jeg2025-abstract" class="collapsible"></button>]</p>
+<i>Journal of Economic Geography</i> (2025): 25(1), 3-19. </p>
+
+<p style="padding-left: 1em;"> Abstract [<button data-toggle="collapse" data-target="#jeg2025-abstract" class="collapsible"></button>]</p>
 
 <div id="jeg2025-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -122,12 +132,12 @@ profile:
 <p>Below are some code scripts I have developed for data analysis.</p>
 
 <ul>
-    <li>Automated Data Collection &nbsp;<a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/eurostatB.R">[R code]</a></li>
+    <li>Automated Data Collection &nbsp;<a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/R/eurostatB.R">[R]</a></li>
     <li>Applied Microeconometrics </li> 
         <ul>
             <li>Dynamic Discrete Choice</li>
                 <ul>
-                    <li>Full Solution: Rust, 1987 &nbsp;<a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/Python/Rust1987.py">[Python Code]</a></li>
+                    <li>Full Solution: Rust, 1987 &nbsp;<a href="https://github.com/conghanzheng/conghanzheng.github.io/blob/master/assets/Python/Rust1987.py">[Python]</a></li>
                 </ul>
             <li>Demand Estimation</li>
                 <ul>
@@ -137,7 +147,7 @@ profile:
         </ul>
     <li>Other Econometric Topics</li> 
         <ul>
-            <li>Kronecker Product Structure (KPS) Covariance &nbsp;<a href="https://github.com/conghanzheng/KPS">[Python Code]</a></li>
+            <li>Kronecker Product Structure (KPS) Covariance &nbsp;<a href="https://github.com/conghanzheng/KPS">[Python]</a></li>
         </ul>
 </ul>
 
