@@ -1,0 +1,58 @@
+/* Section styling for one-page layout */
+.section-container {
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--global-divider-color);
+    scroll-margin-top: 50px; /* Adjust scrolling position for fixed navbar */
+    margin-bottom: 2rem;
+  }
+  
+/* Adjust spacing for fixed navbar */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+  scroll-padding-top: 50px; /* Add padding for fixed navbar */
+}
+
+/* Fix header overlap with anchor links */
+h2[id]:before, 
+h3[id]:before,
+h4[id]:before,
+h5[id]:before, 
+h6[id]:before,
+div[id]:before { 
+  content: "";
+  display: block;
+  height: 50px;
+  margin: -50px 0 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Navbar styling */
+.navbar-nav .nav-link {
+  color: var(--global-text-color) !important; /* Override any other styling */
+}
+
+/* Active navigation link styling */
+.navbar-nav .nav-link.active {
+  color: var(--global-theme-color) !important;
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover {
+  color: var(--global-hover-color) !important;
+}
+
+/* Remove any existing specific styling for home link if present */
+.navbar-nav .nav-item:first-child .nav-link {
+  color: var(--global-text-color) !important; /* Reset home link color */
+}
+
+.navbar-nav .nav-item:first-child .nav-link.active {
+  color: var(--global-theme-color) !important; /* Only when active */
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  background-color: inherit;
+  color: var(--global-theme-color);
+}

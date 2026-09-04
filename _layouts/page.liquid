@@ -1,0 +1,106 @@
+---
+layout: default
+---
+{% if page._styles %}
+  <!-- Page/Post style -->
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+<div class="post">
+  <header class="post-header" style="text-align: center;">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="desc">{{ page.subtitle }}</p>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+
+  <article>
+    <!-- Auto-add <br> at the start -->
+    <br>
+    
+    {% comment %}
+    Check if content starts with h5 tag and handle differently
+    {% endcomment %}
+    {% if content contains '<h5' %}
+      {% assign first_h5_position = content | split: '<h5' | first | size %}
+      {% if first_h5_position < 10 %}
+        {% comment %}h5 is at the beginning (allowing for some whitespace){% endcomment %}
+        {% assign first_part = content | split: '<h5' | first %}
+        {% assign rest_part = content | split: '<h5' | shift | join: '<h5' %}
+        {% assign first_h5 = '<h5' | append: rest_part | split: '</h5>' | first | append: '</h5>' %}
+        {% assign after_first_h5 = content | split: first_h5 | last %}
+        
+        {{ first_part }}{{ first_h5 }}<span style="display: block; margin-top: 20px;"></span>
+        
+        {% assign remaining_content = after_first_h5 | replace: '<h5', '<span style="display: block; margin-top: 30px;"></span><h5' %}
+        {% assign remaining_content = remaining_content | replace: '</h5>', '</h5><span style="display: block; margin-top: 20px;"></span>' %}
+        
+        {% comment %}Add spacing before top-level <ul> tags that don't follow h5 but not before nested ones{% endcomment %}
+        {% assign parts = remaining_content | split: '<ul' %}
+        {% assign new_content = parts[0] %}
+        
+        {% for part in parts offset:1 %}
+          {% assign prev_content = new_content | split: '' | reverse | join: '' | truncate: 100, '' | split: '' | reverse | join: '' %}
+          {% if prev_content contains '</h5><span style="display: block; margin-top: 20px;"></span>' %}
+            {% comment %}This <ul> follows an h5, don't add extra spacing{% endcomment %}
+            {% assign new_content = new_content | append: '<ul' | append: part %}
+          {% elsif prev_content contains '</li>' or prev_content contains '<li>' %}
+            {% comment %}This appears to be a nested <ul>, don't add extra spacing{% endcomment %}
+            {% assign new_content = new_content | append: '<ul' | append: part %}
+          {% else %}
+            {% comment %}This is a top-level <ul> that doesn't follow an h5, add spacing{% endcomment %}
+            {% assign new_content = new_content | append: '<span style="display: block; margin-top: 20px;"></span><ul' | append: part %}
+          {% endif %}
+        {% endfor %}
+        
+        {{ new_content }}
+        
+      {% else %}
+        {% comment %}h5 is not at the beginning{% endcomment %}
+        {% assign content_with_spacing = content | replace: '<h5', '<span style="display: block; margin-top: 30px;"></span><h5' %}
+        {% assign content_with_spacing = content_with_spacing | replace: '</h5>', '</h5><span style="display: block; margin-top: 20px;"></span>' %}
+        
+        {% comment %}Add spacing before top-level <ul> tags that don't follow h5 but not before nested ones{% endcomment %}
+        {% assign parts = content_with_spacing | split: '<ul' %}
+        {% assign new_content = parts[0] %}
+        
+        {% for part in parts offset:1 %}
+          {% assign prev_content = new_content | split: '' | reverse | join: '' | truncate: 100, '' | split: '' | reverse | join: '' %}
+          {% if prev_content contains '</h5><span style="display: block; margin-top: 20px;"></span>' %}
+            {% comment %}This <ul> follows an h5, don't add extra spacing{% endcomment %}
+            {% assign new_content = new_content | append: '<ul' | append: part %}
+          {% elsif prev_content contains '</li>' or prev_content contains '<li>' %}
+            {% comment %}This appears to be a nested <ul>, don't add extra spacing{% endcomment %}
+            {% assign new_content = new_content | append: '<ul' | append: part %}
+          {% else %}
+            {% comment %}This is a top-level <ul> that doesn't follow an h5, add spacing{% endcomment %}
+            {% assign new_content = new_content | append: '<span style="display: block; margin-top: 20px;"></span><ul' | append: part %}
+          {% endif %}
+        {% endfor %}
+        
+        {{ new_content }}
+      {% endif %}
+    {% else %}
+      {% comment %}No h5 tags, but still need to handle <ul> tags - only add spacing to top-level lists{% endcomment %}
+      {% assign parts = content | split: '<ul' %}
+      {% assign new_content = parts[0] %}
+      
+      {% for part in parts offset:1 %}
+        {% assign prev_content = new_content | split: '' | reverse | join: '' | truncate: 100, '' | split: '' | reverse | join: '' %}
+        {% if prev_content contains '</li>' or prev_content contains '<li>' %}
+          {% comment %}This appears to be a nested <ul>, don't add extra spacing{% endcomment %}
+          {% assign new_content = new_content | append: '<ul' | append: part %}
+        {% else %}
+          {% comment %}This is a top-level <ul>, add spacing{% endcomment %}
+          {% assign new_content = new_content | append: '<span style="display: block; margin-top: 20px;"></span><ul' | append: part %}
+        {% endif %}
+      {% endfor %}
+      
+      {{ new_content }}
+    {% endif %}
+    
+    <!-- Auto-add margin at the bottom -->
+    <span style="display: block; margin-top: 20px;"></span>
+  </article>
+</div>
