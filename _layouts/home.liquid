@@ -91,7 +91,7 @@ layout: default
 
     /* Container spacing to match original design */
     .container.mt-5 {
-      margin-top: 3rem !important; /* Keep original top spacing */
+      margin-top: 1.75rem !important; /* Keep original top spacing */
     }
 
     .sticky-column {
@@ -116,11 +116,6 @@ layout: default
 
   /* Enhanced mobile styling */
   @media (max-width: 767px) {
-    
-    /* Hide elements on mobile */
-    .hide-on-mobile {
-      display: none !important;
-    }
     
     /* Improve layout flow */
     .row {
@@ -185,33 +180,4 @@ layout: default
     transition: max-height 0.2s ease-out;
   }
 
-  /* Table */
-  .content-column table {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
-  /* Table, mobild view (two-columns/one-column layout) */
-  @media only screen and (max-width: 768px) {
-    table {
-      width: 100%; /* Ensure the table takes full width on mobile */
-    }
-
-    tr {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    td, th {
-      display: inline-block;
-      width: 90%; /* width for each column*/
-      margin-bottom: 10px;
-    }
-
-    /* Give the last td more width */
-    td:last-child {
-      width: 100%; /* Allow the last column to take full width */
-    }
-  }
 </style>

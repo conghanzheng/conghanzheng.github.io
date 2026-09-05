@@ -144,67 +144,9 @@
     color: var(--global-theme-color);
   }
 
-  /* Desktop view - hide brand and affiliation on homepage */
-  @media (min-width: 768px) {
-    .desktop-hide-brand {
-      display: none;
-    }
-  }
-
-  /* Mobile and tablet view styling - apply to all screens up to 991px */
-  @media (max-width: 767px) {
-    /* Keep brand visible on all pages including homepage */
-    .navbar-brand-container {
-      display: none; /* Displayed as a flex container */
-    }
-
-    .desktop-hide-brand .navbar-brand {
-      font-weight: bold; /* Bold name only for homepage */
-    }
-    
-    /* Position the navbar collapse properly */
-    .navbar-collapse {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: white;
-      z-index: 1030; /* Lower than brand container */
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-    
-    /* Toggle button should always be visible below 992px */
-    .navbar-toggler {
-      display: block !important;
-    }
-    
-    /* Override Bootstrap's navbar-expand-sm behavior */
-    .navbar-expand-sm .navbar-toggler {
-      display: block !important;
-    }
-    
-    .navbar-expand-sm .navbar-collapse {
-      display: none !important;
-    }
-    
-    .navbar-expand-sm .navbar-collapse.show {
-      display: block !important;
-    }
-    
-    /* Ensure navbar items are stacked */
-    .navbar-nav {
-      flex-direction: column !important;
-      padding: 10px 0 !important;
-    }
-    
-    /* Ensure container properly positions elements */
-    .navbar > .container {
-      position: relative;
-    }
+  /*hide brand and affiliation on homepage */
+  .desktop-hide-brand {
+    display: none;
   }
   
-  /* Extra styles specific to very small screens if needed */
-  @media (max-width: 767px) {
-    /* Any additional styles specifically for phones can go here */
-  }
 </style>
