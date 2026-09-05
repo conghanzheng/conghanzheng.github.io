@@ -144,16 +144,18 @@
     color: var(--global-theme-color);
   }
 
-  /* hide brand and affiliation on homepage */
-  .desktop-hide-brand {
+  /* Desktop view - hide brand and affiliation on homepage */
+  @media (min-width: 768px) {
+    .desktop-hide-brand {
       display: none;
     }
+  }
 
   /* Mobile and tablet view styling - apply to all screens up to 991px */
   @media (max-width: 767px) {
     /* Keep brand visible on all pages including homepage */
     .navbar-brand-container {
-      display: flex; /* Displayed as a flex container */
+      display: none; /* Displayed as a flex container */
     }
 
     .desktop-hide-brand .navbar-brand {
