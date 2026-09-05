@@ -3,9 +3,9 @@ layout: home
 title: Home
 permalink: /
 subtitle: > 
-    <span style="color: grey;">pronounced: <em>tsong-hahn</em> <br>
-    se pronuncia: <em>tsong-jan</em> <br> 
-    <em>(ts como en tsunami)</em> </span>
+    <span style="color: grey;">pronounced: <i>tsong-hahn</i> <br>
+    se pronuncia: <i>tsong-jan</i> <br> 
+    <i>(ts como en tsunami)</i> </span>
 profile:
   align: right
   image: Profile_2026.JPG
