@@ -28,7 +28,7 @@ profile:
 
 <h5>Working Papers</h5>
 
-<p>"Parental Rural-Urban Migration and Child Education" &nbsp; <a href="https://drive.google.com/file/d/1iStb7yNR4LUlK19sJ7lNp_yg16Ccs2Kx/view">[pdf]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#jmp-abstract" class="collapsible"></button>]</p>
+<p>"Parental Rural-Urban Migration and Child Education" &nbsp; <a href="https://drive.google.com/file/d/1iStb7yNR4LUlK19sJ7lNp_yg16Ccs2Kx/view">[PDF]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#jmp-abstract" class="collapsible"></button>]</p>
 
 <div id="jmp-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -36,7 +36,7 @@ profile:
     </p>
 </div>
 
-<p>"The Presence of Siblings and Child Health Outcomes" &nbsp; <a href="https://drive.google.com/file/d/1i_D9DOuTkk-ZY6V2_prUH6xJ50mT4USv/view">[pdf]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#sibhealth-abstract" class="collapsible"></button>]</p>
+<p>"The Presence of Siblings and Child Health Outcomes" &nbsp; <a href="https://drive.google.com/file/d/1i_D9DOuTkk-ZY6V2_prUH6xJ50mT4USv/view">[PDF]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#sibhealth-abstract" class="collapsible"></button>]</p>
 
 <div id="sibhealth-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -44,7 +44,7 @@ profile:
     </p>
 </div>
 
-<p>"Migration Outcome Gap: The Cost of Leaving Children Behind" &nbsp; <a href="https://drive.google.com/file/d/19beCLAUTd3ZVhdY0rAG171cb90w07MYH/view">[pdf]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#enter-jbr-abstract" class="collapsible"></button>]</p>
+<p>"Migration Outcome Gap: The Cost of Leaving Children Behind" &nbsp; <a href="https://drive.google.com/file/d/19beCLAUTd3ZVhdY0rAG171cb90w07MYH/view">[PDF]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#enter-jbr-abstract" class="collapsible"></button>]</p>
 
 <div id="enter-jbr-abstract" class="collapse">
     <p style="padding-left: 1em;">
