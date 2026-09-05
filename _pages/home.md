@@ -28,7 +28,7 @@ profile:
 
 <h5>Working Papers</h5>
 
-<p><a href="https://drive.google.com/file/d/1iStb7yNR4LUlK19sJ7lNp_yg16Ccs2Kx/view">"Parental Rural-Urban Migration and Child Education"</a>. &nbsp; Abstract [<button data-toggle="collapse" data-target="#jmp-abstract" class="collapsible"></button>]</p>
+<p>"Parental Rural-Urban Migration and Child Education" &nbsp; <a href="https://drive.google.com/file/d/1iStb7yNR4LUlK19sJ7lNp_yg16Ccs2Kx/view">[pdf]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#jmp-abstract" class="collapsible"></button>]</p>
 
 <div id="jmp-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -36,7 +36,7 @@ profile:
     </p>
 </div>
 
-<p><a href="https://drive.google.com/file/d/1i_D9DOuTkk-ZY6V2_prUH6xJ50mT4USv/view">"The Presence of Siblings and Child Health Outcomes"</a>. &nbsp; Abstract [<button data-toggle="collapse" data-target="#sibhealth-abstract" class="collapsible"></button>]</p>
+<p>"The Presence of Siblings and Child Health Outcomes" &nbsp; <a href="https://drive.google.com/file/d/1i_D9DOuTkk-ZY6V2_prUH6xJ50mT4USv/view">[pdf]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#sibhealth-abstract" class="collapsible"></button>]</p>
 
 <div id="sibhealth-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -44,7 +44,7 @@ profile:
     </p>
 </div>
 
-<p><a href="https://drive.google.com/file/d/19beCLAUTd3ZVhdY0rAG171cb90w07MYH/view">"Migration Outcome Gap: The Cost of Leaving Children Behind"</a>. &nbsp; Abstract [<button data-toggle="collapse" data-target="#enter-jbr-abstract" class="collapsible"></button>]</p>
+<p>"Migration Outcome Gap: The Cost of Leaving Children Behind" &nbsp; <a href="https://drive.google.com/file/d/19beCLAUTd3ZVhdY0rAG171cb90w07MYH/view">[pdf]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#enter-jbr-abstract" class="collapsible"></button>]</p>
 
 <div id="enter-jbr-abstract" class="collapse">
     <p style="padding-left: 1em;">
@@ -58,8 +58,8 @@ profile:
 
 <h5>Published Paper</h5>
 
-<p><a href="https://doi.org/10.1093/jeg/lbae023">"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques"</a> (with Konstantin Boss and Tobias Heidland and Andre Groeger and Finja Krüger) <br>
-<i>Journal of Economic Geography</i> (2025): 25(1), 3-19. &nbsp; Abstract [<button data-toggle="collapse" data-target="#jeg2025-abstract" class="collapsible"></button>]</p>
+<p>"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques" (with Konstantin Boss and Tobias Heidland and Andre Groeger and Finja Krüger) <br>
+<i>Journal of Economic Geography</i> (2025): 25(1), 3-19. &nbsp; <a href="https://doi.org/10.1093/jeg/lbae023">[DOI]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#jeg2025-abstract" class="collapsible"></button>]</p>
 
 <div id="jeg2025-abstract" class="collapse">
     <p style="padding-left: 1em;">
