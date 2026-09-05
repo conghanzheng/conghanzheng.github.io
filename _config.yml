@@ -7,7 +7,12 @@ first_name: Conghan
 middle_name: 
 last_name: Zheng
 email: conghanzheng42@gmail.com
-affiliation: Assistant Professor, Universidad de Cantabria
+affiliation: >
+  <span style="color: grey;">pronounced: <em>tsong-hahn</em> <br>
+  se pronuncia: <em>tsong-jan</em> <br> 
+  <em>(ts como en tsunami)</em> </span> 
+  <span>Assistant Professor</span> <br>
+  Universidad de Cantabria</span>
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Conghan is an Assistant Professor of Economics at Universidad de Cantabria, she does research in applied micro, labor, migration, and family econ.
 show_footer: false ## check
