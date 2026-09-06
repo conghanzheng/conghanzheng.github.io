@@ -8,7 +8,7 @@ subtitle: >
     <i>(ts como en tsunami)</i> </span>
 profile:
   align: right
-  image: Profile_2026.JPG
+  image: 
   image_circular: false # crops the image to make it circular
   more_info: > 
     <span class="location-icon"></span> <a>Santander, Spain</a><br>
@@ -22,7 +22,7 @@ profile:
 
 <p>I'm an Assistant Professor <i style="color: grey;">(Profesor Ayudante Doctor)</i> of Economics at the Universidad de Cantabria.</p> 
 
-<p>My research interests are in applied micro, labor, migration, and family econ.</p> 
+<p>My research interests are in applied micro, labor, and family econ.</p> 
 
 <div id="research" class="section-container"><!-- Begin of Research section -->
 

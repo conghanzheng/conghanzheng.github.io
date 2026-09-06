@@ -5,7 +5,7 @@
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Conghan
 middle_name: 
-last_name: Zheng
+last_name: ZHENG
 email: conghanzheng42@gmail.com
 affiliation: >
   <span> Assistant Professor, <br>
@@ -16,7 +16,7 @@ show_footer: false ## check
 footer_text:
 keywords: Conghan Zheng,Conghan,Zheng,Universidad de Cantabria,UC,UniCan,Cantabria,Santander,UAB,BSE,BGSE,Universitat Autònoma de Barcelona,Barcelona School of Economics,Barcelona gse,labor,migration,internal migration,rural-urban,China,child,parental migration,family,XJTU,SDU,ITFlows,refugee,Google Trends # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: Logo_202606.jpeg # provide image name in /assets/img/
+icon: # provide image name in /assets/img/
 
 url: https://conghanzheng.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
