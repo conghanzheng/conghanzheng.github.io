@@ -60,7 +60,6 @@ profile:
 
 <p>"Forecasting Bilateral Refugee Flows with High-dimensional Data and Machine Learning Techniques" (with Konstantin Boss and Tobias Heidland and Andre Groeger and Finja Krüger) <br>
 <i>Journal of Economic Geography</i> (2025): 25(1), 3-19. &nbsp; <a href="https://doi.org/10.1093/jeg/lbae023">[DOI]</a> &nbsp; Abstract [<button data-toggle="collapse" data-target="#jeg2025-abstract" class="collapsible"></button>]</p>
-
 <div id="jeg2025-abstract" class="collapse">
     <p style="padding-left: 1em;">
         We develop monthly asylum seeker flow forecasting models for 157 origin countries to the EU27, using machine learning and high-dimensional data, including digital trace data from Google Trends. Comparing different models and forecasting horizons and validating out-of-sample, we find that an ensemble forecast combining Random Forest and Extreme Gradient Boosting algorithms outperforms the random walk over horizons between 3 and 12 months. For large corridors, this holds in a parsimonious model exclusively based on Google Trends variables, which has the advantage of near real-time availability. We provide practical recommendations how our approach can enable ahead-of-period asylum seeker flow forecasting applications.
@@ -82,16 +81,18 @@ Current
     </ul>
 </ul>
 
-Past
-<ul>
-    <li>TA</li>
+Past [<button data-toggle="collapse" data-target="#past-teaching" class="collapsible"></button>]
+<div id="past-teaching" class="collapse">
     <ul>
-        <li>Structural Microeconometrics (IDEA PhD, UAB; 2024)</li>
-        <li>Microeconometrics (IDEA PhD, UAB; 2021, 2022, 2024)</li>
-        <li>Econometrics II (IDEA PhD, UAB; 2024)</li>
-        <li>Development Economics (IDEA PhD, UAB; 2024)</li>
-        <li>Applied IO (IDEA PhD, UAB; 2023)</li>
+        <li>TA</li>
+        <ul>
+            <li>Structural Microeconometrics (IDEA PhD, UAB; 2024)</li>
+            <li>Microeconometrics (IDEA PhD, UAB; 2021, 2022, 2024)</li>
+            <li>Econometrics II (IDEA PhD, UAB; 2024)</li>
+            <li>Development Economics (IDEA PhD, UAB; 2024)</li>
+            <li>Applied IO (IDEA PhD, UAB; 2023)</li>
+        </ul>
     </ul>
-</ul>
+</div>
 
 </div><!-- End of Teaching section -->
