@@ -73,10 +73,25 @@ profile:
 
 <h5>Teaching</h5>
 
-Fall 2026
+Current
 <ul>
-    <li>Econometrics II (Undergraduate, Grado en Economía)</li>
-    <li>Microeconometrics (Undergraduate, Grado en Economía)</li>
+    <li>Instructor</li>
+    <ul>
+        <li>Econometrics II (Undergraduate, UniCan; 2026)</li>
+        <li>Microeconometrics (Undergraduate, UniCan; 2026)</li>
+    </ul>
+</ul>
+
+Past
+<ul>
+    <li>TA</li>
+    <ul>
+        <li>Structural Microeconometrics (IDEA PhD, UAB; 2024)</li>
+        <li>Microeconometrics (IDEA PhD, UAB; 2021, 2022, 2024)</li>
+        <li>Econometrics II (IDEA PhD, UAB; 2024)</li>
+        <li>Development Economics (IDEA PhD, UAB; 2024)</li>
+        <li>Applied IO (IDEA PhD, UAB; 2023)</li>
+    </ul>
 </ul>
 
 </div><!-- End of Teaching section -->
