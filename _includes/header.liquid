@@ -1,12 +1,12 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light auto-collapse-nav" role="navigation">
+  <nav id="navbar" class="navbar navbar-light navbar-expand {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      
+
       <!-- Navbar Links (Left) -->
-      <div class="collapse navbar-collapse show" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto flex-nowrap">
-          <!-- Home Link -->
+          <!-- Home Link (always present) -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
               Home
@@ -38,7 +38,6 @@
               </button>
             </li>
           {% endif %}
-
           {% if site.enable_darkmode %}
             <!-- Toggle theme mode -->
             <li class="toggle-container">
@@ -51,22 +50,6 @@
           {% endif %}
         </ul>
       </div>
-
-      <!-- Navbar Toggle (Appears only on tiny screens) -->
-      <button
-        class="navbar-toggler collapsed ml-auto"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
 
       <!-- Navbar Brand (Right) -->
       <div class="navbar-brand-container {% if page.permalink == '/' %}desktop-hide-brand{% endif %}">
@@ -97,32 +80,9 @@
 </header>
 
 <style>
-  /* Base flex layout for links when space is available */
-  .auto-collapse-nav .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-  
-  .auto-collapse-nav .navbar-toggler {
-    display: none; /* Hide toggle button by default */
-  }
-
-  /* Only collapse into a menu on extremely narrow viewports (e.g., small phones under 450px) */
-  @media (max-width: 450px) {
-    .auto-collapse-nav .navbar-collapse {
-      display: none !important; /* Hide menu links */
-    }
-
-    .auto-collapse-nav .navbar-collapse.show {
-      display: block !important; /* Show links when toggled */
-    }
-
-    .auto-collapse-nav .navbar-toggler {
-      display: block; /* Show hamburger button */
-    }
-  }
-
   /* Navbar brand container styling */
+
+  /* - Both Name and Affiliation*/
   .navbar-brand-container {
     display: flex;
     flex-direction: column;
@@ -130,10 +90,11 @@
     text-align: right;
     margin-right: 0;
     line-height: 1.5;
-    z-index: 1040;
-    position: relative;
+    z-index: 1040; /* Higher z-index to keep on top */
+    position: relative; /* Establish stacking context */
   }
   
+  /* - Name */
   .navbar-brand { 
     padding: 0;
     margin-bottom: 0;
@@ -142,11 +103,13 @@
     display: block;
   }
   
+  /* - Affiliation */
   .navbar-affiliation {
     font-size: 1rem;
     display: block;
   }
 
+  /* Navbar brand link that wraps both elements */
   .navbar-brand-link {
     display: flex;
     flex-direction: column;
@@ -161,11 +124,14 @@
     color: inherit;
   }
 
+  /* Active link in navbar */
   .navbar-nav .nav-link.active {
     color: var(--global-theme-color);
   }
 
+  /*hide brand and affiliation on homepage */
   .desktop-hide-brand {
     display: none;
   }
+  
 </style>
