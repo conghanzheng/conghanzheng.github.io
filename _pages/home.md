@@ -11,8 +11,8 @@ profile:
   image: 
   image_circular: false # crops the image to make it circular
   more_info: > 
-    <span class="location-icon"></span> <a>Santander, Spain</a><br>
-    <span>&#128231;</span> <a href="mailto:conghan.zheng@unican.es">Email</a><br> 
+    <span class="location-icon"></span> Santander, Spain<br>
+    <span>&#128231;</span> <a href="mailto:conghan.zheng@unican.es">Email</a><br>
     <span class="pdf-icon"></span> <a href="https://drive.google.com/file/d/1k2VQ8q8Dq5QhTCJPEX6S_2Ggz2XmqBn8/view">CV</a><br>
     <span class="orcid-icon"></span> <a href="https://orcid.org/0000-0003-0158-5111">ORCID</a><br>
 # <span>&#128205;</span> <a>Santander, Spain</a><br>
@@ -20,9 +20,11 @@ profile:
 # <span class="github-icon"></span> <a href="https://github.com/conghanzheng?tab=repositories">Github</a>
 ---
 
-<p>I'm an Assistant Professor <i style="color: grey;">(Profesor Ayudante Doctor)</i> of Economics at the Universidad de Cantabria.</p> 
+<p><b>Assistant Professor</b> <i style="color: grey;">(Profesor Ayudante Doctor)</i> of Economics, Universidad de Cantabria.</p> 
 
-<p>My research interests are in applied micro, labor, and family econ.</p> 
+<p><b>Research Interests</b>: Applied Microeconomics, Labor Economics, Family Economics.</p> 
+
+<p><b>News</b>: We are organizing the <a href="https://ipdc2027.unican.es">32nd International Panel Data Conference (IPDC 2027)</a>, to be held on June 28&ndash;29, 2027, at the Universidad de Cantabria in Santander, Spain.</p>
 
 <div id="research" class="section-container"><!-- Begin of Research section -->
 
@@ -76,8 +78,8 @@ Current
 <ul>
     <li>Instructor</li>
     <ul>
-        <li>Econometrics II (Undergraduate, UniCan; 2026)</li>
-        <li>Microeconometrics (Undergraduate, UniCan; 2026)</li>
+        <li>Econometrics II (Undergraduate GE, UniCan; 2026)</li>
+        <li>Microeconometrics (Undergraduate GE, UniCan; 2026)</li>
     </ul>
 </ul>
 
