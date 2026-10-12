@@ -26,11 +26,11 @@ profile:
 # <span class="github-icon"></span> <a href="https://github.com/conghanzheng?tab=repositories">Github</a>
 ---
 
-<p><b>Assistant Professor</b> <i style="color: grey;">(Profesor Ayudante Doctor)</i> of Economics, Universidad de Cantabria.</p> 
+<p><b>Assistant Professor</b> <i style="color: grey;">(Profesor Ayudante Doctor)</i> of Economics, <a href="https://web.unican.es/centros/economicas/investigacion-y-transferencia">Universidad de Cantabria</a>.</p> 
 
 <p><b>Research Interests</b>: Applied Microeconomics, Labor Economics, Family Economics.</p> 
 
-<p><b>News</b>: We are organizing the <a href="https://ipdc2027.unican.es">32nd International Panel Data Conference (IPDC 2027)</a>, to be held on June 28&ndash;29, 2027, at the Universidad de Cantabria in Santander, Spain.</p>
+<p><b><i>News</i></b>: We are organizing the <a href="https://ipdc2027.unican.es">32nd International Panel Data Conference (IPDC 2027)</a>, to be held on June 28&ndash;29, 2027, at the Universidad de Cantabria in Santander, Spain.</p>
 
 <div id="research" class="section-container"><!-- Begin of Research section -->
 
