@@ -11,6 +11,7 @@ profile:
   image: 
   image_circular: false # crops the image to make it circular
   more_info: > 
+    <br>
     <span class="orcid-icon"></span> <a href="https://orcid.org/0000-0003-0158-5111">ORCID</a><br>
     <span class="pdf-icon"></span> <a href="https://drive.google.com/file/d/1k2VQ8q8Dq5QhTCJPEX6S_2Ggz2XmqBn8/view">CV</a><br>
     <span>&#128231;</span> <a href="mailto:conghan.zheng@unican.es">Email</a><br>
@@ -18,7 +19,7 @@ profile:
     Office E123A <br>
     Departamento de Econom&iacute;a <br>
     Universidad de Cantabria <br>
-    <span class="location-icon"></span> 39005, Santander, Spain<br>
+    39005 Santander, Spain<br>
 
 # <span>&#128205;</span> <a>Santander, Spain</a><br>
 # <span class="googlescholar-icon"></span> <a href="https://scholar.google.com/citations?user=6xciHZgAAAAJ&hl=en&oi=ao">Google Scholar</a>
@@ -83,8 +84,8 @@ Current
 <ul>
     <li>Instructor</li>
     <ul>
-        <li>Econometrics II (Undergraduate, UniCan; 2026)</li>
-        <li>Microeconometrics (Undergraduate, UniCan; 2026)</li>
+        <li>Econometrics II (Undergraduate GE, UniCan; 2026)</li>
+        <li>Microeconometrics (Undergraduate GE, UniCan; 2026)</li>
     </ul>
 </ul>
 
