@@ -16,10 +16,10 @@ profile:
     <span class="pdf-icon"></span> <a href="https://drive.google.com/file/d/1k2VQ8q8Dq5QhTCJPEX6S_2Ggz2XmqBn8/view">CV</a><br>
     <span>&#128231;</span> <a href="mailto:conghan.zheng@unican.es">Email</a><br>
     <br>
-    Office E123A <br>
+    Office <i>E123A</i> <br>
     Departamento de Econom&iacute;a <br>
     Universidad de Cantabria <br>
-    39005 Santander, Spain<br>
+    <span>&#128205;</span> 39005 Santander, Spain<br>
 
 # <span>&#128205;</span> <a>Santander, Spain</a><br>
 # <span class="googlescholar-icon"></span> <a href="https://scholar.google.com/citations?user=6xciHZgAAAAJ&hl=en&oi=ao">Google Scholar</a>
@@ -28,9 +28,9 @@ profile:
 
 <p><b>Assistant Professor</b> <i style="color: grey;">(Profesor Ayudante Doctor)</i> of Economics, <a href="https://web.unican.es/centros/economicas/investigacion-y-transferencia">Universidad de Cantabria</a>.</p> 
 
-<p><b>Research Interests</b>: Applied Microeconomics, Labor Economics, Family Economics.</p> 
+<p><b>Research Interests:</b> Applied Microeconomics, Labor Economics, Family Economics.</p> 
 
-<p><b><i>News</i></b>: We are organizing the <a href="https://ipdc2027.unican.es">32nd International Panel Data Conference (IPDC 2027)</a>, to be held on June 28&ndash;29, 2027, at the Universidad de Cantabria in Santander, Spain.</p>
+<p><b><i>News:</i></b> We are organizing the <a href="https://ipdc2027.unican.es">32nd International Panel Data Conference (IPDC 2027)</a>, to be held on June 28&ndash;29, 2027, at the Universidad de Cantabria in Santander, Spain.</p>
 
 <div id="research" class="section-container"><!-- Begin of Research section -->
 
