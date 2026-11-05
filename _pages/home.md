@@ -8,7 +8,7 @@ subtitle: >
     <i>(ts como en tsunami)</i> </span>
 profile:
   align: right
-  image: 
+  image: profile2025.jpeg
   image_circular: false # crops the image to make it circular
   more_info: > 
     <br>
